@@ -3,8 +3,8 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from urllib.parse import quote
 NOW=datetime.datetime.now(datetime.timezone.utc)
-SERIES={'US 10Y yield (market proxy)':'DGS10','US 5Y yield (market proxy)':'DGS5','Gold futures USD/oz':'GOLDAMGBD228NLBM','AUD/USD':'DEXUSAL','USD index futures':'DTWEXBGS','US real 10Y yield':'DFII10','High yield spread':'BAMLH0A0HYM2','Investment grade spread':'BAMLC0A0CM','US unemployment':'UNRATE','Consumer sentiment':'UMCSENT','All loan delinquencies':'DRALACBS','Credit card delinquencies':'DRCCLACBS','Brent crude futures':'DCOILBRENTEU','S&P 500':'SP500','Nasdaq':'NASDAQCOM','VIX':'VIXCLS','Australia interbank rate (not RBA cash rate)':'IR3TIB01AUM156N'}
-MARKETS={'S&P 500':'^GSPC','Nasdaq':'^IXIC','VIX':'^VIX','US 10Y yield (market proxy)':'^TNX','US 5Y yield (market proxy)':'^FVX','Gold futures USD/oz':'GC=F','Brent crude futures':'BZ=F','AUD/USD':'AUDUSD=X','USD index futures':'DX=F'}
+SERIES={'US 10Y yield (market proxy)':'DGS10','US 5Y yield (market proxy)':'DGS5','Gold futures USD/oz':'GOLDAMGBD228NLBM','AUD/USD':'DEXUSAL','USD index futures':'DTWEXBGS','US real 10Y yield':'DFII10','High yield spread':'BAMLH0A0HYM2','Investment grade spread':'BAMLC0A0CM','US unemployment':'UNRATE','Consumer sentiment':'UMCSENT','All loan delinquencies':'DRALACBS','Credit card delinquencies':'DRCCLACBS','Brent crude futures':'DCOILBRENTEU','S&P 500':'SP500','Nasdaq':'NASDAQCOM','VIX':'VIXCLS','Australia interbank rate (not RBA cash rate)':'IR3TIB01AUM156N','High yield corporate bond ETF (HYG)':'HYG','Investment grade corporate bond ETF (LQD)':'LQD'}
+MARKETS={'S&P 500':'^GSPC','Nasdaq':'^IXIC','VIX':'^VIX','US 10Y yield (market proxy)':'^TNX','US 5Y yield (market proxy)':'^FVX','Gold futures USD/oz':'GC=F','Brent crude futures':'BZ=F','AUD/USD':'AUDUSD=X','USD index futures':'DX=F','High yield corporate bond ETF (HYG)':'HYG','Investment grade corporate bond ETF (LQD)':'LQD'}
 STOOQ={'S&P 500':'^spx','Nasdaq':'^ndq','Gold futures USD/oz':'gc.f','Brent crude futures':'brn.f','AUD/USD':'audusd'}
 def trends(obs,name):
  obs=sorted(obs)
@@ -47,6 +47,21 @@ def stooq(item):
   date,value=obs[-1]
   return {'name':name,'date':date,'value':round(value,4),'previous':obs[-2][1] if len(obs)>1 else value,'status':'ok','source':url,'unit':'market price','trends':trends(obs,name)}
  except Exception as e:return {'name':name,'status':'unavailable','error':str(e)[:150],'source':url}
+def bls_unemployment():
+ url='https://api.bls.gov/publicAPI/v1/timeseries/data/LNS14000000'
+ try:
+  req=urllib.request.Request(url,headers={'User-Agent':'CambridgeMarketIntelligence/1.0','Accept':'application/json'})
+  with urllib.request.urlopen(req,timeout=16) as f:doc=json.load(f)
+  if doc.get('status')!='REQUEST_SUCCEEDED':raise ValueError(str(doc.get('message')))
+  points=[]
+  for row in doc['Results']['series'][0]['data']:
+   if row.get('period','').startswith('M') and row['period']!='M13':
+    points.append((row['year']+'-'+row['period'][1:]+'-01',float(row['value'])))
+  points.sort()
+  if not points:raise ValueError('No monthly observations')
+  date,value=points[-1]
+  return {'name':'US unemployment','date':date,'value':value,'previous':points[-2][1] if len(points)>1 else value,'status':'ok','source':url,'unit':'%','trends':trends(points,'US unemployment')}
+ except Exception as e:return {'name':'US unemployment','status':'unavailable','error':'BLS: '+str(e)[:130],'source':url}
 def fetch(item):
  name,code=item
  if name in MARKETS:
