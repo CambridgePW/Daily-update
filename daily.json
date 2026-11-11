@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-11T06:09:43.007480+00:00",
+  "generated_at_utc": "2026-11-11T06:13:16.802961+00:00",
   "regime": "DATA INSUFFICIENT",
   "score": null,
   "coverage": 0,
@@ -9,92 +9,92 @@
     {
       "name": "US 10Y yield",
       "status": "unavailable",
-      "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2025-01-01&coed=2026-11-11"
+      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
+      "source": "https://api.db.nomics.world/v22/series/FRED/DGS10?observations=1"
     },
     {
       "name": "US 2Y yield",
       "status": "unavailable",
-      "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2&cosd=2025-01-01&coed=2026-11-11"
+      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
+      "source": "https://api.db.nomics.world/v22/series/FRED/DGS2?observations=1"
     },
     {
       "name": "US real 10Y yield",
       "status": "unavailable",
-      "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10&cosd=2025-01-01&coed=2026-11-11"
+      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
+      "source": "https://api.db.nomics.world/v22/series/FRED/DFII10?observations=1"
     },
     {
       "name": "High yield spread",
       "status": "unavailable",
-      "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLH0A0HYM2&cosd=2025-01-01&coed=2026-11-11"
+      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
+      "source": "https://api.db.nomics.world/v22/series/FRED/BAMLH0A0HYM2?observations=1"
     },
     {
       "name": "Investment grade spread",
       "status": "unavailable",
-      "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLC0A0CM&cosd=2025-01-01&coed=2026-11-11"
+      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
+      "source": "https://api.db.nomics.world/v22/series/FRED/BAMLC0A0CM?observations=1"
     },
     {
       "name": "US unemployment",
       "status": "unavailable",
-      "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE&cosd=2025-01-01&coed=2026-11-11"
+      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
+      "source": "https://api.db.nomics.world/v22/series/FRED/UNRATE?observations=1"
     },
     {
       "name": "Consumer sentiment",
       "status": "unavailable",
-      "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UMCSENT&cosd=2025-01-01&coed=2026-11-11"
+      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
+      "source": "https://api.db.nomics.world/v22/series/FRED/UMCSENT?observations=1"
     },
     {
       "name": "All loan delinquencies",
       "status": "unavailable",
-      "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DRALACBS&cosd=2025-01-01&coed=2026-11-11"
+      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
+      "source": "https://api.db.nomics.world/v22/series/FRED/DRALACBS?observations=1"
     },
     {
       "name": "Credit card delinquencies",
       "status": "unavailable",
-      "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DRCCLACBS&cosd=2025-01-01&coed=2026-11-11"
+      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
+      "source": "https://api.db.nomics.world/v22/series/FRED/DRCCLACBS?observations=1"
     },
     {
       "name": "Brent oil",
       "status": "unavailable",
-      "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILBRENTEU&cosd=2025-01-01&coed=2026-11-11"
+      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
+      "source": "https://api.db.nomics.world/v22/series/FRED/DCOILBRENTEU?observations=1"
     },
     {
       "name": "S&P 500",
       "status": "unavailable",
-      "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=SP500&cosd=2025-01-01&coed=2026-11-11"
+      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
+      "source": "https://api.db.nomics.world/v22/series/FRED/SP500?observations=1"
     },
     {
       "name": "Nasdaq",
       "status": "unavailable",
-      "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NASDAQCOM&cosd=2025-01-01&coed=2026-11-11"
+      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
+      "source": "https://api.db.nomics.world/v22/series/FRED/NASDAQCOM?observations=1"
     },
     {
       "name": "VIX",
       "status": "unavailable",
-      "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS&cosd=2025-01-01&coed=2026-11-11"
+      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
+      "source": "https://api.db.nomics.world/v22/series/FRED/VIXCLS?observations=1"
     },
     {
       "name": "Broad USD (not DXY)",
       "status": "unavailable",
-      "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS&cosd=2025-01-01&coed=2026-11-11"
+      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
+      "source": "https://api.db.nomics.world/v22/series/FRED/DTWEXBGS?observations=1"
     },
     {
       "name": "Australia interbank rate (not RBA cash rate)",
       "status": "unavailable",
-      "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=IR3TIB01AUM156N&cosd=2025-01-01&coed=2026-11-11"
+      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
+      "source": "https://api.db.nomics.world/v22/series/FRED/IR3TIB01AUM156N?observations=1"
     }
   ],
   "news": [
