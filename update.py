@@ -29,10 +29,11 @@ def yahoo(item):
   result=doc['chart']['result'][0]
   timestamps=result.get('timestamp',[])
   closes=result['indicators']['quote'][0]['close']
+  volumes=result['indicators']['quote'][0].get('volume',[])
   observations=[(datetime.datetime.fromtimestamp(t,datetime.timezone.utc).date().isoformat(),float(v)) for t,v in zip(timestamps,closes) if v is not None]
   if not observations:raise ValueError('No close observations')
   date,value=observations[-1]
-  return {'name':name,'date':date,'value':round(value,4),'previous':observations[-2][1] if len(observations)>1 else value,'status':'ok','source':url,'unit':'index/market price','trends':trends(observations,name)}
+  return {'name':name,'date':date,'value':round(value,4),'previous':observations[-2][1] if len(observations)>1 else value,'status':'ok','source':url,'unit':'index/market price','trends':trends(observations,name),'volume_signal':volume_signal}
  except Exception as e:
   return {'name':name,'status':'unavailable','error':str(e)[:150],'source':url}
 def stooq(item):
