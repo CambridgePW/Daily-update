@@ -62,7 +62,8 @@ def bls_unemployment():
   points=[]
   for row in doc['Results']['series'][0]['data']:
    if row.get('period','').startswith('M') and row['period']!='M13':
-    points.append((row['year']+'-'+row['period'][1:]+'-01',float(row['value'])))
+    try:points.append((row['year']+'-'+row['period'][1:]+'-01',float(row['value'])))
+    except (ValueError,TypeError):continue
   points.sort()
   if not points:raise ValueError('No monthly observations')
   date,value=points[-1]
