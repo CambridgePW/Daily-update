@@ -1,1 +1,222 @@
-{"generated_at_utc":null,"regime":"NOT YET RUN","score":null,"coverage":0,"positioning":{},"readings":[],"news":[]}
+{
+  "generated_at_utc": "2026-11-11T06:07:05.899401+00:00",
+  "regime": "DATA INSUFFICIENT",
+  "score": null,
+  "coverage": 0,
+  "positioning": {},
+  "indicators": [],
+  "readings": [
+    {
+      "name": "US 10Y yield",
+      "status": "unavailable",
+      "error": "The read operation timed out",
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10"
+    },
+    {
+      "name": "US 2Y yield",
+      "status": "unavailable",
+      "error": "The read operation timed out",
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2"
+    },
+    {
+      "name": "US real 10Y yield",
+      "status": "unavailable",
+      "error": "The read operation timed out",
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10"
+    },
+    {
+      "name": "High yield spread",
+      "status": "unavailable",
+      "error": "The read operation timed out",
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLH0A0HYM2"
+    },
+    {
+      "name": "Investment grade spread",
+      "status": "unavailable",
+      "error": "The read operation timed out",
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLC0A0CM"
+    },
+    {
+      "name": "US unemployment",
+      "status": "unavailable",
+      "error": "The read operation timed out",
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE"
+    },
+    {
+      "name": "Consumer sentiment",
+      "status": "unavailable",
+      "error": "The read operation timed out",
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UMCSENT"
+    },
+    {
+      "name": "All loan delinquencies",
+      "status": "unavailable",
+      "error": "The read operation timed out",
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DRALACBS"
+    },
+    {
+      "name": "Credit card delinquencies",
+      "status": "unavailable",
+      "error": "The read operation timed out",
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DRCCLACBS"
+    },
+    {
+      "name": "Brent oil",
+      "status": "unavailable",
+      "error": "The read operation timed out",
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILBRENTEU"
+    },
+    {
+      "name": "S&P 500",
+      "status": "unavailable",
+      "error": "The read operation timed out",
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=SP500"
+    },
+    {
+      "name": "Nasdaq",
+      "status": "unavailable",
+      "error": "The read operation timed out",
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NASDAQCOM"
+    },
+    {
+      "name": "VIX",
+      "status": "unavailable",
+      "error": "The read operation timed out",
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS"
+    },
+    {
+      "name": "Broad USD (not DXY)",
+      "status": "unavailable",
+      "error": "The read operation timed out",
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS"
+    },
+    {
+      "name": "Australia interbank rate (not RBA cash rate)",
+      "status": "unavailable",
+      "error": "The read operation timed out",
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=IR3TIB01AUM156N"
+    }
+  ],
+  "news": [
+    {
+      "category": "Central banks",
+      "title": "Statement on Monetary Policy \u2013 August 2026 1. Financial Conditions - www.rba.gov.au",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5UR1RaNmtCRkNYM1BsSWtDTHVJOHNYYVFLSjdtZlAxM21tVWFBZE90azVLVUNMUE5FanR6bG5DNUJQX0tUTDRMMTMwMWhobjVIVWFNSElHSWsxZlFuQTk0NUZnM0l4RUFmZUZBdjNaNWpVMG5ZcGx6WW9xS1IxZVk?oc=5",
+      "published": "Tue, 11 Aug 2026 07:01:14 GMT"
+    },
+    {
+      "category": "Central banks",
+      "title": "Statement on Monetary Policy \u2013 May 2026 1. Financial Conditions - www.rba.gov.au",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5DaFBudFdtLXVqNHJMTm5TcFZad2RqZ2lrRzA2V3hobGp0ZW56QVdMeF8wamZaOU9TWXhCeU1sM3lSdXNBZ0g2ZTR4YVFtYUEzT1JDSWl4LURXRGVLLUExWkpQOUFtUFcxcHRtTzIza2ZqNk84T1dxM05haUM5WjQ?oc=5",
+      "published": "Tue, 05 May 2026 07:48:44 GMT"
+    },
+    {
+      "category": "Central banks",
+      "title": "Statement on Monetary Policy \u2013 February 2026 1. Financial Conditions - www.rba.gov.au",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1qdEl3d0h1MjY2d1VVdTJkTHpPNkhGamVjM0Y0RUlBc29jNDBhbkRtNk5SLVJ6bnY1UHlZZTVlWkptNHBVOExQTWY2WERLeXVfdWdUa3MxVDNyUnR3TjNhNTF5ZVRYa0d1aUVObGd1Uk4zM3BGZ1UtSmJwelNhOXc?oc=5",
+      "published": "Tue, 03 Feb 2026 12:11:08 GMT"
+    },
+    {
+      "category": "Central banks",
+      "title": "The RBA now has the data it needs to lift interest rates this month - AFR",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNVXJiN1gtSV9jTFhBUTBoRHRtLW5LdXd3Tk5UUHRUdkdZOVE0aXZGU2RFWkVSWEVpMktvZXN0d3ZhNjltZ0Iyb3p0WEhYQWNrY1FvRzdhbGw3REtubF9TZmlEbGo2S1E2eEpXTUhZZFhBRWYyRWlmNlZkcy1zYks4VVBwRmVhWWtKdC1iZEtWOUJoUXVyUjFmUXdkeWJGMGNPT2dxX1NPM0RoNUVk?oc=5",
+      "published": "Wed, 02 Sep 2026 07:00:00 GMT"
+    },
+    {
+      "category": "Central banks",
+      "title": "9 December 2025 | Minutes of the Monetary Policy Board Meeting - Reserve Bank of Australia",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNeWlqTUhwd1NjVjZFNm5yM2lJMVJ6SllaM2tKZTU4WkpWSE9QNk9MaFNvemNEM3E0YTV2OTRRVHFjdEpTQXdRdHFMaFcteGlheGgyVEpQYlJZOWd2TGNMMkhDX2RxWHpYV09RZEhkY3hhQnJXWFBSckNGRXpiVy1sLTJyOA?oc=5",
+      "published": "Tue, 09 Dec 2025 08:00:00 GMT"
+    },
+    {
+      "category": "Credit",
+      "title": "Banks Must Act Now as Consumer Credit Stress Begins to Spread - The Financial Brand",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPNXFNakh3Sno5LVRBYlhJMmdhX01CZ1I2Y0ozRTdKSE1CcHMtamVwNWNiczhYaEF2OVJBRDYtWlhxQTV4UjRzWlJnQUUweExQcHl3TUtQTkxRRFRBVkxVSlNncVozLS1valdISEpsYjBZa013MGp3WnhvLTRkM2ZfMklhaEFYaGMxSTlLLTl0WXBsRldWeml5bnhPOGI2dXBsXzhQaENZNFp1aEppMkdlVS11cFhucnctdWFVdGo4T19MY0wxSUEzcw?oc=5",
+      "published": "Tue, 07 Apr 2026 07:00:00 GMT"
+    },
+    {
+      "category": "Credit",
+      "title": "Rising Private Credit Defaults Are Testing Banks And Insurers - Forbes",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQUXk4cGgyRUJhaUtIbzRMS1pDaUhHN3pRWjJtcEp0UjYySzNza19yRmlhRnUzay1XTEJ6UGNrVTYzN1cweXZWbFFkZkE3YTZTcnZZME16RjBON3VpejZWVDZXcVFRR29MRHY5dTFsR3hKUmlxNVJqUDhyUVRVeUphWHp3b29YZXM0bHNwQk5EZkYxYWI3ZnFsdGd5TmREQzI5cW9KeVRsSGNacUFZalB6dlVaVFF2OF85Uk1zS3ZTbkRxSS1zSUE?oc=5",
+      "published": "Sun, 24 May 2026 07:00:00 GMT"
+    },
+    {
+      "category": "Credit",
+      "title": "Argentina credit stress deepens as inflation and utility costs hit households - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPNnN6Sk90SWV4aGh5cVJPLVFSN2d2aVBVZnVrS3JTU002OG9paFgyNWZjU2dhQ0pPM2hjZi1vX2NpSHlKRkFCTHNwRldGWlpLbTRMZVFmd2hUNTg3cklFVjZfRUdDQXpYSlhrY19fSnRMeElvVTNDeFV1N1Q4c0lVNG5fYjNrQWNXUlRiMGg2Yjc1Q3lLNVBYSURLV0FTYXladDNyeXFFX1ZhU05FcG1aLW5TS0pzNDRQYTdnbEhR?oc=5",
+      "published": "Mon, 13 Apr 2026 07:00:00 GMT"
+    },
+    {
+      "category": "Credit",
+      "title": "Brazil credit delinquency hits record as debt stress deepens - Valor International",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQMHFiaHlMNTgyR0xpTE5hNFI0RS1vSk9SQnJkSkw0NnNaVXI0VEd0NV9OSVFsR1lhUWw1Y0Q2TTFkMDdaMWpBZkYxUTBLZ2JzSWZ4ZEZfRmZjd2pUbllZR3c2TTdqZUUyZ3NYS1B6UnU0TlNCZFVpQ1Q4QTIzeEZmZHNjS1FsT3hmY0dGaVZvdEVzdWRZVVQ2VWJodldIRF9BN29Bb1M3bjhweWwxc3g0bThabm9BVlVRRWNxZk1qTG1tOEdBWFHSAdQBQVVfeXFMTUlDRzdJbE5hTldiZXhNa0JPRjRhbVYxeWhwcExPREd0dUtURDlQckd0clIwQU9lSVpXaG8xSzg2UVI5YldmVmJfbTVIOU9VYlpmdEVJcHd3RENvbDdtcjlnT2hmaDVmd19wN3QxSklqZHd4cmxNcDhTb1otdzRBbE82X2pMdUp2QWVoRUJVQ005QU1td3lmdno4dnE0cm1KdHRvRkEzMm9ubGgxVUZFay1BU28xemltRXZQSjh3b0IwYXBzSlNObGc3V2xTVUllQ3NSQkk?oc=5",
+      "published": "Thu, 02 Jul 2026 07:00:00 GMT"
+    },
+    {
+      "category": "Credit",
+      "title": "Financial stability indicators - Bank of Canada",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPX29GU1VSMDFzdUtQV1A3bk5ubnZEb3RYRVREb2NuZzR2NmQ2WDlYRW1PTm4wcmpMZUQxTk1iSDlRam9zdWlvdENYVHRlc1NYU1lsenB2Vlo3RWJOVHdPOXNJMmNKeWxXdXJXWmVnRkM3NTl5WlVYVzQwMmJSQmF4TWtR?oc=5",
+      "published": "Fri, 19 Dec 2025 15:01:30 GMT"
+    },
+    {
+      "category": "Geopolitics",
+      "title": "WTO chief sees lasting impact on trade from Middle East war and geopolitics - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPdmFldXBLU0N2MEtrUHZGUXFMNEVGR0lsYzJwZDJwdVV0T0ZvN0FENHlMOXdmekY4elZOb1BsV04ydDZMazlQRlREcmowSUFKVkRHYXpXUlRnN24zcFpXUlRYWnNMNE5pN1dDVFZZb21WMzl1SnJZam1GOGFLemtxVjVMUjE2eTFrTEpZNGwtam5yanJjeWFyRkpIQTdtU21sRDZ2MVNObEZJNW9T?oc=5",
+      "published": "Thu, 15 Oct 2026 07:00:00 GMT"
+    },
+    {
+      "category": "Geopolitics",
+      "title": "Geopolitical and tariff risk back with a bang for markets - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQbFpkLUJzVXNxZ0lyUXFjd3loSHdFbzlERzZrOGJoSHd0cV9sV012NjBhaHBPbUppZXhvcHc5RG42SzNZTDhZaTJqV1QwUG1ZUmVlYUdlMEJRblJ5NzZaS2E2bDlFU3FHTWpLOURiQkRKbEFFRzMxMlUtSU90di1seXowN3dGTnI4dUctNjU2d2dmdkxrdUhV?oc=5",
+      "published": "Wed, 21 Jan 2026 08:00:00 GMT"
+    },
+    {
+      "category": "Geopolitics",
+      "title": "Gold climbs as tariff and geopolitical risks spur safe\u2011haven demand - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOZHljRXNOTTBKTGZyWVQxRC1uNkRzbXQxVy1wVEphd0VjZkZQXzd1NVB3OFdmN1ZsZHluVVJQd0U3OG45UjQ5MjNJSHYwcUdubU5vTGRsYl8xNzR0dDZNLXd2UzJEMy1FZWQwYl91NXQ0Rjl2Z0xKVHRlaTdQeW80eGZGc1hrdG9nSlhoSzZUT1RMVzJMbi02UjM4N05GNW1CNmdKSFZ3?oc=5",
+      "published": "Wed, 25 Feb 2026 08:00:00 GMT"
+    },
+    {
+      "category": "Geopolitics",
+      "title": "How US-Iran tensions could shape world markets - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQWFBBamo3NzdGOFFxZ3h5Z3NpcEtHY0lGS1UyUFpCNThFLUxsUi02TzBMVllKRmVKa3JwcTEtVnFOTVRUWDU4dWpzN0pZLTN6MzJMVWl4WmpEbVlTQWxWbWFSNkRkSkNtT3hTM0RLZzZ4T3ZuVG9vSmkzOFZjcGtjWmhwN1VINmI2QkdpRUg0eHI2aHA0SjFUdVpVTkJUSTQ?oc=5",
+      "published": "Sat, 28 Feb 2026 08:00:00 GMT"
+    },
+    {
+      "category": "Geopolitics",
+      "title": "Geopolitical analysis on the rise for investors as risks multiply - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQMk1qdUh0QlJYM1ZMUVJzRG5ueVNlZnRGWHZuVjdhZV9rQ05JT3BsQ0Zxa1VXMVYybDZkQnp1Yms0R3ZxZFhBT0lLLWhtU0RRX2ZIaGZ0blFXT3RNaUJMMG5XZFhsd0F1UkdKY1lSRS1zbGVSUG50Q0c0VWFvQUloSnd4ek0zdWk5azZLLXlZQ2ltaDIxTEJDMlJXMmpsQndyaEFwaA?oc=5",
+      "published": "Fri, 23 Jan 2026 08:00:00 GMT"
+    },
+    {
+      "category": "Gold",
+      "title": "China buys gold for two straight years as central bank demand remains a key pillar of support - Kitco",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNcnMwUHdaakNobncwZG8wWE41M290UThlMmQxQV84UkRuNThLMDdwcU9JWWVKTVUtN0hiWS1nNDNqYUVocXdYZVdjSlpUN0FjamdpRGtFSmNIbk9ITGl3Q0Q4LTJ0WC1BTW03cDBIaTY5MldITlJDVVlsdVZQZkpqelJfSnpSeF9MWGRnOTZXWndsdmFIVjc5bEVNZ28zWThaaXI4VVVuVWxGbmtVOUZfZ24tdmlZX1RUbTA0?oc=5",
+      "published": "Tue, 10 Nov 2026 16:50:34 GMT"
+    },
+    {
+      "category": "Gold",
+      "title": "Gold\u2019s Pullback Puts Producer Costs & Cash Flow in Focus - Crux Investor",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOSzE3b0pVZ0VCS0hHZ0w3ZWNZLTVVTHZBdS1hX0liMGV3UEZrZW9GTFB3OFZ5SVR3RVYyN0kzWXE3WlRCV3JfSEJ6enJiSTF1aEJqX3lES1NRTDF0Y2tBQlNQN1NSM1p4MnBNMGM1V2huTGh3elBzZ2M3c1A3RGdtRC1jam9lbjVaX0NteWk4V1p4Zw?oc=5",
+      "published": "Mon, 09 Nov 2026 08:00:00 GMT"
+    },
+    {
+      "category": "Gold",
+      "title": "China Extends Gold-Buying Streak to Two Years as Prices Drop - Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPQVdJdkgwZnBIUEhYS0ZGcUpvYVFmWW5tVlZqVFlRSkJuOWUyU3Z2Zi1sZ3F1S3BuMmFrSUtuSDhDbWkzWS1lM2Q0OE14WTVkaEk0SnZMOExTRDFUV3h1dUNvejhVTkRmdjVLb1VKUU40ZlliTTVXenVaN3M5ZEpoZVFqMW9WemRDWGV2YmNCeGpVci0zU2p4a0xhRUhYaDB4ZC13bHNISUdOc3J2RUNKUg?oc=5",
+      "published": "Sat, 07 Nov 2026 03:32:00 GMT"
+    },
+    {
+      "category": "Gold",
+      "title": "China CITIC Bank to launch pending-order feature for gold accumulation plan next Monday as Chinese banks jostle amid sharp gold price swings - BigGo Finance",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFB5bnBnWkJ4cHFPVFVYWHI5WUhOYjdYYVMxUGwycFJBbFNERlljZkpZVzlFNkNfcmpFWkU1WHRDa3lBeU1FSDFkel9jaWlrTlZYcEVCNldlZEZxRFc1R2hFNXg5dHZNMFMwQ3dLUmZ3ZzVxQlk5bXc?oc=5",
+      "published": "Wed, 11 Nov 2026 05:35:00 GMT"
+    },
+    {
+      "category": "Gold",
+      "title": "Central Bank Gold Statistics: Central banks make positive headlines on gold | Post by Marissa Salim | Insights - World Gold Council",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPcGtfOTVtaHJlbUFvZlRKNGJfdkpiN2VaYWd6Yzk4akxnZVg2c0tMdlRDVlR6bkFoMVlaMjNSbzZ3X3h6ZG9JSXMzTkVqdFJ1UTJiTXlfNWF2SXZLZ09ZX1dVN3pvNUdrLXV4U1lnaTRUekFZTkx2SHlybDc3dXpoQ3hlUmRUM1lveVl0STE1bGE5c2lka1ZpaXItOC1ybFhzWGdQXzR5WEF2THBZVjBtOUxjUnhfM2d5a204?oc=5",
+      "published": "Thu, 03 Sep 2026 07:00:00 GMT"
+    }
+  ]
+}
