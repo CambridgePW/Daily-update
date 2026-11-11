@@ -6,9 +6,23 @@ NOW=datetime.datetime.now(datetime.timezone.utc)
 SERIES={'US 10Y yield (market proxy)':'DGS10','US 5Y yield (market proxy)':'DGS5','Gold futures USD/oz':'GOLDAMGBD228NLBM','AUD/USD':'DEXUSAL','USD index futures':'DTWEXBGS','US real 10Y yield':'DFII10','High yield spread':'BAMLH0A0HYM2','Investment grade spread':'BAMLC0A0CM','US unemployment':'UNRATE','Consumer sentiment':'UMCSENT','All loan delinquencies':'DRALACBS','Credit card delinquencies':'DRCCLACBS','Brent crude futures':'DCOILBRENTEU','S&P 500':'SP500','Nasdaq':'NASDAQCOM','VIX':'VIXCLS','Australia interbank rate (not RBA cash rate)':'IR3TIB01AUM156N'}
 MARKETS={'S&P 500':'^GSPC','Nasdaq':'^IXIC','VIX':'^VIX','US 10Y yield (market proxy)':'^TNX','US 5Y yield (market proxy)':'^FVX','Gold futures USD/oz':'GC=F','Brent crude futures':'BZ=F','AUD/USD':'AUDUSD=X','USD index futures':'DX=F'}
 STOOQ={'S&P 500':'^spx','Nasdaq':'^ndq','Gold futures USD/oz':'gc.f','Brent crude futures':'brn.f','AUD/USD':'audusd'}
+def trends(obs,name):
+ obs=sorted(obs)
+ latest=obs[-1][0]
+ out={}
+ for label,days in [('3m',91),('6m',182),('12m',365)]:
+  target=datetime.date.fromisoformat(latest)-datetime.timedelta(days=days)
+  choices=[(abs((datetime.date.fromisoformat(d)-target).days),d,v) for d,v in obs if abs((datetime.date.fromisoformat(d)-target).days)<=15]
+  if not choices:continue
+  _,d,base=min(choices)
+  current=obs[-1][1]
+  delta=current-base
+  is_yield='yield' in name.lower() or 'spread' in name.lower()
+  out[label]={'value':round(delta*100 if is_yield else delta/base*100,2) if base else None,'unit':'bp' if is_yield else '%','base_date':d}
+ return out
 def yahoo(item):
  name,symbol=item
- url='https://query1.finance.yahoo.com/v8/finance/chart/'+quote(symbol,safe='')+'?range=10d&interval=1d'
+ url='https://query1.finance.yahoo.com/v8/finance/chart/'+quote(symbol,safe='')+'?range=1y&interval=1d'
  try:
   req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 (compatible; MarketIntelligence/1.0)','Accept':'application/json'})
   with urllib.request.urlopen(req,timeout=14) as f: doc=json.load(f)
@@ -18,19 +32,19 @@ def yahoo(item):
   observations=[(datetime.datetime.fromtimestamp(t,datetime.timezone.utc).date().isoformat(),float(v)) for t,v in zip(timestamps,closes) if v is not None]
   if not observations:raise ValueError('No close observations')
   date,value=observations[-1]
-  return {'name':name,'date':date,'value':round(value,4),'previous':observations[-2][1] if len(observations)>1 else value,'status':'ok','source':url,'unit':'index/market price'}
+  return {'name':name,'date':date,'value':round(value,4),'previous':observations[-2][1] if len(observations)>1 else value,'status':'ok','source':url,'unit':'index/market price','trends':trends(observations,name)}
  except Exception as e:
   return {'name':name,'status':'unavailable','error':str(e)[:150],'source':url}
 def stooq(item):
  name,symbol=item
- url='https://stooq.com/q/d/l/?s='+quote(symbol)+'&i=d&d1=20261001'
+ url='https://stooq.com/q/d/l/?s='+quote(symbol)+'&i=d&d1=20251001'
  try:
   req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'})
   with urllib.request.urlopen(req,timeout=14) as f: rows=list(csv.DictReader(io.StringIO(f.read().decode('utf-8-sig'))))
   obs=[(x['Date'],float(x['Close'])) for x in rows if x.get('Close') not in ('',None,'N/D')]
   if not obs:raise ValueError('No prices')
   date,value=obs[-1]
-  return {'name':name,'date':date,'value':round(value,4),'previous':obs[-2][1] if len(obs)>1 else value,'status':'ok','source':url,'unit':'market price'}
+  return {'name':name,'date':date,'value':round(value,4),'previous':obs[-2][1] if len(obs)>1 else value,'status':'ok','source':url,'unit':'market price','trends':trends(obs,name)}
  except Exception as e:return {'name':name,'status':'unavailable','error':str(e)[:150],'source':url}
 def fetch(item):
  name,code=item
