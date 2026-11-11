@@ -70,6 +70,7 @@ def bls_unemployment():
  except Exception as e:return {'name':'US unemployment','status':'unavailable','error':'BLS: '+str(e)[:130],'source':url}
 def fetch(item):
  name,code=item
+ if name=='US unemployment':return bls_unemployment()
  if name in MARKETS:
   primary=yahoo((name,MARKETS[name]))
   if primary['status']=='ok':return primary
