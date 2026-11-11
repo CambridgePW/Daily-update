@@ -17,7 +17,7 @@ def trends(obs,name):
   _,d,base=min(choices)
   current=obs[-1][1]
   delta=current-base
-  is_yield='yield' in name.lower() or 'spread' in name.lower()
+  is_yield=('yield' in name.lower() or 'spread' in name.lower()) and 'ETF' not in name and 'proxy' not in name.lower()
   out[label]={'value':round(delta*100 if is_yield else delta/base*100,2) if base else None,'unit':'bp' if is_yield else '%','base_date':d}
  return out
 def yahoo(item):
