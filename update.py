@@ -5,10 +5,10 @@ from urllib.parse import quote
 NOW=datetime.datetime.now(datetime.timezone.utc)
 SERIES={'US 10Y yield':'DGS10','US 2Y yield':'DGS2','US real 10Y yield':'DFII10','High yield spread':'BAMLH0A0HYM2','Investment grade spread':'BAMLC0A0CM','US unemployment':'UNRATE','Consumer sentiment':'UMCSENT','All loan delinquencies':'DRALACBS','Credit card delinquencies':'DRCCLACBS','Brent oil':'DCOILBRENTEU','S&P 500':'SP500','Nasdaq':'NASDAQCOM','VIX':'VIXCLS','Broad USD (not DXY)':'DTWEXBGS','Australia interbank rate (not RBA cash rate)':'IR3TIB01AUM156N'}
 def fetch(item):
- name,code=item;url='https://fred.stlouisfed.org/graph/fredgraph.csv?id='+quote(code)
+ name,code=item;url='https://fred.stlouisfed.org/graph/fredgraph.csv?id='+quote(code)+'&cosd=2025-01-01&coed='+NOW.date().isoformat()
  try:
   req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'})
-  with urllib.request.urlopen(req,timeout=20) as f: rows=list(csv.reader(io.StringIO(f.read().decode('utf-8-sig'))))
+  with urllib.request.urlopen(req,timeout=35) as f: rows=list(csv.reader(io.StringIO(f.read().decode('utf-8-sig'))))
   observations=[]
   for row in rows[1:]:
    try:observations.append((row[0],float(row[1])))
