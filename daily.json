@@ -1,22 +1,17 @@
 {
-  "generated_at_utc": "2026-11-11T06:23:47.138926+00:00",
+  "generated_at_utc": "2026-11-11T06:33:27.425949+00:00",
   "regime": "DATA INSUFFICIENT",
-  "score": 0.0,
-  "coverage": 1,
+  "score": null,
+  "coverage": 0,
   "positioning": {},
-  "indicators": [
-    {
-      "name": "Volatility",
-      "score": 0
-    }
-  ],
+  "indicators": [],
   "readings": [
     {
       "name": "US 10Y yield (market proxy)",
       "date": "2026-11-10",
       "value": 4.983,
       "previous": 4.863999843597412,
-      "status": "ok",
+      "status": "last_known",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
@@ -35,14 +30,15 @@
           "unit": "bp",
           "base_date": "2025-11-10"
         }
-      }
+      },
+      "error": "name 'volume_signal' is not defined"
     },
     {
       "name": "US 5Y yield (market proxy)",
       "date": "2026-11-10",
       "value": 4.807,
       "previous": 4.658999919891357,
-      "status": "ok",
+      "status": "last_known",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EFVX?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
@@ -61,14 +57,15 @@
           "unit": "bp",
           "base_date": "2025-11-10"
         }
-      }
+      },
+      "error": "name 'volume_signal' is not defined"
     },
     {
       "name": "Gold futures USD/oz",
       "date": "2026-11-11",
       "value": 4065.0,
       "previous": 4030.199951171875,
-      "status": "ok",
+      "status": "last_known",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
@@ -87,14 +84,15 @@
           "unit": "%",
           "base_date": "2025-11-11"
         }
-      }
+      },
+      "error": "name 'volume_signal' is not defined; Stooq: No prices"
     },
     {
       "name": "AUD/USD",
       "date": "2026-11-11",
       "value": 0.6878,
       "previous": 0.6921229958534241,
-      "status": "ok",
+      "status": "last_known",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/AUDUSD%3DX?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
@@ -113,7 +111,8 @@
           "unit": "%",
           "base_date": "2025-11-11"
         }
-      }
+      },
+      "error": "name 'volume_signal' is not defined; Stooq: No prices"
     },
     {
       "name": "USD index futures",
@@ -168,7 +167,7 @@
       "date": "2026-11-11",
       "value": 92.43,
       "previous": 91.48999786376953,
-      "status": "ok",
+      "status": "last_known",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/BZ%3DF?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
@@ -187,14 +186,15 @@
           "unit": "%",
           "base_date": "2025-11-11"
         }
-      }
+      },
+      "error": "name 'volume_signal' is not defined; Stooq: No prices"
     },
     {
       "name": "S&P 500",
       "date": "2026-11-10",
       "value": 7520.9302,
       "previous": 7549.93994140625,
-      "status": "ok",
+      "status": "last_known",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
@@ -213,14 +213,15 @@
           "unit": "%",
           "base_date": "2025-11-11"
         }
-      }
+      },
+      "error": "name 'volume_signal' is not defined; Stooq: No prices"
     },
     {
       "name": "Nasdaq",
       "date": "2026-11-10",
       "value": 25065.8691,
       "previous": 25253.140625,
-      "status": "ok",
+      "status": "last_known",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
@@ -239,14 +240,15 @@
           "unit": "%",
           "base_date": "2025-11-11"
         }
-      }
+      },
+      "error": "name 'volume_signal' is not defined; Stooq: No prices"
     },
     {
       "name": "VIX",
       "date": "2026-11-10",
       "value": 19.46,
       "previous": 19.920000076293945,
-      "status": "ok",
+      "status": "last_known",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
@@ -265,13 +267,26 @@
           "unit": "%",
           "base_date": "2025-11-10"
         }
-      }
+      },
+      "error": "name 'volume_signal' is not defined"
     },
     {
       "name": "Australia interbank rate (not RBA cash rate)",
       "status": "unavailable",
       "error": "The read operation timed out",
       "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=IR3TIB01AUM156N&cosd=2026-01-01"
+    },
+    {
+      "name": "High yield corporate bond ETF (HYG)",
+      "status": "unavailable",
+      "error": "name 'volume_signal' is not defined",
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/HYG?range=1y&interval=1d"
+    },
+    {
+      "name": "Investment grade corporate bond ETF (LQD)",
+      "status": "unavailable",
+      "error": "name 'volume_signal' is not defined",
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/LQD?range=1y&interval=1d"
     }
   ],
   "news": [
