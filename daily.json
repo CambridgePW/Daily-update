@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-11T07:06:00.822306+00:00",
+  "generated_at_utc": "2026-11-11T07:08:38.996904+00:00",
   "regime": "DATA INSUFFICIENT",
   "score": 0.5,
   "coverage": 2,
@@ -72,24 +72,24 @@
     {
       "name": "Gold futures USD/oz",
       "date": "2026-11-11",
-      "value": 4067.8,
+      "value": 4070.0,
       "previous": 4030.199951171875,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": -8.95,
+          "value": -8.9,
           "unit": "%",
           "base_date": "2026-08-12"
         },
         "6m": {
-          "value": -13.57,
+          "value": -13.53,
           "unit": "%",
           "base_date": "2026-05-13"
         },
         "12m": {
-          "value": -1.18,
+          "value": -1.12,
           "unit": "%",
           "base_date": "2025-11-11"
         }
@@ -126,19 +126,19 @@
     {
       "name": "US Dollar Index (DXY)",
       "date": "2026-11-11",
-      "value": 102.336,
+      "value": 102.331,
       "previous": 102.2300033569336,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": 2.33,
+          "value": 2.32,
           "unit": "%",
           "base_date": "2026-08-12"
         },
         "6m": {
-          "value": 3.92,
+          "value": 3.91,
           "unit": "%",
           "base_date": "2026-05-13"
         },
@@ -172,18 +172,6 @@
       }
     },
     {
-      "name": "High yield spread",
-      "status": "unavailable",
-      "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLH0A0HYM2&cosd=2026-01-01"
-    },
-    {
-      "name": "Investment grade spread",
-      "status": "unavailable",
-      "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLC0A0CM&cosd=2026-01-01"
-    },
-    {
       "name": "US unemployment",
       "date": "2026-10-01",
       "value": 4.1,
@@ -205,44 +193,26 @@
       }
     },
     {
-      "name": "Consumer sentiment",
-      "status": "unavailable",
-      "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UMCSENT&cosd=2026-01-01"
-    },
-    {
-      "name": "All loan delinquencies",
-      "status": "unavailable",
-      "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DRALACBS&cosd=2026-01-01"
-    },
-    {
-      "name": "Credit card delinquencies",
-      "status": "unavailable",
-      "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DRCCLACBS&cosd=2026-01-01"
-    },
-    {
       "name": "Brent crude futures",
       "date": "2026-11-11",
-      "value": 92.25,
+      "value": 92.26,
       "previous": 91.48999786376953,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/BZ%3DF?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": 3.67,
+          "value": 3.69,
           "unit": "%",
           "base_date": "2026-08-12"
         },
         "6m": {
-          "value": -12.67,
+          "value": -12.66,
           "unit": "%",
           "base_date": "2026-05-13"
         },
         "12m": {
-          "value": 41.57,
+          "value": 41.59,
           "unit": "%",
           "base_date": "2025-11-11"
         }
@@ -337,12 +307,6 @@
         }
       },
       "volume_signal": null
-    },
-    {
-      "name": "Australia interbank rate (not RBA cash rate)",
-      "status": "unavailable",
-      "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=IR3TIB01AUM156N&cosd=2026-01-01"
     },
     {
       "name": "High yield corporate bond ETF (HYG)",
@@ -559,6 +523,87 @@
         }
       },
       "volume_signal": null
+    },
+    {
+      "name": "Credit risk appetite proxy (HYG vs LQD)",
+      "date": "2026-11-10",
+      "value": -231.01,
+      "status": "ok",
+      "unit": "3m relative return (pp)",
+      "trends": {
+        "3m": {
+          "value": -231.01,
+          "unit": "pp",
+          "base_date": "2026-08-11"
+        },
+        "6m": {
+          "value": -264.69,
+          "unit": "pp",
+          "base_date": "2026-05-12"
+        },
+        "12m": {
+          "value": -344.41,
+          "unit": "pp",
+          "base_date": "2025-11-11"
+        }
+      },
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/HYG?range=1y&interval=1d",
+      "note": "Relative ETF returns; not an option-adjusted credit spread. Interest-rate sensitivity also affects prices.",
+      "proxy": true
+    },
+    {
+      "name": "Consumer demand proxy (XLY vs XLP)",
+      "date": "2026-11-10",
+      "value": -5.97,
+      "status": "ok",
+      "unit": "3m relative return (pp)",
+      "trends": {
+        "3m": {
+          "value": -5.97,
+          "unit": "pp",
+          "base_date": "2026-08-11"
+        },
+        "6m": {
+          "value": -5.47,
+          "unit": "pp",
+          "base_date": "2026-05-12"
+        },
+        "12m": {
+          "value": -16.5,
+          "unit": "pp",
+          "base_date": "2025-11-11"
+        }
+      },
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/XLY?range=1y&interval=1d",
+      "note": "Relative stock-sector performance; not a consumer-confidence survey.",
+      "proxy": true
+    },
+    {
+      "name": "Market breadth proxy (RSP vs SPY)",
+      "date": "2026-11-10",
+      "value": 2.77,
+      "status": "ok",
+      "unit": "3m relative return (pp)",
+      "trends": {
+        "3m": {
+          "value": 2.77,
+          "unit": "pp",
+          "base_date": "2026-08-11"
+        },
+        "6m": {
+          "value": 6.79,
+          "unit": "pp",
+          "base_date": "2026-05-12"
+        },
+        "12m": {
+          "value": 6.62,
+          "unit": "pp",
+          "base_date": "2025-11-11"
+        }
+      },
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/RSP?range=1y&interval=1d",
+      "note": "Relative ETF returns; not an advance-decline breadth statistic.",
+      "proxy": true
     }
   ],
   "news": [
