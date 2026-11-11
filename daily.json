@@ -1,14 +1,9 @@
 {
-  "generated_at_utc": "2026-11-11T06:17:51.609901+00:00",
-  "regime": "MIXED / CAUTIOUS",
+  "generated_at_utc": "2026-11-11T06:21:45.898349+00:00",
+  "regime": "DATA INSUFFICIENT",
   "score": 0.0,
   "coverage": 1,
-  "positioning": {
-    "Equities": "HOLD / SELECTIVE",
-    "Government bonds": "HOLD / REVIEW YIELDS",
-    "Gold": "HOLD / REVIEW REAL YIELDS",
-    "Cash": "MAINTAIN BUFFER"
-  },
+  "positioning": {},
   "indicators": [
     {
       "name": "Volatility",
@@ -37,7 +32,7 @@
     {
       "name": "Gold futures USD/oz",
       "date": "2026-11-11",
-      "value": 4064.6001,
+      "value": 4065.2,
       "previous": 4030.199951171875,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?range=10d&interval=1d",
@@ -46,7 +41,7 @@
     {
       "name": "AUD/USD",
       "date": "2026-11-11",
-      "value": 0.6877,
+      "value": 0.6878,
       "previous": 0.6921229958534241,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/AUDUSD%3DX?range=10d&interval=1d",
@@ -103,7 +98,7 @@
     {
       "name": "Brent crude futures",
       "date": "2026-11-11",
-      "value": 92.45,
+      "value": 92.43,
       "previous": 91.48999786376953,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/BZ%3DF?range=10d&interval=1d",
