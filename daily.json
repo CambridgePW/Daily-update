@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-11T07:08:38.996904+00:00",
+  "generated_at_utc": "2026-11-11T07:09:42.679741+00:00",
   "regime": "DATA INSUFFICIENT",
   "score": 0.5,
   "coverage": 2,
@@ -25,18 +25,18 @@
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": 29.9,
-          "unit": "bp",
+          "value": 6.38,
+          "unit": "%",
           "base_date": "2026-08-11"
         },
         "6m": {
-          "value": 52.0,
-          "unit": "bp",
+          "value": 11.65,
+          "unit": "%",
           "base_date": "2026-05-12"
         },
         "12m": {
-          "value": 87.3,
-          "unit": "bp",
+          "value": 21.24,
+          "unit": "%",
           "base_date": "2025-11-10"
         }
       },
@@ -52,18 +52,18 @@
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": 42.2,
-          "unit": "bp",
+          "value": 9.62,
+          "unit": "%",
           "base_date": "2026-08-11"
         },
         "6m": {
-          "value": 68.3,
-          "unit": "bp",
+          "value": 16.56,
+          "unit": "%",
           "base_date": "2026-05-12"
         },
         "12m": {
-          "value": 109.7,
-          "unit": "bp",
+          "value": 29.57,
+          "unit": "%",
           "base_date": "2025-11-10"
         }
       },
@@ -72,24 +72,24 @@
     {
       "name": "Gold futures USD/oz",
       "date": "2026-11-11",
-      "value": 4070.0,
+      "value": 4068.8,
       "previous": 4030.199951171875,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": -8.9,
+          "value": -8.92,
           "unit": "%",
           "base_date": "2026-08-12"
         },
         "6m": {
-          "value": -13.53,
+          "value": -13.55,
           "unit": "%",
           "base_date": "2026-05-13"
         },
         "12m": {
-          "value": -1.12,
+          "value": -1.15,
           "unit": "%",
           "base_date": "2025-11-11"
         }
@@ -99,24 +99,24 @@
     {
       "name": "AUD/USD",
       "date": "2026-11-11",
-      "value": 0.6877,
+      "value": 0.6878,
       "previous": 0.6921229958534241,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/AUDUSD%3DX?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": -2.65,
+          "value": -2.63,
           "unit": "%",
           "base_date": "2026-08-12"
         },
         "6m": {
-          "value": -5.22,
+          "value": -5.2,
           "unit": "%",
           "base_date": "2026-05-13"
         },
         "12m": {
-          "value": 5.23,
+          "value": 5.25,
           "unit": "%",
           "base_date": "2025-11-11"
         }
@@ -126,7 +126,7 @@
     {
       "name": "US Dollar Index (DXY)",
       "date": "2026-11-11",
-      "value": 102.331,
+      "value": 102.326,
       "previous": 102.2300033569336,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?range=1y&interval=1d",
@@ -143,7 +143,7 @@
           "base_date": "2026-05-13"
         },
         "12m": {
-          "value": 2.89,
+          "value": 2.88,
           "unit": "%",
           "base_date": "2025-11-11"
         }
@@ -195,24 +195,24 @@
     {
       "name": "Brent crude futures",
       "date": "2026-11-11",
-      "value": 92.26,
+      "value": 92.27,
       "previous": 91.48999786376953,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/BZ%3DF?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": 3.69,
+          "value": 3.7,
           "unit": "%",
           "base_date": "2026-08-12"
         },
         "6m": {
-          "value": -12.66,
+          "value": -12.65,
           "unit": "%",
           "base_date": "2026-05-13"
         },
         "12m": {
-          "value": 41.59,
+          "value": 41.61,
           "unit": "%",
           "base_date": "2025-11-11"
         }
@@ -318,18 +318,18 @@
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": -233.0,
-          "unit": "bp",
+          "value": -2.93,
+          "unit": "%",
           "base_date": "2026-08-11"
         },
         "6m": {
-          "value": -269.0,
-          "unit": "bp",
+          "value": -3.37,
+          "unit": "%",
           "base_date": "2026-05-12"
         },
         "12m": {
-          "value": -351.0,
-          "unit": "bp",
+          "value": -4.35,
+          "unit": "%",
           "base_date": "2025-11-11"
         }
       },
@@ -527,22 +527,22 @@
     {
       "name": "Credit risk appetite proxy (HYG vs LQD)",
       "date": "2026-11-10",
-      "value": -231.01,
+      "value": -0.94,
       "status": "ok",
       "unit": "3m relative return (pp)",
       "trends": {
         "3m": {
-          "value": -231.01,
+          "value": -0.94,
           "unit": "pp",
           "base_date": "2026-08-11"
         },
         "6m": {
-          "value": -264.69,
+          "value": 0.94,
           "unit": "pp",
           "base_date": "2026-05-12"
         },
         "12m": {
-          "value": -344.41,
+          "value": 2.24,
           "unit": "pp",
           "base_date": "2025-11-11"
         }
