@@ -68,9 +68,29 @@ def bls_unemployment():
   date,value=points[-1]
   return {'name':'US unemployment','date':date,'value':value,'previous':points[-2][1] if len(points)>1 else value,'status':'ok','source':url,'unit':'%','trends':trends(points,'US unemployment')}
  except Exception as e:return {'name':'US unemployment','status':'unavailable','error':'BLS: '+str(e)[:130],'source':url}
+def treasury_real_yield():
+ year=NOW.year
+ url='https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/'+str(year)+'/all?type=daily_treasury_real_yield_curve&field_tdr_date_value='+str(year)+'&page&_format=csv'
+ try:
+  req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Accept':'text/csv'})
+  with urllib.request.urlopen(req,timeout=18) as f:
+   rows=list(csv.DictReader(io.StringIO(f.read().decode('utf-8-sig'))))
+  observations=[]
+  for row in rows:
+   try:
+    date=datetime.datetime.strptime(row['Date'].strip(),'%m/%d/%Y').date().isoformat()
+    value=float(row['10 YR'])
+    observations.append((date,value))
+   except (KeyError,ValueError,TypeError):continue
+  observations.sort()
+  if not observations:raise ValueError('Treasury CSV returned no usable 10-year real yields')
+  date,value=observations[-1]
+  return {'name':'US real 10Y yield','date':date,'value':value,'previous':observations[-2][1] if len(observations)>1 else value,'status':'ok','unit':'%','source':url,'trends':trends(observations,'US real 10Y yield')}
+ except Exception as e:return {'name':'US real 10Y yield','status':'unavailable','error':'Treasury: '+str(e)[:130],'source':url}
 def fetch(item):
  name,code=item
  if name=='US unemployment':return bls_unemployment()
+ if name=='US real 10Y yield':return treasury_real_yield()
  if name in MARKETS:
   primary=yahoo((name,MARKETS[name]))
   if primary['status']=='ok':return primary
