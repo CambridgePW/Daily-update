@@ -1,100 +1,146 @@
 {
-  "generated_at_utc": "2026-11-11T06:13:16.802961+00:00",
-  "regime": "DATA INSUFFICIENT",
-  "score": null,
-  "coverage": 0,
-  "positioning": {},
-  "indicators": [],
+  "generated_at_utc": "2026-11-11T06:17:51.609901+00:00",
+  "regime": "MIXED / CAUTIOUS",
+  "score": 0.0,
+  "coverage": 1,
+  "positioning": {
+    "Equities": "HOLD / SELECTIVE",
+    "Government bonds": "HOLD / REVIEW YIELDS",
+    "Gold": "HOLD / REVIEW REAL YIELDS",
+    "Cash": "MAINTAIN BUFFER"
+  },
+  "indicators": [
+    {
+      "name": "Volatility",
+      "score": 0
+    }
+  ],
   "readings": [
     {
-      "name": "US 10Y yield",
-      "status": "unavailable",
-      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
-      "source": "https://api.db.nomics.world/v22/series/FRED/DGS10?observations=1"
+      "name": "US 10Y yield (market proxy)",
+      "date": "2026-11-10",
+      "value": 4.983,
+      "previous": 4.863999843597412,
+      "status": "ok",
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?range=10d&interval=1d",
+      "unit": "index/market price"
     },
     {
-      "name": "US 2Y yield",
+      "name": "US 5Y yield (market proxy)",
+      "date": "2026-11-10",
+      "value": 4.807,
+      "previous": 4.658999919891357,
+      "status": "ok",
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EFVX?range=10d&interval=1d",
+      "unit": "index/market price"
+    },
+    {
+      "name": "Gold futures USD/oz",
+      "date": "2026-11-11",
+      "value": 4064.6001,
+      "previous": 4030.199951171875,
+      "status": "ok",
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?range=10d&interval=1d",
+      "unit": "index/market price"
+    },
+    {
+      "name": "AUD/USD",
+      "date": "2026-11-11",
+      "value": 0.6877,
+      "previous": 0.6921229958534241,
+      "status": "ok",
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/AUDUSD%3DX?range=10d&interval=1d",
+      "unit": "index/market price"
+    },
+    {
+      "name": "USD index futures",
       "status": "unavailable",
-      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
-      "source": "https://api.db.nomics.world/v22/series/FRED/DGS2?observations=1"
+      "error": "HTTP Error 404: Not Found",
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/DX%3DF?range=10d&interval=1d"
     },
     {
       "name": "US real 10Y yield",
       "status": "unavailable",
-      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
-      "source": "https://api.db.nomics.world/v22/series/FRED/DFII10?observations=1"
+      "error": "The read operation timed out",
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10&cosd=2026-01-01"
     },
     {
       "name": "High yield spread",
       "status": "unavailable",
-      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
-      "source": "https://api.db.nomics.world/v22/series/FRED/BAMLH0A0HYM2?observations=1"
+      "error": "The read operation timed out",
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLH0A0HYM2&cosd=2026-01-01"
     },
     {
       "name": "Investment grade spread",
       "status": "unavailable",
-      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
-      "source": "https://api.db.nomics.world/v22/series/FRED/BAMLC0A0CM?observations=1"
+      "error": "The read operation timed out",
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLC0A0CM&cosd=2026-01-01"
     },
     {
       "name": "US unemployment",
       "status": "unavailable",
-      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
-      "source": "https://api.db.nomics.world/v22/series/FRED/UNRATE?observations=1"
+      "error": "The read operation timed out",
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE&cosd=2026-01-01"
     },
     {
       "name": "Consumer sentiment",
       "status": "unavailable",
-      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
-      "source": "https://api.db.nomics.world/v22/series/FRED/UMCSENT?observations=1"
+      "error": "The read operation timed out",
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UMCSENT&cosd=2026-01-01"
     },
     {
       "name": "All loan delinquencies",
       "status": "unavailable",
-      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
-      "source": "https://api.db.nomics.world/v22/series/FRED/DRALACBS?observations=1"
+      "error": "The read operation timed out",
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DRALACBS&cosd=2026-01-01"
     },
     {
       "name": "Credit card delinquencies",
       "status": "unavailable",
-      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
-      "source": "https://api.db.nomics.world/v22/series/FRED/DRCCLACBS?observations=1"
+      "error": "The read operation timed out",
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DRCCLACBS&cosd=2026-01-01"
     },
     {
-      "name": "Brent oil",
-      "status": "unavailable",
-      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
-      "source": "https://api.db.nomics.world/v22/series/FRED/DCOILBRENTEU?observations=1"
+      "name": "Brent crude futures",
+      "date": "2026-11-11",
+      "value": 92.45,
+      "previous": 91.48999786376953,
+      "status": "ok",
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/BZ%3DF?range=10d&interval=1d",
+      "unit": "index/market price"
     },
     {
       "name": "S&P 500",
-      "status": "unavailable",
-      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
-      "source": "https://api.db.nomics.world/v22/series/FRED/SP500?observations=1"
+      "date": "2026-11-10",
+      "value": 7520.9302,
+      "previous": 7549.93994140625,
+      "status": "ok",
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=10d&interval=1d",
+      "unit": "index/market price"
     },
     {
       "name": "Nasdaq",
-      "status": "unavailable",
-      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
-      "source": "https://api.db.nomics.world/v22/series/FRED/NASDAQCOM?observations=1"
+      "date": "2026-11-10",
+      "value": 25065.8691,
+      "previous": 25253.140625,
+      "status": "ok",
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=10d&interval=1d",
+      "unit": "index/market price"
     },
     {
       "name": "VIX",
-      "status": "unavailable",
-      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
-      "source": "https://api.db.nomics.world/v22/series/FRED/VIXCLS?observations=1"
-    },
-    {
-      "name": "Broad USD (not DXY)",
-      "status": "unavailable",
-      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
-      "source": "https://api.db.nomics.world/v22/series/FRED/DTWEXBGS?observations=1"
+      "date": "2026-11-10",
+      "value": 19.46,
+      "previous": 19.920000076293945,
+      "status": "ok",
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?range=10d&interval=1d",
+      "unit": "index/market price"
     },
     {
       "name": "Australia interbank rate (not RBA cash rate)",
       "status": "unavailable",
-      "error": "HTTP Error 404: NOT FOUND; The read operation timed out",
-      "source": "https://api.db.nomics.world/v22/series/FRED/IR3TIB01AUM156N?observations=1"
+      "error": "The read operation timed out",
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=IR3TIB01AUM156N&cosd=2026-01-01"
     }
   ],
   "news": [
