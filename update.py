@@ -33,6 +33,12 @@ def yahoo(item):
   observations=[(datetime.datetime.fromtimestamp(t,datetime.timezone.utc).date().isoformat(),float(v)) for t,v in zip(timestamps,closes) if v is not None]
   if not observations:raise ValueError('No close observations')
   date,value=observations[-1]
+  volume_signal=None
+  if name in ('S&P 500','Nasdaq') and len(volumes)>=21 and len(observations)>=2 and volumes[-1] is not None:
+   recent=[float(z) for z in volumes[-21:-1] if z is not None and z>0]
+   if len(recent)>=15 and float(volumes[-1])>0:
+    ratio=round(float(volumes[-1])/(sum(recent)/len(recent)),2)
+    volume_signal={'ratio_to_20d':ratio,'direction':'down' if value<observations[-2][1] else 'up','note':'Reported index volume; not consolidated exchange volume'}
   return {'name':name,'date':date,'value':round(value,4),'previous':observations[-2][1] if len(observations)>1 else value,'status':'ok','source':url,'unit':'index/market price','trends':trends(observations,name),'volume_signal':volume_signal}
  except Exception as e:
   return {'name':name,'status':'unavailable','error':str(e)[:150],'source':url}
