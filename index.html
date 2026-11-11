@@ -10,16 +10,35 @@ const sufficient=count>=3;
 document.getElementById('overview').innerHTML='<div class="small">LATEST UPDATE: '+esc(d.generated_at_utc||'Not run')+' UTC</div><h2>'+(sufficient?esc(d.regime):'Market assessment: provisional')+'</h2><p>'+(sufficient?'Risk assessment uses '+count+' qualifying indicators.':'Only '+count+' of 5 core risk indicators are available. A reliable overall Buy/Hold/Reduce conclusion is not yet possible.')+'</p><div class="warn">'+esc(live.length)+' market readings available · '+esc(missing.length)+' missing or last-known · Data gaps are excluded from the risk score.</div>';
 const gold=live.find(x=>x.name.includes('Gold')),vix=live.find(x=>x.name==='VIX'),sp=live.find(x=>x.name==='S&P 500'),ten=live.find(x=>x.name.includes('10Y yield'));
 const vix3=vix?.trends?.['3m']?.value, sp3=sp?.trends?.['3m']?.value, y3=ten?.trends?.['3m']?.value;
+const by=n=>live.find(x=>x.name===n);
+const t=n=>by(n)?.trends?.['3m']?.value;
+const pairs=[
+ ['Consumer expectations (market proxy)','Consumer discretionary vs staples',t('Consumer discretionary ETF (XLY)'),t('Consumer staples ETF (XLP)')],
+ ['Credit appetite (market proxy)','High-yield bonds vs investment-grade',t('High yield corporate bond ETF (HYG)'),t('Investment grade corporate bond ETF (LQD)')],
+ ['Market participation (market proxy)','Equal-weighted S&P vs S&P 500',t('Equal weight S&P ETF (RSP)'),t('S&P ETF (SPY)')],
+ ['Small companies (market proxy)','Small caps vs S&P 500',t('Small cap ETF (IWM)'),t('S&P ETF (SPY)')],
+ ['Banking confidence (market proxy)','Regional banks vs S&P 500',t('Regional banks ETF (KRE)'),t('S&P ETF (SPY)')]
+];
+const cross=pairs.filter(x=>x[2]!=null&&x[3]!=null).map(([name,description,a,b])=>({name,description,relative:Math.round((a-b)*100)/100}));
+const marketSignals=[vix3>15?1:vix3<-15?-1:0,sp3<0?1:sp3>5?-1:0,y3>20?1:y3< -20?-1:0,...cross.map(x=>x.relative< -3?1:x.relative>3?-1:0)];
+const active=marketSignals.filter(x=>x!==0);
+const warning=marketSignals.filter(x=>x===1).length,positive=marketSignals.filter(x=>x===-1).length;
+const view=marketSignals.length<4?'INSUFFICIENT MARKET SIGNALS':warning>=4&&warning>=positive+2?'DEFENSIVE / REDUCE RISK':positive>=4&&positive>=warning+2?'CONSTRUCTIVE / SELECTIVE BUY':'MIXED / HOLD';
+document.getElementById('overview').innerHTML='<div class="small">LATEST UPDATE: '+esc(d.generated_at_utc||'Not run')+' UTC</div><h2>'+esc(view)+'</h2><p>'+esc(warning)+' caution signals and '+esc(positive)+' supportive signals across '+esc(marketSignals.length)+' available market tests. These are market-based assessments, not official macroeconomic data.</p><div class="warn">'+esc(live.length)+' live market readings · '+esc(missing.length)+' unavailable/last-known. Official economic coverage: '+esc(count)+' of 5 core indicators.</div>';
 const concerns=[];
 if(vix3>15)concerns.push('Market nervousness is increasing (VIX up '+vix3+'% over three months).');
 if(sp3<0)concerns.push('US shares are down '+Math.abs(sp3)+'% over three months.');
 if(y3>20)concerns.push('Ten-year yields have risen '+y3+' basis points, which can pressure share valuations and bond prices.');
-const hyg=live.find(x=>x.name.includes('HYG')),lqd=live.find(x=>x.name.includes('LQD'));\nif(hyg?.trends?.['3m']?.value < -3)concerns.push('High-yield corporate bond ETF prices have fallen over three months, a possible credit-risk warning (not a direct credit spread).');\nif(lqd?.trends?.['3m']?.value < -3)concerns.push('Investment-grade corporate bond ETF prices have weakened; this may reflect higher yields rather than defaults.');\nconst volume=sp?.volume_signal;
+const hyg=live.find(x=>x.name.includes('HYG')),lqd=live.find(x=>x.name.includes('LQD'));
+if(hyg?.trends?.['3m']?.value < -3)concerns.push('High-yield corporate bond ETF prices have fallen over three months, a possible credit-risk warning (not a direct credit spread).');
+if(lqd?.trends?.['3m']?.value < -3)concerns.push('Investment-grade corporate bond ETF prices have weakened; this may reflect higher yields rather than defaults.');
+const volume=sp?.volume_signal;
+for(const x of cross){if(x.relative < -3)concerns.push(x.description+' has underperformed by '+Math.abs(x.relative)+' percentage points over three months, suggesting caution.');}
 if(volume&&volume.direction==='down'&&volume.ratio_to_20d>1.3)concerns.push('The latest index decline coincided with unusually high reported volume ('+volume.ratio_to_20d+' times its 20-session average). This warrants attention, not a crash prediction.');
 else if(volume)concerns.push('Latest index volume is '+volume.ratio_to_20d+' times its 20-session average; a single session cannot confirm a trend.');
-document.getElementById('plain').innerHTML='<p><b>'+(concerns.length>=3?'Caution is warranted.':concerns.length?'Some warning signs are emerging.':'Available market indicators do not show a clear combined warning.')+'</b></p><p>'+esc(concerns.join(' '))+'</p><p><b>What to do:</b> '+esc(concerns.length>=3?'Avoid rushing to increase equity exposure; consider existing risk limits and keep cash available.':'Hold existing allocations pending confirmation from credit, consumer confidence and market breadth.')+'</p><p class="small">Missing official consumer confidence, credit spreads or loan stress remain disclosed separately. Credit ETF prices are risk proxies, not replacements for default statistics. Market breadth and historical pre-correction comparisons are not yet measured. These gaps prevent a high-confidence Buy or Sell call.</p>';
+document.getElementById('plain').innerHTML='<p><b>'+(concerns.length>=3?'Caution is warranted.':concerns.length?'Some warning signs are emerging.':'Available market indicators do not show a clear combined warning.')+'</b></p><p>'+esc(concerns.join(' '))+'</p><p><b>What to do:</b> '+esc(concerns.length>=3?'Avoid rushing to increase equity exposure; consider existing risk limits and keep cash available.':'Hold existing allocations pending confirmation from credit, consumer confidence and market breadth.')+'</p><p class="small">Missing official consumer confidence, credit spreads or loan stress remain disclosed separately. Credit ETF prices are risk proxies, not replacements for default statistics. Relative ETF performance is a proxy for participation, not a full advance/decline breadth measure. Historical pre-correction comparisons are not yet measured. These gaps prevent a high-confidence Buy or Sell call.</p>';
 const positions=[
-['Equities',sufficient?(d.positioning?.Equities||'REVIEW'):'HOLD / REVIEW',sp?.trends?.['3m']?.value<0?'Equity prices have weakened over three months; confirm credit and growth before increasing exposure.':'Review equity momentum, earnings and credit conditions before changing exposure.'],
+['Equities',view==='DEFENSIVE / REDUCE RISK'?'REDUCE / DEFENSIVE':view==='CONSTRUCTIVE / SELECTIVE BUY'?'SELECTIVE BUY':'HOLD / REVIEW',sp?.trends?.['3m']?.value<0?'Equity prices have weakened over three months; confirm credit and growth before increasing exposure.':'Review equity momentum, earnings and credit conditions before changing exposure.'],
 ['Government bonds','HOLD / REVIEW',ten?.trends?.['3m']?.value>0?'Treasury yields have risen over three months. Income improves but duration risk remains.':'Review yields, inflation and duration exposure.'],
 ['Gold','HOLD / REVIEW',gold?.trends?.['3m']?.value<0?'Gold has weakened over three months. Real yields and USD data are still missing.':'Assess gold alongside real yields, USD and geopolitical developments.'],
 ['Cash','MAINTAIN BUFFER','Keep liquidity available until credit and economic indicators are reliable.']
