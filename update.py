@@ -3,7 +3,7 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from urllib.parse import quote
 NOW=datetime.datetime.now(datetime.timezone.utc)
-SERIES={'US 10Y yield (market proxy)':'DGS10','US 5Y yield (market proxy)':'DGS5','Gold futures USD/oz':'GOLDAMGBD228NLBM','AUD/USD':'DEXUSAL','US Dollar Index (DXY)':'DTWEXBGS','US real 10Y yield':'DFII10','High yield spread':'BAMLH0A0HYM2','Investment grade spread':'BAMLC0A0CM','US unemployment':'UNRATE','Consumer sentiment':'UMCSENT','All loan delinquencies':'DRALACBS','Credit card delinquencies':'DRCCLACBS','Brent crude futures':'DCOILBRENTEU','S&P 500':'SP500','Nasdaq':'NASDAQCOM','VIX':'VIXCLS','Australia interbank rate (not RBA cash rate)':'IR3TIB01AUM156N','High yield corporate bond ETF (HYG)':'HYG','Investment grade corporate bond ETF (LQD)':'LQD','Consumer discretionary ETF (XLY)':'XLY','Consumer staples ETF (XLP)':'XLP','Equal weight S&P ETF (RSP)':'RSP','S&P ETF (SPY)':'SPY','Small cap ETF (IWM)':'IWM','Regional banks ETF (KRE)':'KRE'}
+SERIES={'US 10Y yield (market proxy)':'DGS10','US 5Y yield (market proxy)':'DGS5','Gold futures USD/oz':'GOLDAMGBD228NLBM','AUD/USD':'DEXUSAL','US Dollar Index (DXY)':'DTWEXBGS','US real 10Y yield':'DFII10','US unemployment':'UNRATE','Brent crude futures':'DCOILBRENTEU','S&P 500':'SP500','Nasdaq':'NASDAQCOM','VIX':'VIXCLS','High yield corporate bond ETF (HYG)':'HYG','Investment grade corporate bond ETF (LQD)':'LQD','Consumer discretionary ETF (XLY)':'XLY','Consumer staples ETF (XLP)':'XLP','Equal weight S&P ETF (RSP)':'RSP','S&P ETF (SPY)':'SPY','Small cap ETF (IWM)':'IWM','Regional banks ETF (KRE)':'KRE'}
 MARKETS={'S&P 500':'^GSPC','Nasdaq':'^IXIC','VIX':'^VIX','US 10Y yield (market proxy)':'^TNX','US 5Y yield (market proxy)':'^FVX','Gold futures USD/oz':'GC=F','Brent crude futures':'BZ=F','AUD/USD':'AUDUSD=X','US Dollar Index (DXY)':'DX-Y.NYB','High yield corporate bond ETF (HYG)':'HYG','Investment grade corporate bond ETF (LQD)':'LQD','Consumer discretionary ETF (XLY)':'XLY','Consumer staples ETF (XLP)':'XLP','Equal weight S&P ETF (RSP)':'RSP','S&P ETF (SPY)':'SPY','Small cap ETF (IWM)':'IWM','Regional banks ETF (KRE)':'KRE'}
 STOOQ={'S&P 500':'^spx','Nasdaq':'^ndq','Gold futures USD/oz':'gc.f','Brent crude futures':'brn.f','AUD/USD':'audusd'}
 def trends(obs,name):
@@ -127,6 +127,22 @@ except (OSError,ValueError):old={}
 for i,x in enumerate(readings):
  if x.get('status')!='ok' and x['name'] in old:
   readings[i]={**old[x['name']],'status':'last_known','error':x.get('error','Feed unavailable')}
+# Explicitly labelled, transparent market proxies. These are NOT official macro statistics.
+market={x['name']:x for x in readings if x.get('status')=='ok'}
+def relative_proxy(name,a,b,explanation):
+ x,y=market.get(a),market.get(b)
+ if not x or not y:return
+ changes={}
+ for term in ('3m','6m','12m'):
+  tx=x.get('trends',{}).get(term)
+  ty=y.get('trends',{}).get(term)
+  if tx and ty and tx.get('value') is not None and ty.get('value') is not None:
+   changes[term]={'value':round(tx['value']-ty['value'],2),'unit':'pp','base_date':tx.get('base_date')}
+ if not changes:return
+ readings.append({'name':name,'date':min(x['date'],y['date']),'value':changes.get('3m',{}).get('value'),'status':'ok','unit':'3m relative return (pp)','trends':changes,'source':x['source'],'note':explanation,'proxy':True})
+relative_proxy('Credit risk appetite proxy (HYG vs LQD)','High yield corporate bond ETF (HYG)','Investment grade corporate bond ETF (LQD)','Relative ETF returns; not an option-adjusted credit spread. Interest-rate sensitivity also affects prices.')
+relative_proxy('Consumer demand proxy (XLY vs XLP)','Consumer discretionary ETF (XLY)','Consumer staples ETF (XLP)','Relative stock-sector performance; not a consumer-confidence survey.')
+relative_proxy('Market breadth proxy (RSP vs SPY)','Equal weight S&P ETF (RSP)','S&P ETF (SPY)','Relative ETF returns; not an advance-decline breadth statistic.')
 r={x['name']:x for x in readings}
 def v(k):
  x=r.get(k,{})
