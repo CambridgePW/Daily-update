@@ -63,6 +63,12 @@ def news(item):
 with ThreadPoolExecutor(max_workers=10) as pool:
  readings=list(pool.map(fetch,SERIES.items()))
  headlines=list(pool.map(news,[('Central banks','RBA Federal Reserve rates policy'),('Credit','bank defaults delinquencies credit stress'),('Geopolitics','geopolitics war tariffs Reuters'),('Gold','gold price central bank purchases')]))
+try:
+ old={x['name']:x for x in json.loads(Path(__file__).with_name('daily.json').read_text()).get('readings',[]) if x.get('value') is not None}
+except (OSError,ValueError):old={}
+for i,x in enumerate(readings):
+ if x.get('status')!='ok' and x['name'] in old:
+  readings[i]={**old[x['name']],'status':'last_known','error':x.get('error','Feed unavailable')}
 r={x['name']:x for x in readings}
 def v(k):
  x=r.get(k,{})
@@ -84,8 +90,8 @@ if sent is not None:add('Consumer confidence',-1 if sent<60 else 1 if sent>80 el
 delinq=v('All loan delinquencies')
 if delinq is not None:add('Loan stress',-1 if delinq>3 else 1 if delinq<2 else 0)
 avg=score/count if count else None
-regime='DATA INSUFFICIENT' if avg is None else 'DEFENSIVE' if avg<=-.6 else 'CONSTRUCTIVE' if avg>=.6 else 'MIXED / CAUTIOUS'
-positioning={} if avg is None else {'Equities':'REDUCE / DEFENSIVE' if avg<=-.6 else 'SELECTIVE BUY' if avg>=.6 else 'HOLD / SELECTIVE','Government bonds':'HOLD / REVIEW YIELDS','Gold':'HOLD / REVIEW REAL YIELDS','Cash':'MAINTAIN BUFFER' if avg<.6 else 'NORMAL BUFFER'}
+regime='DATA INSUFFICIENT' if count<3 else 'DEFENSIVE' if avg<=-.6 else 'CONSTRUCTIVE' if avg>=.6 else 'MIXED / CAUTIOUS'
+positioning={} if count<3 else {'Equities':'REDUCE / DEFENSIVE' if avg<=-.6 else 'SELECTIVE BUY' if avg>=.6 else 'HOLD / SELECTIVE','Government bonds':'HOLD / REVIEW YIELDS','Gold':'HOLD / REVIEW REAL YIELDS','Cash':'MAINTAIN BUFFER' if avg<.6 else 'NORMAL BUFFER'}
 output={'generated_at_utc':NOW.isoformat(),'regime':regime,'score':round(avg,2) if avg is not None else None,'coverage':count,'positioning':positioning,'indicators':notes,'readings':readings,'news':[n for group in headlines for n in group]}
 Path(__file__).with_name('daily.json').write_text(json.dumps(output,indent=2))
 print('Saved daily.json:',regime,'coverage',count)
