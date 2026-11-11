@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-11T06:07:05.899401+00:00",
+  "generated_at_utc": "2026-11-11T06:09:43.007480+00:00",
   "regime": "DATA INSUFFICIENT",
   "score": null,
   "coverage": 0,
@@ -10,91 +10,91 @@
       "name": "US 10Y yield",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10"
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2025-01-01&coed=2026-11-11"
     },
     {
       "name": "US 2Y yield",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2"
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2&cosd=2025-01-01&coed=2026-11-11"
     },
     {
       "name": "US real 10Y yield",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10"
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10&cosd=2025-01-01&coed=2026-11-11"
     },
     {
       "name": "High yield spread",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLH0A0HYM2"
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLH0A0HYM2&cosd=2025-01-01&coed=2026-11-11"
     },
     {
       "name": "Investment grade spread",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLC0A0CM"
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLC0A0CM&cosd=2025-01-01&coed=2026-11-11"
     },
     {
       "name": "US unemployment",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE"
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE&cosd=2025-01-01&coed=2026-11-11"
     },
     {
       "name": "Consumer sentiment",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UMCSENT"
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UMCSENT&cosd=2025-01-01&coed=2026-11-11"
     },
     {
       "name": "All loan delinquencies",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DRALACBS"
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DRALACBS&cosd=2025-01-01&coed=2026-11-11"
     },
     {
       "name": "Credit card delinquencies",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DRCCLACBS"
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DRCCLACBS&cosd=2025-01-01&coed=2026-11-11"
     },
     {
       "name": "Brent oil",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILBRENTEU"
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILBRENTEU&cosd=2025-01-01&coed=2026-11-11"
     },
     {
       "name": "S&P 500",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=SP500"
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=SP500&cosd=2025-01-01&coed=2026-11-11"
     },
     {
       "name": "Nasdaq",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NASDAQCOM"
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NASDAQCOM&cosd=2025-01-01&coed=2026-11-11"
     },
     {
       "name": "VIX",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS"
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS&cosd=2025-01-01&coed=2026-11-11"
     },
     {
       "name": "Broad USD (not DXY)",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS"
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS&cosd=2025-01-01&coed=2026-11-11"
     },
     {
       "name": "Australia interbank rate (not RBA cash rate)",
       "status": "unavailable",
       "error": "The read operation timed out",
-      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=IR3TIB01AUM156N"
+      "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=IR3TIB01AUM156N&cosd=2025-01-01&coed=2026-11-11"
     }
   ],
   "news": [
