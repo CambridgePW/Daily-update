@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-11T06:21:45.898349+00:00",
+  "generated_at_utc": "2026-11-11T06:23:47.138926+00:00",
   "regime": "DATA INSUFFICIENT",
   "score": 0.0,
   "coverage": 1,
@@ -17,8 +17,25 @@
       "value": 4.983,
       "previous": 4.863999843597412,
       "status": "ok",
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?range=10d&interval=1d",
-      "unit": "index/market price"
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?range=1y&interval=1d",
+      "unit": "index/market price",
+      "trends": {
+        "3m": {
+          "value": 29.9,
+          "unit": "bp",
+          "base_date": "2026-08-11"
+        },
+        "6m": {
+          "value": 52.0,
+          "unit": "bp",
+          "base_date": "2026-05-12"
+        },
+        "12m": {
+          "value": 87.3,
+          "unit": "bp",
+          "base_date": "2025-11-10"
+        }
+      }
     },
     {
       "name": "US 5Y yield (market proxy)",
@@ -26,17 +43,51 @@
       "value": 4.807,
       "previous": 4.658999919891357,
       "status": "ok",
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EFVX?range=10d&interval=1d",
-      "unit": "index/market price"
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EFVX?range=1y&interval=1d",
+      "unit": "index/market price",
+      "trends": {
+        "3m": {
+          "value": 42.2,
+          "unit": "bp",
+          "base_date": "2026-08-11"
+        },
+        "6m": {
+          "value": 68.3,
+          "unit": "bp",
+          "base_date": "2026-05-12"
+        },
+        "12m": {
+          "value": 109.7,
+          "unit": "bp",
+          "base_date": "2025-11-10"
+        }
+      }
     },
     {
       "name": "Gold futures USD/oz",
       "date": "2026-11-11",
-      "value": 4065.2,
+      "value": 4065.0,
       "previous": 4030.199951171875,
       "status": "ok",
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?range=10d&interval=1d",
-      "unit": "index/market price"
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?range=1y&interval=1d",
+      "unit": "index/market price",
+      "trends": {
+        "3m": {
+          "value": -9.01,
+          "unit": "%",
+          "base_date": "2026-08-12"
+        },
+        "6m": {
+          "value": -13.63,
+          "unit": "%",
+          "base_date": "2026-05-13"
+        },
+        "12m": {
+          "value": -1.25,
+          "unit": "%",
+          "base_date": "2025-11-11"
+        }
+      }
     },
     {
       "name": "AUD/USD",
@@ -44,14 +95,31 @@
       "value": 0.6878,
       "previous": 0.6921229958534241,
       "status": "ok",
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/AUDUSD%3DX?range=10d&interval=1d",
-      "unit": "index/market price"
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/AUDUSD%3DX?range=1y&interval=1d",
+      "unit": "index/market price",
+      "trends": {
+        "3m": {
+          "value": -2.64,
+          "unit": "%",
+          "base_date": "2026-08-12"
+        },
+        "6m": {
+          "value": -5.2,
+          "unit": "%",
+          "base_date": "2026-05-13"
+        },
+        "12m": {
+          "value": 5.24,
+          "unit": "%",
+          "base_date": "2025-11-11"
+        }
+      }
     },
     {
       "name": "USD index futures",
       "status": "unavailable",
       "error": "HTTP Error 404: Not Found",
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/DX%3DF?range=10d&interval=1d"
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/DX%3DF?range=1y&interval=1d"
     },
     {
       "name": "US real 10Y yield",
@@ -101,8 +169,25 @@
       "value": 92.43,
       "previous": 91.48999786376953,
       "status": "ok",
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/BZ%3DF?range=10d&interval=1d",
-      "unit": "index/market price"
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/BZ%3DF?range=1y&interval=1d",
+      "unit": "index/market price",
+      "trends": {
+        "3m": {
+          "value": 3.88,
+          "unit": "%",
+          "base_date": "2026-08-12"
+        },
+        "6m": {
+          "value": -12.5,
+          "unit": "%",
+          "base_date": "2026-05-13"
+        },
+        "12m": {
+          "value": 41.85,
+          "unit": "%",
+          "base_date": "2025-11-11"
+        }
+      }
     },
     {
       "name": "S&P 500",
@@ -110,8 +195,25 @@
       "value": 7520.9302,
       "previous": 7549.93994140625,
       "status": "ok",
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=10d&interval=1d",
-      "unit": "index/market price"
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=1y&interval=1d",
+      "unit": "index/market price",
+      "trends": {
+        "3m": {
+          "value": -2.68,
+          "unit": "%",
+          "base_date": "2026-08-11"
+        },
+        "6m": {
+          "value": 1.62,
+          "unit": "%",
+          "base_date": "2026-05-12"
+        },
+        "12m": {
+          "value": 9.85,
+          "unit": "%",
+          "base_date": "2025-11-11"
+        }
+      }
     },
     {
       "name": "Nasdaq",
@@ -119,8 +221,25 @@
       "value": 25065.8691,
       "previous": 25253.140625,
       "status": "ok",
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=10d&interval=1d",
-      "unit": "index/market price"
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=1y&interval=1d",
+      "unit": "index/market price",
+      "trends": {
+        "3m": {
+          "value": -5.22,
+          "unit": "%",
+          "base_date": "2026-08-11"
+        },
+        "6m": {
+          "value": -3.92,
+          "unit": "%",
+          "base_date": "2026-05-12"
+        },
+        "12m": {
+          "value": 6.81,
+          "unit": "%",
+          "base_date": "2025-11-11"
+        }
+      }
     },
     {
       "name": "VIX",
@@ -128,8 +247,25 @@
       "value": 19.46,
       "previous": 19.920000076293945,
       "status": "ok",
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?range=10d&interval=1d",
-      "unit": "index/market price"
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?range=1y&interval=1d",
+      "unit": "index/market price",
+      "trends": {
+        "3m": {
+          "value": 27.36,
+          "unit": "%",
+          "base_date": "2026-08-11"
+        },
+        "6m": {
+          "value": 8.17,
+          "unit": "%",
+          "base_date": "2026-05-12"
+        },
+        "12m": {
+          "value": 10.57,
+          "unit": "%",
+          "base_date": "2025-11-10"
+        }
+      }
     },
     {
       "name": "Australia interbank rate (not RBA cash rate)",
