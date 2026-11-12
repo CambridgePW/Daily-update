@@ -30,14 +30,15 @@ const signalTests=[
  {name:'US 10-year Treasury yield',value:y3,unit:'bp',test:v=>v>20?1:v< -20?-1:0,rule:'Three-month yield rise above 20 basis points',why:'Rising yields may pressure bond prices and equity valuations; the effect depends on why yields rose.'},
  ...cross.map(x=>({name:x.name,value:x.relative,unit:'pp',test:v=>v< -3?1:v>3?-1:0,rule:x.description+' underperforms by more than 3 percentage points',why:x.description+' relative weakness may signal defensive positioning or narrowing market leadership. This is a market proxy, not an official economic statistic.'}))
 ];
+const byName=name=>signalTests.findIndex(t=>t.name===name);
 const groups=[
-{name:'Market direction & breadth',weight:25,tests:[0,1,5,6]},
-{name:'Credit & financial stress',weight:25,tests:[4,7]},
-{name:'Rates & inflation pressure',weight:15,tests:[2]},
-{name:'Consumer & economic demand',weight:15,tests:[3]},
-{name:'Volatility',weight:20,tests:[0]}
+{name:'Market direction & breadth',weight:25,tests:[byName('US equities (S&P 500)'),byName('Market breadth proxy (RSP vs SPY)'),byName('Small cap vs large cap')]},
+{name:'Credit & financial stress',weight:25,tests:[byName('Credit risk appetite proxy (HYG vs LQD)'),byName('Regional banks vs S&P 500')]},
+{name:'Rates & inflation pressure',weight:15,tests:[byName('US 10-year Treasury yield')]},
+{name:'Consumer & economic demand',weight:15,tests:[byName('Consumer demand proxy (XLY vs XLP)')]},
+{name:'Volatility',weight:20,tests:[byName('Market volatility (VIX)')]}
 ];
-const weighted=groups.map(g=>{const valid=g.tests.map(i=>signalTests[i]).filter(x=>x&&Number.isFinite(x.value));const score=valid.length?valid.reduce((a,x)=>a-x.test(x.value),0)/valid.length:null;return {...g,score,available:valid.length};});
+const weighted=groups.map(g=>{const valid=g.tests.filter(i=>i>=0).map(i=>signalTests[i]).filter(x=>x&&Number.isFinite(x.value));const score=valid.length?valid.reduce((a,x)=>a-x.test(x.value),0)/valid.length:null;return {...g,score,available:valid.length};});
 const covered=weighted.filter(g=>g.score!==null);
 const weightTotal=covered.reduce((a,g)=>a+g.weight,0);
 const blend=weightTotal?covered.reduce((a,g)=>a+g.score*g.weight,0)/weightTotal:null;
@@ -50,7 +51,9 @@ const initialModel={growth:50,fixed:30,cash:20};
 let savedModel=null;try{savedModel=JSON.parse(localStorage.getItem(modelKey)||'null');}catch(e){}
 const validModel=x=>x&&['growth','fixed','cash'].every(k=>Number.isFinite(x[k])&&x[k]>=0&&x[k]<=100)&&Math.abs(x.growth+x.fixed+x.cash-100)<.001;
 const baseline=validModel(savedModel)?savedModel:initialModel;
-const coverageOK=weightTotal>=65&&Number.isFinite(blend);
+const dataAgeDays=(Date.now()-Date.parse(d.generated_at_utc||''))/86400000;
+const freshSnapshot=Number.isFinite(dataAgeDays)&&dataAgeDays>=0&&dataAgeDays<=4;
+const coverageOK=freshSnapshot&&weightTotal>=65&&Number.isFinite(blend);
 const marketFactors=weighted.filter(g=>g.score!==null).sort((a,b)=>Math.abs(b.score*b.weight)-Math.abs(a.score*a.weight));
 const reasons=marketFactors.slice(0,3).map(g=>g.name+' ('+(g.score<=-.35?'cautious':g.score>=.35?'supportive':'mixed')+')');
 const desired=blend<=-.35?{growth:45,fixed:30,cash:25}:blend>=.35?{growth:55,fixed:30,cash:15}:initialModel;
@@ -61,7 +64,7 @@ if(alertNode){
 const stamp=esc(d.generated_at_utc||'unknown');
 const alloc=x=>x.growth+'% growth / '+x.fixed+'% fixed interest / '+x.cash+'% cash &amp; TDs';
 const currentLabel='<p class="small">Adviser-approved reference: <b>'+alloc(baseline)+'</b>. Data updated '+stamp+'.</p>';
-if(!coverageOK)alertNode.innerHTML='<b>No allocation recommendation</b><p class="small">Only '+weightTotal+'% signal coverage; insufficient data to change the portfolio.</p>'+currentLabel;
+if(!coverageOK)alertNode.innerHTML='<b>No allocation recommendation</b><p class="small">Only '+weightTotal+'% signal coverage or data older than four days; insufficient reliable information to change the portfolio.</p>'+currentLabel;
 else if(!eligible)alertNode.innerHTML='<b>No qualifying portfolio change</b><p class="small">Calculated shift is '+Math.abs(delta)+'% of total portfolio, below the 5% minimum or zero.</p>'+currentLabel;
 else alertNode.innerHTML='<b>Portfolio review alert · '+(delta>0?'Increase growth':'Reduce growth')+'</b><p>Proposed model: <b>'+alloc(desired)+'</b>. Shift <b>'+Math.abs(delta)+'% of total portfolio</b> between growth and cash/term deposits.</p><p class="small"><b>Reasons:</b> '+esc(reasons.join('; '))+'. Signal coverage '+weightTotal+'%.</p>'+currentLabel+'<button type="button" id="approve-model" style="padding:9px 13px;border-radius:7px;cursor:pointer">Approve new model reference</button><p class="small">Approval records the model reference in this browser only. It does not trade, notify clients or sync across devices.</p>';
 if(eligible){document.getElementById('approve-model').addEventListener('click',()=>{if(!confirm('Approve this model allocation as the new reference? This does not execute any trades.'))return;try{localStorage.setItem(modelKey,JSON.stringify(desired));alertNode.innerHTML='<b>Reference approved on this browser</b><p class="small">New reference: '+alloc(desired)+'. No trades placed. Refresh to re-evaluate the latest readings.</p>';}catch(e){alertNode.innerHTML='<b>Unable to save approval</b><p class="small">Browser storage is unavailable; no change recorded.</p>';}});}
