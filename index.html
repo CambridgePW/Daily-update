@@ -101,7 +101,20 @@ const freshSnapshot=Number.isFinite(dataAgeDays)&&dataAgeDays>=0&&dataAgeDays<=4
 const coverageOK=freshSnapshot&&weightTotal>=65&&Number.isFinite(blend);
 const marketFactors=weighted.filter(g=>g.score!==null).sort((a,b)=>Math.abs(b.score*b.weight)-Math.abs(a.score*a.weight));
 const reasons=marketFactors.slice(0,3).map(g=>g.name+' ('+(g.score<=-.35?'cautious':g.score>=.35?'supportive':'mixed')+')');
-const desired=blend<=-.35?{growth:45,fixed:30,cash:25}:blend>=.35?{growth:55,fixed:30,cash:15}:initialModel;
+/* Contrarian overlay: market strength alone never proves overvaluation.
+   Only recommend a trim when high momentum coincides with independent breadth/volatility warnings.
+   Without valuation data, label this a provisional risk review rather than a valuation conclusion. */
+const trendDesired=blend<=-.35?{growth:45,fixed:30,cash:25}:blend>=.35?{growth:55,fixed:30,cash:15}:initialModel;
+const equityMarket=live.find(x=>/S&P 500|S&P500|Nasdaq/i.test(x.name));
+const equityMomentum=equityMarket?.trends?.['3m']?.value;
+const vixMarket=live.find(x=>/VIX/i.test(x.name));
+const vixLevel=vixMarket?.value;
+const breadthWarnings=signalTests.filter(x=>/breadth|equal.weight|small.cap|regional.bank|cyclical/i.test(x.name)&&Number.isFinite(x.value)&&x.test(x.value)===1).length;
+const extendedMomentum=Number.isFinite(equityMomentum)&&equityMomentum>=12;
+const cautionConfirmed=breadthWarnings>=2||(breadthWarnings>=1&&Number.isFinite(vixLevel)&&vixLevel>=22);
+const contrarianTrim=coverageOK&&blend>=.35&&extendedMomentum&&cautionConfirmed;
+const desired=contrarianTrim?{growth:Math.max(35,baseline.growth-5),fixed:baseline.fixed,cash:Math.min(65,baseline.cash+5)}:trendDesired;
+const overlayReason=contrarianTrim?'Contrarian risk review: strong 3-month equity momentum ('+equityMomentum.toFixed(1)+'%) alongside '+breadthWarnings+' breadth warning(s)'+(Number.isFinite(vixLevel)?' and VIX '+vixLevel.toFixed(1):'')+'. This is a provisional momentum-excess warning, not proof of overvaluation.':'Contrarian overlay: no independently confirmed overextended-momentum trigger. Strong momentum alone does not justify trimming; valuation and sentiment require adviser review.';
 const delta=desired.growth-baseline.growth;
 const eligible=coverageOK&&Math.abs(delta)>=minShift;
 const alertNode=document.getElementById('portfolio-alert');
@@ -110,8 +123,8 @@ const stamp=esc(d.generated_at_utc||'unknown');
 const alloc=x=>x.growth+'% growth / '+x.fixed+'% fixed interest / '+x.cash+'% cash &amp; TDs';
 const currentLabel='<p class="small">Adviser-approved reference: <b>'+alloc(baseline)+'</b>. Data updated '+stamp+'.</p>';
 if(!coverageOK)alertNode.innerHTML='<b>No allocation recommendation</b><p class="small">Only '+weightTotal+'% signal coverage or data older than four days; insufficient reliable information to change the portfolio.</p>'+currentLabel;
-else if(!eligible)alertNode.innerHTML='<b>No qualifying portfolio change</b><p class="small">Calculated shift is '+Math.abs(delta)+'% of total portfolio, below the 5% minimum or zero.</p>'+currentLabel;
-else alertNode.innerHTML='<b>Portfolio review alert · '+(delta>0?'Increase growth':'Reduce growth')+'</b><p>Proposed model: <b>'+alloc(desired)+'</b>. Shift <b>'+Math.abs(delta)+'% of total portfolio</b> between growth and cash/term deposits.</p><p class="small"><b>Reasons:</b> '+esc(reasons.join('; '))+'. Signal coverage '+weightTotal+'%.</p>'+currentLabel+'<button type="button" id="approve-model" style="padding:9px 13px;border-radius:7px;cursor:pointer">Approve new model reference</button><p class="small">Approval records the model reference in this browser only. It does not trade, notify clients or sync across devices.</p>';
+else if(!eligible)alertNode.innerHTML='<b>No qualifying portfolio change</b><p class="small">Calculated shift is '+Math.abs(delta)+'% of total portfolio, below the 5% minimum or zero.</p><p class="small">'+esc(overlayReason)+'</p>'+currentLabel;
+else alertNode.innerHTML='<b>Portfolio review alert · '+(delta>0?'Increase growth':'Reduce growth')+'</b><p>Proposed model: <b>'+alloc(desired)+'</b>. Shift <b>'+Math.abs(delta)+'% of total portfolio</b> between growth and cash/term deposits.</p><p class="small"><b>Reasons:</b> '+esc(reasons.join('; '))+'. Signal coverage '+weightTotal+'%.</p><p class="small">'+esc(overlayReason)+'</p>'+currentLabel+'<button type="button" id="approve-model" style="padding:9px 13px;border-radius:7px;cursor:pointer">Approve new model reference</button><p class="small">Approval records the model reference in this browser only. It does not trade, notify clients or sync across devices.</p>';
 if(eligible){document.getElementById('approve-model').addEventListener('click',()=>{if(!confirm('Approve this model allocation as the new reference? This does not execute any trades.'))return;try{localStorage.setItem(modelKey,JSON.stringify(desired));alertNode.innerHTML='<b>Reference approved on this browser</b><p class="small">New reference: '+alloc(desired)+'. No trades placed. Refresh to re-evaluate the latest readings.</p>';}catch(e){alertNode.innerHTML='<b>Unable to save approval</b><p class="small">Browser storage is unavailable; no change recorded.</p>';}});}
 }
 const acRows=[
