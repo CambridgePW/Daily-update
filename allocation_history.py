@@ -2,7 +2,7 @@
 import datetime,json,urllib.request
 from pathlib import Path
 from urllib.parse import quote
-SYMS={'SPY':'SPY','RSP':'RSP','IWM':'IWM','HYG':'HYG','LQD':'LQD','XLY':'XLY','XLP':'XLP','KRE':'KRE','VIX':'^VIX'}
+SYMS={'SPY':'SPY','RSP':'RSP','IWM':'IWM','HYG':'HYG','LQD':'LQD','XLY':'XLY','XLP':'XLP','KRE':'KRE','VIX':'^VIX','GLD':'GLD','GDX':'GDX'}
 def history(sym):
  url='https://query1.finance.yahoo.com/v8/finance/chart/'+quote(sym,safe='')+'?range=11y&interval=1d'
  req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Accept':'application/json'})
@@ -38,7 +38,7 @@ def run():
    if valid==7:
     score=sum(tests.values())
     growth=30+10*score
-    months.append({'date':end.isoformat(),'growth':growth,'defensive':100-growth,'positive':score,'tests':7,'spy':round(before(data['SPY'],end),2),'signals':tests})
+    months.append({'date':end.isoformat(),'growth':growth,'defensive':100-growth,'positive':score,'tests':7,'spy':round(before(data['SPY'],end),2),'gld':round(before(data['GLD'],end),4) if before(data['GLD'],end) else None,'gdx':round(before(data['GDX'],end),4) if before(data['GDX'],end) else None,'signals':tests})
   m+=1
   if m==13:y,m=y+1,1
  out={'generated_at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'method':'Retrospective rule-based illustration: 7 equally weighted monthly market tests, each positive test adds 10 percentage points to a 30% growth floor (range 30–100%). Uses only market prices observable at each month end, and 91-day lookbacks. No trading costs, tax, dividends, or rebalancing friction. Not the historical CPW recommendation or an independently validated backtest.','source':'Yahoo Finance daily close history','points':months}
