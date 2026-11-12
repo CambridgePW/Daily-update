@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-12T04:14:26.637906+00:00",
+  "generated_at_utc": "2026-11-12T04:14:47.671987+00:00",
   "method": "Retrospective rule-based illustration: 7 equally weighted monthly market tests, each positive test adds 10 percentage points to a 30% growth floor (range 30\u2013100%). Uses only market prices observable at each month end, and 91-day lookbacks. No trading costs, tax, dividends, or rebalancing friction. Not the historical CPW recommendation or an independently validated backtest.",
   "source": "Yahoo Finance daily close history",
   "points": [
