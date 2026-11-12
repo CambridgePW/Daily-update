@@ -1,0 +1,1197 @@
+{
+  "generated_at_utc": "2026-11-12T04:14:26.637906+00:00",
+  "method": "Retrospective rule-based illustration: 7 equally weighted monthly market tests, each positive test adds 10 percentage points to a 30% growth floor (range 30\u2013100%). Uses only market prices observable at each month end, and 91-day lookbacks. No trading costs, tax, dividends, or rebalancing friction. Not the historical CPW recommendation or an independently validated backtest.",
+  "source": "Yahoo Finance daily close history",
+  "points": [
+    {
+      "date": "2021-02-28",
+      "growth": 90,
+      "defensive": 10,
+      "positive": 6,
+      "tests": 7,
+      "spy": 380.36,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": true,
+        "Small-cap participation": true,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": true,
+        "Regional banks": true,
+        "Volatility below 25": false
+      }
+    },
+    {
+      "date": "2021-03-31",
+      "growth": 100,
+      "defensive": 0,
+      "positive": 7,
+      "tests": 7,
+      "spy": 396.33,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": true,
+        "Small-cap participation": true,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": true,
+        "Regional banks": true,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2021-04-30",
+      "growth": 90,
+      "defensive": 10,
+      "positive": 6,
+      "tests": 7,
+      "spy": 417.3,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": true,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": true,
+        "Regional banks": true,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2021-05-31",
+      "growth": 70,
+      "defensive": 30,
+      "positive": 4,
+      "tests": 7,
+      "spy": 420.04,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": true,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": false,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2021-06-30",
+      "growth": 60,
+      "defensive": 40,
+      "positive": 3,
+      "tests": 7,
+      "spy": 428.06,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": false,
+        "Consumer cyclicals": true,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2021-07-31",
+      "growth": 50,
+      "defensive": 50,
+      "positive": 2,
+      "tests": 7,
+      "spy": 438.51,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": false,
+        "Consumer cyclicals": false,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2021-08-31",
+      "growth": 60,
+      "defensive": 40,
+      "positive": 3,
+      "tests": 7,
+      "spy": 451.56,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": false,
+        "Consumer cyclicals": true,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2021-09-30",
+      "growth": 70,
+      "defensive": 30,
+      "positive": 4,
+      "tests": 7,
+      "spy": 429.14,
+      "signals": {
+        "Broad US market trend": false,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": true,
+        "Regional banks": true,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2021-10-31",
+      "growth": 80,
+      "defensive": 20,
+      "positive": 5,
+      "tests": 7,
+      "spy": 459.25,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": true,
+        "Regional banks": true,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2021-11-30",
+      "growth": 60,
+      "defensive": 40,
+      "positive": 3,
+      "tests": 7,
+      "spy": 455.56,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": false,
+        "Consumer cyclicals": true,
+        "Regional banks": true,
+        "Volatility below 25": false
+      }
+    },
+    {
+      "date": "2021-12-31",
+      "growth": 70,
+      "defensive": 30,
+      "positive": 4,
+      "tests": 7,
+      "spy": 474.96,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": true,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2022-01-31",
+      "growth": 60,
+      "defensive": 40,
+      "positive": 3,
+      "tests": 7,
+      "spy": 449.91,
+      "signals": {
+        "Broad US market trend": false,
+        "Market breadth": true,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": false,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2022-02-28",
+      "growth": 60,
+      "defensive": 40,
+      "positive": 3,
+      "tests": 7,
+      "spy": 436.63,
+      "signals": {
+        "Broad US market trend": false,
+        "Market breadth": true,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": false,
+        "Regional banks": true,
+        "Volatility below 25": false
+      }
+    },
+    {
+      "date": "2022-03-31",
+      "growth": 70,
+      "defensive": 30,
+      "positive": 4,
+      "tests": 7,
+      "spy": 451.64,
+      "signals": {
+        "Broad US market trend": false,
+        "Market breadth": true,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": false,
+        "Regional banks": true,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2022-04-30",
+      "growth": 60,
+      "defensive": 40,
+      "positive": 3,
+      "tests": 7,
+      "spy": 412.0,
+      "signals": {
+        "Broad US market trend": false,
+        "Market breadth": true,
+        "Small-cap participation": true,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": false,
+        "Regional banks": false,
+        "Volatility below 25": false
+      }
+    },
+    {
+      "date": "2022-05-31",
+      "growth": 50,
+      "defensive": 50,
+      "positive": 2,
+      "tests": 7,
+      "spy": 412.93,
+      "signals": {
+        "Broad US market trend": false,
+        "Market breadth": true,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": false,
+        "Regional banks": false,
+        "Volatility below 25": false
+      }
+    },
+    {
+      "date": "2022-06-30",
+      "growth": 50,
+      "defensive": 50,
+      "positive": 2,
+      "tests": 7,
+      "spy": 377.25,
+      "signals": {
+        "Broad US market trend": false,
+        "Market breadth": true,
+        "Small-cap participation": false,
+        "Credit risk appetite": false,
+        "Consumer cyclicals": false,
+        "Regional banks": true,
+        "Volatility below 25": false
+      }
+    },
+    {
+      "date": "2022-07-31",
+      "growth": 70,
+      "defensive": 30,
+      "positive": 4,
+      "tests": 7,
+      "spy": 411.99,
+      "signals": {
+        "Broad US market trend": false,
+        "Market breadth": false,
+        "Small-cap participation": true,
+        "Credit risk appetite": false,
+        "Consumer cyclicals": true,
+        "Regional banks": true,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2022-08-31",
+      "growth": 60,
+      "defensive": 40,
+      "positive": 3,
+      "tests": 7,
+      "spy": 395.18,
+      "signals": {
+        "Broad US market trend": false,
+        "Market breadth": false,
+        "Small-cap participation": true,
+        "Credit risk appetite": false,
+        "Consumer cyclicals": true,
+        "Regional banks": true,
+        "Volatility below 25": false
+      }
+    },
+    {
+      "date": "2022-09-30",
+      "growth": 70,
+      "defensive": 30,
+      "positive": 4,
+      "tests": 7,
+      "spy": 357.18,
+      "signals": {
+        "Broad US market trend": false,
+        "Market breadth": false,
+        "Small-cap participation": true,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": true,
+        "Regional banks": true,
+        "Volatility below 25": false
+      }
+    },
+    {
+      "date": "2022-10-31",
+      "growth": 70,
+      "defensive": 30,
+      "positive": 4,
+      "tests": 7,
+      "spy": 386.21,
+      "signals": {
+        "Broad US market trend": false,
+        "Market breadth": true,
+        "Small-cap participation": true,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": false,
+        "Regional banks": true,
+        "Volatility below 25": false
+      }
+    },
+    {
+      "date": "2022-11-30",
+      "growth": 70,
+      "defensive": 30,
+      "positive": 4,
+      "tests": 7,
+      "spy": 407.68,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": true,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": false,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2022-12-31",
+      "growth": 70,
+      "defensive": 30,
+      "positive": 4,
+      "tests": 7,
+      "spy": 382.43,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": true,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": false,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2023-01-31",
+      "growth": 70,
+      "defensive": 30,
+      "positive": 4,
+      "tests": 7,
+      "spy": 406.48,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": true,
+        "Small-cap participation": false,
+        "Credit risk appetite": false,
+        "Consumer cyclicals": true,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2023-02-28",
+      "growth": 90,
+      "defensive": 10,
+      "positive": 6,
+      "tests": 7,
+      "spy": 396.26,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": true,
+        "Small-cap participation": true,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": true,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2023-03-31",
+      "growth": 60,
+      "defensive": 40,
+      "positive": 3,
+      "tests": 7,
+      "spy": 409.39,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": false,
+        "Consumer cyclicals": true,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2023-04-30",
+      "growth": 50,
+      "defensive": 50,
+      "positive": 2,
+      "tests": 7,
+      "spy": 415.93,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": false,
+        "Consumer cyclicals": false,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2023-05-31",
+      "growth": 60,
+      "defensive": 40,
+      "positive": 3,
+      "tests": 7,
+      "spy": 417.85,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": false,
+        "Consumer cyclicals": true,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2023-06-30",
+      "growth": 70,
+      "defensive": 30,
+      "positive": 4,
+      "tests": 7,
+      "spy": 443.28,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": true,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2023-07-31",
+      "growth": 90,
+      "defensive": 10,
+      "positive": 6,
+      "tests": 7,
+      "spy": 457.79,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": true,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": true,
+        "Regional banks": true,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2023-08-31",
+      "growth": 90,
+      "defensive": 10,
+      "positive": 6,
+      "tests": 7,
+      "spy": 450.35,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": true,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": true,
+        "Regional banks": true,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2023-09-30",
+      "growth": 70,
+      "defensive": 30,
+      "positive": 4,
+      "tests": 7,
+      "spy": 427.48,
+      "signals": {
+        "Broad US market trend": false,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": true,
+        "Regional banks": true,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2023-10-31",
+      "growth": 50,
+      "defensive": 50,
+      "positive": 2,
+      "tests": 7,
+      "spy": 418.2,
+      "signals": {
+        "Broad US market trend": false,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": false,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2023-11-30",
+      "growth": 70,
+      "defensive": 30,
+      "positive": 4,
+      "tests": 7,
+      "spy": 456.4,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": true,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2023-12-31",
+      "growth": 90,
+      "defensive": 10,
+      "positive": 6,
+      "tests": 7,
+      "spy": 475.31,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": true,
+        "Small-cap participation": true,
+        "Credit risk appetite": false,
+        "Consumer cyclicals": true,
+        "Regional banks": true,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2024-01-31",
+      "growth": 90,
+      "defensive": 10,
+      "positive": 6,
+      "tests": 7,
+      "spy": 482.88,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": true,
+        "Small-cap participation": true,
+        "Credit risk appetite": false,
+        "Consumer cyclicals": true,
+        "Regional banks": true,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2024-02-29",
+      "growth": 80,
+      "defensive": 20,
+      "positive": 5,
+      "tests": 7,
+      "spy": 508.08,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": true,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": true,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2024-03-31",
+      "growth": 60,
+      "defensive": 40,
+      "positive": 3,
+      "tests": 7,
+      "spy": 523.07,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": false,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2024-04-30",
+      "growth": 60,
+      "defensive": 40,
+      "positive": 3,
+      "tests": 7,
+      "spy": 501.98,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": false,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2024-05-31",
+      "growth": 60,
+      "defensive": 40,
+      "positive": 3,
+      "tests": 7,
+      "spy": 527.37,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": false,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2024-06-30",
+      "growth": 60,
+      "defensive": 40,
+      "positive": 3,
+      "tests": 7,
+      "spy": 544.22,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": false,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2024-07-31",
+      "growth": 80,
+      "defensive": 20,
+      "positive": 5,
+      "tests": 7,
+      "spy": 550.81,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": true,
+        "Credit risk appetite": false,
+        "Consumer cyclicals": true,
+        "Regional banks": true,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2024-08-31",
+      "growth": 70,
+      "defensive": 30,
+      "positive": 4,
+      "tests": 7,
+      "spy": 563.68,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": true,
+        "Credit risk appetite": false,
+        "Consumer cyclicals": false,
+        "Regional banks": true,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2024-09-30",
+      "growth": 90,
+      "defensive": 10,
+      "positive": 6,
+      "tests": 7,
+      "spy": 573.76,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": true,
+        "Small-cap participation": true,
+        "Credit risk appetite": false,
+        "Consumer cyclicals": true,
+        "Regional banks": true,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2024-10-31",
+      "growth": 80,
+      "defensive": 20,
+      "positive": 5,
+      "tests": 7,
+      "spy": 568.64,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": true,
+        "Regional banks": true,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2024-11-30",
+      "growth": 90,
+      "defensive": 10,
+      "positive": 6,
+      "tests": 7,
+      "spy": 602.55,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": true,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": true,
+        "Regional banks": true,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2024-12-31",
+      "growth": 80,
+      "defensive": 20,
+      "positive": 5,
+      "tests": 7,
+      "spy": 586.08,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": true,
+        "Regional banks": true,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2025-01-31",
+      "growth": 80,
+      "defensive": 20,
+      "positive": 5,
+      "tests": 7,
+      "spy": 601.82,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": true,
+        "Regional banks": true,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2025-02-28",
+      "growth": 50,
+      "defensive": 50,
+      "positive": 2,
+      "tests": 7,
+      "spy": 594.18,
+      "signals": {
+        "Broad US market trend": false,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": false,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2025-03-31",
+      "growth": 50,
+      "defensive": 50,
+      "positive": 2,
+      "tests": 7,
+      "spy": 559.39,
+      "signals": {
+        "Broad US market trend": false,
+        "Market breadth": true,
+        "Small-cap participation": false,
+        "Credit risk appetite": false,
+        "Consumer cyclicals": false,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2025-04-30",
+      "growth": 50,
+      "defensive": 50,
+      "positive": 2,
+      "tests": 7,
+      "spy": 554.54,
+      "signals": {
+        "Broad US market trend": false,
+        "Market breadth": true,
+        "Small-cap participation": false,
+        "Credit risk appetite": false,
+        "Consumer cyclicals": false,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2025-05-31",
+      "growth": 50,
+      "defensive": 50,
+      "positive": 2,
+      "tests": 7,
+      "spy": 589.39,
+      "signals": {
+        "Broad US market trend": false,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": false,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2025-06-30",
+      "growth": 70,
+      "defensive": 30,
+      "positive": 4,
+      "tests": 7,
+      "spy": 617.85,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": true,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2025-07-31",
+      "growth": 70,
+      "defensive": 30,
+      "positive": 4,
+      "tests": 7,
+      "spy": 632.08,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": true,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2025-08-31",
+      "growth": 80,
+      "defensive": 20,
+      "positive": 5,
+      "tests": 7,
+      "spy": 645.05,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": true,
+        "Credit risk appetite": false,
+        "Consumer cyclicals": true,
+        "Regional banks": true,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2025-09-30",
+      "growth": 70,
+      "defensive": 30,
+      "positive": 4,
+      "tests": 7,
+      "spy": 666.18,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": true,
+        "Credit risk appetite": false,
+        "Consumer cyclicals": true,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2025-10-31",
+      "growth": 70,
+      "defensive": 30,
+      "positive": 4,
+      "tests": 7,
+      "spy": 682.06,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": true,
+        "Credit risk appetite": false,
+        "Consumer cyclicals": true,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2025-11-30",
+      "growth": 60,
+      "defensive": 40,
+      "positive": 3,
+      "tests": 7,
+      "spy": 683.39,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": false,
+        "Consumer cyclicals": true,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2025-12-31",
+      "growth": 70,
+      "defensive": 30,
+      "positive": 4,
+      "tests": 7,
+      "spy": 681.92,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": false,
+        "Regional banks": true,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2026-01-31",
+      "growth": 90,
+      "defensive": 10,
+      "positive": 6,
+      "tests": 7,
+      "spy": 691.97,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": true,
+        "Small-cap participation": true,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": false,
+        "Regional banks": true,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2026-02-28",
+      "growth": 80,
+      "defensive": 20,
+      "positive": 5,
+      "tests": 7,
+      "spy": 685.99,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": true,
+        "Small-cap participation": true,
+        "Credit risk appetite": false,
+        "Consumer cyclicals": false,
+        "Regional banks": true,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2026-03-31",
+      "growth": 70,
+      "defensive": 30,
+      "positive": 4,
+      "tests": 7,
+      "spy": 650.34,
+      "signals": {
+        "Broad US market trend": false,
+        "Market breadth": true,
+        "Small-cap participation": true,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": false,
+        "Regional banks": true,
+        "Volatility below 25": false
+      }
+    },
+    {
+      "date": "2026-04-30",
+      "growth": 70,
+      "defensive": 30,
+      "positive": 4,
+      "tests": 7,
+      "spy": 718.66,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": true,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": false,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2026-05-31",
+      "growth": 80,
+      "defensive": 20,
+      "positive": 5,
+      "tests": 7,
+      "spy": 756.48,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": true,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": true,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2026-06-30",
+      "growth": 90,
+      "defensive": 10,
+      "positive": 6,
+      "tests": 7,
+      "spy": 746.77,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": true,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": true,
+        "Regional banks": true,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2026-07-31",
+      "growth": 90,
+      "defensive": 10,
+      "positive": 6,
+      "tests": 7,
+      "spy": 747.03,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": true,
+        "Small-cap participation": true,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": false,
+        "Regional banks": true,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2026-08-31",
+      "growth": 90,
+      "defensive": 10,
+      "positive": 6,
+      "tests": 7,
+      "spy": 767.05,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": true,
+        "Small-cap participation": true,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": false,
+        "Regional banks": true,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2026-09-30",
+      "growth": 60,
+      "defensive": 40,
+      "positive": 3,
+      "tests": 7,
+      "spy": 762.63,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": false,
+        "Small-cap participation": false,
+        "Credit risk appetite": true,
+        "Consumer cyclicals": false,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2026-10-31",
+      "growth": 60,
+      "defensive": 40,
+      "positive": 3,
+      "tests": 7,
+      "spy": 755.72,
+      "signals": {
+        "Broad US market trend": true,
+        "Market breadth": true,
+        "Small-cap participation": false,
+        "Credit risk appetite": false,
+        "Consumer cyclicals": false,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    },
+    {
+      "date": "2026-11-12",
+      "growth": 50,
+      "defensive": 50,
+      "positive": 2,
+      "tests": 7,
+      "spy": 759.81,
+      "signals": {
+        "Broad US market trend": false,
+        "Market breadth": true,
+        "Small-cap participation": false,
+        "Credit risk appetite": false,
+        "Consumer cyclicals": false,
+        "Regional banks": false,
+        "Volatility below 25": true
+      }
+    }
+  ]
+}
