@@ -16,7 +16,7 @@ if(d.status!=='ok'||!Number.isFinite(age)||age>7||age<0||!stocks.length){return;
 const candidates=stocks.filter(x=>x.brokers>=3&&x.score>=2.31&&(x.upside==null||x.upside>=5));
 const fmt=x=>x==null?'—':Number(x).toFixed(1)+'%';
 el.innerHTML='<p><b>Feed:</b> '+esc(d.provider||'broker data')+' · '+esc(d.as_of)+' · '+stocks.length+' stocks covered · '+candidates.length+' research candidates</p><div class="scroll"><table style="font-size:12px"><tr><th>ASX</th><th>Style</th><th>Consensus</th><th>B / H / S</th><th>Target upside</th></tr>'+stocks.slice(0,30).map(x=>'<tr><td><b>'+esc(x.symbol)+'</b></td><td>'+esc(x.style||x.sector||'—')+'</td><td>'+esc(x.rating)+(candidates.includes(x)?' ★':'')+'</td><td>'+[x.buy,x.hold,x.sell].join(' / ')+'</td><td>'+fmt(x.upside)+'</td></tr>').join('')+'</table></div><p>★ Meets preliminary broker-consensus screen. Ranking is not an adviser-approved buy list; price-target upside is not a guaranteed return. Source data may have different individual broker update dates.</p>';
-}).catch(()=>{const el=document.getElementById('asx-consensus-data');if(el)el.textContent='Broker consensus feed unavailable; no current stock recommendations shown.'});
+}).catch(()=>{/* Keep dated consensus snapshot visible when live feed is unavailable. */});
 fetch('daily.json?nocache='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(d=>{
 const watch=document.getElementById('asx-price-watch');
 if(watch){const rows=(d.asx_watch||[]).filter(x=>x.status==='ok'&&x.date&&Number.isFinite(x.trends?.['3m']?.value)&&((Date.now()-Date.parse(x.date+'T00:00:00Z'))/86400000)<=7);
