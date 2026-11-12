@@ -4,7 +4,7 @@ from pathlib import Path
 from urllib.parse import quote
 SYMS={'SPY':'SPY','RSP':'RSP','IWM':'IWM','HYG':'HYG','LQD':'LQD','XLY':'XLY','XLP':'XLP','KRE':'KRE','VIX':'^VIX'}
 def history(sym):
- url='https://query1.finance.yahoo.com/v8/finance/chart/'+quote(sym,safe='')+'?range=6y&interval=1d'
+ url='https://query1.finance.yahoo.com/v8/finance/chart/'+quote(sym,safe='')+'?range=11y&interval=1d'
  req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Accept':'application/json'})
  with urllib.request.urlopen(req,timeout=22) as f: d=json.load(f)['chart']['result'][0]
  return sorted((datetime.datetime.fromtimestamp(t,datetime.timezone.utc).date(),float(v)) for t,v in zip(d['timestamp'],d['indicators']['quote'][0]['close']) if v is not None)
@@ -17,12 +17,12 @@ def change(series,date):
 def run():
  data={k:history(v) for k,v in SYMS.items()}
  today=datetime.datetime.now(datetime.timezone.utc).date()
- months=[];y,m=2021,1
+ months=[];y,m=2016,11
  while (y,m)<=(today.year,today.month):
   target=datetime.date(y,m,1)
   end=(datetime.date(y+1,1,1) if m==12 else datetime.date(y,m+1,1))-datetime.timedelta(days=1)
   end=min(end,today)
-  if end>=datetime.date(2021,1,1):
+  if end>=datetime.date(2016,11,1):
    c={k:change(v,end) for k,v in data.items()}
    vix=before(data['VIX'],end)
    tests={
