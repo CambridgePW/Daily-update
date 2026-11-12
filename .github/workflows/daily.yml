@@ -14,9 +14,14 @@ jobs:
         with:
           python-version: '3.12'
       - run: python update.py
+      - name: Refresh licensed broker consensus (when configured)
+        env:
+          BROKER_CONSENSUS_URL: ${{ secrets.BROKER_CONSENSUS_URL }}
+          BROKER_CONSENSUS_TOKEN: ${{ secrets.BROKER_CONSENSUS_TOKEN }}
+        run: python update_brokers.py
       - name: Publish snapshot
         run: |
           git config user.name market-intelligence-bot
           git config user.email actions@users.noreply.github.com
-          git add daily.json
+          git add daily.json broker_consensus.json
           git diff --cached --quiet || (git commit -m 'Update daily market intelligence' && git push)
