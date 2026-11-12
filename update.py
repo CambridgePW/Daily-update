@@ -118,8 +118,21 @@ def news(item):
   with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'}),timeout=20) as f:root=ET.fromstring(f.read())
   return [{'category':category,'title':x.findtext('title'),'url':x.findtext('link'),'published':x.findtext('pubDate')} for x in root.findall('.//item')[:5]]
  except Exception:return []
+# ASX price-trend research watchlist; independent of broker consensus.
+# These signals never claim to be analyst recommendations.
+ASX_WATCH={
+'CSL':('Healthcare','Defensive'),'SHL':('Healthcare','Defensive'),'WOW':('Consumer staples','Defensive'),'COL':('Consumer staples','Defensive'),
+'TLS':('Telecommunications','Defensive'),'TCL':('Infrastructure','Defensive'),
+'BHP':('Resources','Cyclical'),'RIO':('Resources','Cyclical'),'WES':('Consumer','Cyclical'),'QBE':('Insurance','Cyclical'),
+'GMG':('Property','Growth'),'NWL':('Financial technology','Growth'),'TLX':('Healthcare','Growth'),'XRO':('Technology','Growth'),
+'PRU':('Gold miners','Cyclical'),'NST':('Gold miners','Cyclical')}
+def asx_trend(item):
+ symbol,(sector,style)=item
+ result=yahoo(('ASX '+symbol,symbol+'.AX'))
+ return {'symbol':symbol,'sector':sector,'style':style,'status':result.get('status'),'date':result.get('date'),'price':result.get('value'),'trends':result.get('trends',{}),'source':result.get('source')}
 with ThreadPoolExecutor(max_workers=10) as pool:
  readings=list(pool.map(fetch,SERIES.items()))
+ asx_watch=list(pool.map(asx_trend,ASX_WATCH.items()))
  headlines=list(pool.map(news,[('Central banks','RBA Federal Reserve rates policy'),('Credit','bank defaults delinquencies credit stress'),('Geopolitics','geopolitics war tariffs Reuters'),('Gold','gold price central bank purchases')]))
 try:
  old={x['name']:x for x in json.loads(Path(__file__).with_name('daily.json').read_text()).get('readings',[]) if x.get('value') is not None}
@@ -166,6 +179,6 @@ if delinq is not None:add('Loan stress',-1 if delinq>3 else 1 if delinq<2 else 0
 avg=score/count if count else None
 regime='DATA INSUFFICIENT' if count<3 else 'DEFENSIVE' if avg<=-.6 else 'CONSTRUCTIVE' if avg>=.6 else 'MIXED / CAUTIOUS'
 positioning={} if count<3 else {'Equities':'REDUCE / DEFENSIVE' if avg<=-.6 else 'SELECTIVE BUY' if avg>=.6 else 'HOLD / SELECTIVE','Government bonds':'HOLD / REVIEW YIELDS','Gold':'HOLD / REVIEW REAL YIELDS','Cash':'MAINTAIN BUFFER' if avg<.6 else 'NORMAL BUFFER'}
-output={'generated_at_utc':NOW.isoformat(),'regime':regime,'score':round(avg,2) if avg is not None else None,'coverage':count,'positioning':positioning,'indicators':notes,'readings':readings,'news':[n for group in headlines for n in group]}
+output={'generated_at_utc':NOW.isoformat(),'regime':regime,'score':round(avg,2) if avg is not None else None,'coverage':count,'positioning':positioning,'indicators':notes,'readings':readings,'asx_watch':asx_watch,'news':[n for group in headlines for n in group]}
 Path(__file__).with_name('daily.json').write_text(json.dumps(output,indent=2))
 print('Saved daily.json:',regime,'coverage',count)
