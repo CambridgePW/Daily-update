@@ -15,7 +15,9 @@ jobs:
           python-version: '3.12'
       - run: python update.py
       - name: Recalculate historical allocation illustration
-        run: python allocation_history.py\n      - name: Backtest gold overlay scenarios\n        run: python gold_backtest.py
+        run: python allocation_history.py
+      - name: Backtest gold overlay scenarios
+        run: python gold_backtest.py
       - name: Refresh licensed broker consensus (when configured)
         env:
           BROKER_CONSENSUS_URL: ${{ secrets.BROKER_CONSENSUS_URL }}
