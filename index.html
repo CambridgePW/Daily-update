@@ -50,10 +50,10 @@ const signalTests=[
 ];
 const byName=name=>signalTests.findIndex(t=>t.name===name);
 const groups=[
-{name:'Market direction & breadth',weight:25,tests:[byName('US equities (S&P 500)'),byName('Market breadth proxy (RSP vs SPY)'),byName('Small cap vs large cap')]},
-{name:'Credit & financial stress',weight:25,tests:[byName('Credit risk appetite proxy (HYG vs LQD)'),byName('Regional banks vs S&P 500')]},
+{name:'Market direction & breadth',weight:25,tests:[byName('US equities (S&P 500)'),byName('Market participation (market proxy)'),byName('Small companies (market proxy)')]},
+{name:'Credit & financial stress',weight:25,tests:[byName('Credit appetite (market proxy)'),byName('Banking confidence (market proxy)')]},
 {name:'Rates & inflation pressure',weight:15,tests:[byName('US 10-year Treasury yield')]},
-{name:'Consumer & economic demand',weight:15,tests:[byName('Consumer demand proxy (XLY vs XLP)')]},
+{name:'Consumer & economic demand',weight:15,tests:[byName('Consumer expectations (market proxy)')]},
 {name:'Volatility',weight:20,tests:[byName('Market volatility (VIX)')]}
 ];
 const weighted=groups.map(g=>{const valid=g.tests.filter(i=>i>=0).map(i=>signalTests[i]).filter(x=>x&&Number.isFinite(x.value));const score=valid.length?valid.reduce((a,x)=>a-x.test(x.value),0)/valid.length:null;return {...g,score,available:valid.length};});
