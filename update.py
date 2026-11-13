@@ -5,7 +5,7 @@ from urllib.parse import quote
 NOW=datetime.datetime.now(datetime.timezone.utc)
 SERIES={'US 10Y yield (market proxy)':'DGS10','US 5Y yield (market proxy)':'DGS5','Gold futures USD/oz':'GOLDAMGBD228NLBM','Gold miners ETF (GDX)':'GDX','AUD/USD':'DEXUSAL','US Dollar Index (DXY)':'DTWEXBGS','US real 10Y yield':'DFII10','US unemployment':'UNRATE','US CPI index':'CPIAUCSL','US M2 money stock':'M2SL','US household debt service ratio':'TDSP','Brent crude futures':'DCOILBRENTEU','S&P 500':'SP500','Nasdaq':'NASDAQCOM','VIX':'VIXCLS','High yield corporate bond ETF (HYG)':'HYG','Investment grade corporate bond ETF (LQD)':'LQD','Consumer discretionary ETF (XLY)':'XLY','Consumer staples ETF (XLP)':'XLP','Equal weight S&P ETF (RSP)':'RSP','S&P ETF (SPY)':'SPY','Small cap ETF (IWM)':'IWM','Regional banks ETF (KRE)':'KRE','Broad US banks ETF (KBE)':'KBE','Australian equities ETF (VAS)':'VAS.AX','Australian resources ETF (MVR)':'MVR.AX','Australian quality ETF (AQLT)':'AQLT.AX','Developed markets ETF (VEU)':'VEU','Emerging markets ETF (VWO)':'VWO','Global technology ETF (IXN)':'IXN','Australian government bonds ETF (IAF)':'IAF.AX'}
 MARKETS={'S&P 500':'^GSPC','Nasdaq':'^IXIC','VIX':'^VIX','US 10Y yield (market proxy)':'^TNX','US 5Y yield (market proxy)':'^FVX','Gold futures USD/oz':'GC=F','Gold miners ETF (GDX)':'GDX','Brent crude futures':'BZ=F','AUD/USD':'AUDUSD=X','US Dollar Index (DXY)':'DX-Y.NYB','High yield corporate bond ETF (HYG)':'HYG','Investment grade corporate bond ETF (LQD)':'LQD','Consumer discretionary ETF (XLY)':'XLY','Consumer staples ETF (XLP)':'XLP','Equal weight S&P ETF (RSP)':'RSP','S&P ETF (SPY)':'SPY','Small cap ETF (IWM)':'IWM','Regional banks ETF (KRE)':'KRE','Australian equities ETF (VAS)':'VAS.AX','Australian resources ETF (MVR)':'MVR.AX','Australian quality ETF (AQLT)':'AQLT.AX','Developed markets ETF (VEU)':'VEU','Emerging markets ETF (VWO)':'VWO','Global technology ETF (IXN)':'IXN','Australian government bonds ETF (IAF)':'IAF.AX'}
-STOOQ={'S&P 500':'^spx','Nasdaq':'^ndq','Gold futures USD/oz':'gc.f','Brent crude futures':'brn.f','AUD/USD':'audusd'}
+STOOQ={'S&P 500':'^spx','Nasdaq':'^ndq','Gold futures USD/oz':'gc.f','Brent crude futures':'brn.f','AUD/USD':'audusd','Broad US banks ETF (KBE)':'kbe.us'}
 def trends(obs,name):
  obs=sorted(obs)
  latest=obs[-1][0]
@@ -103,7 +103,7 @@ def fetch(item):
  url='https://fred.stlouisfed.org/graph/fredgraph.csv?id='+quote(code)+'&cosd=2024-01-01'
  try:
   req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'})
-  with urllib.request.urlopen(req,timeout=8) as f: rows=list(csv.reader(io.StringIO(f.read().decode('utf-8-sig'))))
+  with urllib.request.urlopen(req,timeout=22) as f: rows=list(csv.reader(io.StringIO(f.read().decode('utf-8-sig'))))
   obs=[]
   for row in rows[1:]:
    try:obs.append((row[0],float(row[1])))
