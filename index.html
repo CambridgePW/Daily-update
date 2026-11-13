@@ -45,34 +45,6 @@ const count=d.coverage||0;
 const sufficient=count>=3;
 document.getElementById('overview').innerHTML='<div class="small">LATEST UPDATE: '+esc(d.generated_at_utc||'Not run')+' UTC</div><h2>'+(sufficient?esc(d.regime):'Market assessment: provisional')+'</h2><p>'+(sufficient?'Risk assessment uses '+count+' qualifying indicators.':'Only '+count+' of 5 core risk indicators are available. A reliable overall Buy/Hold/Reduce conclusion is not yet possible.')+'</p><div class="warn">'+esc(live.length)+' market readings available · '+esc(missing.length)+' missing or last-known · Data gaps are excluded from the risk score.</div>';
 const gold=live.find(x=>x.name.includes('Gold')),vix=live.find(x=>x.name==='VIX'),sp=live.find(x=>x.name==='S&P 500'),ten=live.find(x=>x.name.includes('10Y yield'));
-const goldReview=document.getElementById('gold-signal-review');
-if(goldReview){
-const findReading=pattern=>live.find(x=>pattern.test(x.name));
-const bullion=findReading(/Gold futures|Gold spot|Gold ETF/i);
-const miners=findReading(/Gold miners ETF \(GDX\)/i);
-const realYield=findReading(/US real 10Y yield/i);
-const usd=findReading(/US Dollar Index/i);
-const factors=[['Gold futures',bullion],['Gold miners (GDX)',miners],['US real 10-year yield',realYield],['US dollar index (verify series)',usd]];
-const recent=x=>x&&x.status==='ok'&&x.date&&Number.isFinite(Date.parse(x.date+'T00:00:00Z'))&&(Date.now()-Date.parse(x.date+'T00:00:00Z'))/86400000<=7;
-const trend=(x,period='3m')=>recent(x)&&Number.isFinite(x.trends?.[period]?.value)?x.trends[period].value:null;
-const g=trend(bullion),m=trend(miners),y=trend(realYield),u=trend(usd);
-const g12=trend(bullion,'12m'),m12=trend(miners,'12m');
-const ready=[g,m,y,u,g12,m12].every(Number.isFinite);
-let goldWeight=0,detail='Awaiting complete fresh 3-month and 12-month evidence; no model allocation established.';
-if(ready){
-const macroSupport=(y<=0?1:0)+(u<=0?1:0);
-const longSupport=(g12>0?1:0)+(m12>0?1:0);
-const trendScore=(g>0?1:g< -12?-1:0)+(m>0?1:m< -18?-1:0);
-const correction=(g<0||m<0)&&g> -18&&m> -30;
-const contrarianBonus=correction&&macroSupport===2&&longSupport===2?2:correction&&macroSupport>=1&&longSupport===2?1:0;
-const breakdown=macroSupport+longSupport+trendScore+contrarianBonus;
-goldWeight=breakdown>=7?20:breakdown>=5?15:breakdown>=3?10:breakdown>=1?5:0;
-goldWeight=Math.min(goldWeight,baseline.growth,25);
-detail='Model score '+breakdown+': macro support '+macroSupport+'/2, 12-month trend '+longSupport+'/2, short-term trend '+trendScore+', correction opportunity '+contrarianBonus+'. A controlled pullback can increase exposure when longer-term momentum and macro conditions remain favourable. Severe declines do not earn a contrarian bonus. Illustrative rules, not backtested or approved.';
-}
-window.pendingGoldSignal={weight:goldWeight,verified:ready};window.updateAutomatedGoldWeight?.(goldWeight,ready);
-goldReview.innerHTML='<b>Automated gold-mining equities allocation:</b> '+(ready?goldWeight+'% of total portfolio':'Pending verified signals')+'<p class="small">'+esc(detail)+'</p><div style="margin-top:7px">'+factors.map(([name,x])=>'<div>'+esc(name)+': '+(trend(x)!==null?esc(trend(x).toFixed(1))+'% (3m), '+esc(x.date):'Unavailable or stale')+(trend(x,'12m')!==null?', 12m '+esc(trend(x,'12m').toFixed(1))+'%':'')+'</div>').join('')+'</div><p class="small">25% is a combined bullion/miner ceiling, not a target. Gold bullion remains 0% pending a separate rule. The dollar index feed may be a broad trade-weighted proxy rather than DXY; confirm its identity before treating the model as production-ready. Illustrative weights do not change holdings.</p>';
-}
 const vix3=vix?.trends?.['3m']?.value, sp3=sp?.trends?.['3m']?.value, y3=ten?.trends?.['3m']?.value;
 const by=n=>live.find(x=>x.name===n);
 const t=n=>by(n)?.trends?.['3m']?.value;
@@ -136,6 +108,34 @@ const sum=rows.reduce((a,x)=>a+x.weight,0);
 table.innerHTML='<table><tr><th>Illustrative asset allocation</th><th style="text-align:right">Weight</th></tr>'+rows.map(x=>'<tr><td>'+esc(x.name)+'</td><td style="text-align:right">'+x.weight.toFixed(1)+'%</td></tr>').join('')+'<tr><td><b>Total</b></td><td style="text-align:right"><b>'+sum.toFixed(1)+'%</b></td></tr></table>';
 };
 window.updateAutomatedGoldWeight=(weight,verified)=>{slider.value=verified?Math.max(0,Math.min(maxGold,weight)):0;renderGold();label.textContent=verified?slider.value+'%':'0% (awaiting signals)';};window.updateAutomatedGoldWeight(window.pendingGoldSignal?.weight??0,window.pendingGoldSignal?.verified??false);
+}
+const goldReview=document.getElementById('gold-signal-review');
+if(goldReview){
+const findReading=pattern=>live.find(x=>pattern.test(x.name));
+const bullion=findReading(/Gold futures|Gold spot|Gold ETF/i);
+const miners=findReading(/Gold miners ETF \(GDX\)/i);
+const realYield=findReading(/US real 10Y yield/i);
+const usd=findReading(/US Dollar Index/i);
+const factors=[['Gold futures',bullion],['Gold miners (GDX)',miners],['US real 10-year yield',realYield],['US dollar index (verify series)',usd]];
+const recent=x=>x&&x.status==='ok'&&x.date&&Number.isFinite(Date.parse(x.date+'T00:00:00Z'))&&(Date.now()-Date.parse(x.date+'T00:00:00Z'))/86400000<=7;
+const trend=(x,period='3m')=>recent(x)&&Number.isFinite(x.trends?.[period]?.value)?x.trends[period].value:null;
+const g=trend(bullion),m=trend(miners),y=trend(realYield),u=trend(usd);
+const g12=trend(bullion,'12m'),m12=trend(miners,'12m');
+const ready=[g,m,y,u,g12,m12].every(Number.isFinite);
+let goldWeight=0,detail='Awaiting complete fresh 3-month and 12-month evidence; no model allocation established.';
+if(ready){
+const macroSupport=(y<=0?1:0)+(u<=0?1:0);
+const longSupport=(g12>0?1:0)+(m12>0?1:0);
+const trendScore=(g>0?1:g< -12?-1:0)+(m>0?1:m< -18?-1:0);
+const correction=(g<0||m<0)&&g> -18&&m> -30;
+const contrarianBonus=correction&&macroSupport===2&&longSupport===2?2:correction&&macroSupport>=1&&longSupport===2?1:0;
+const breakdown=macroSupport+longSupport+trendScore+contrarianBonus;
+goldWeight=breakdown>=7?20:breakdown>=5?15:breakdown>=3?10:breakdown>=1?5:0;
+goldWeight=Math.min(goldWeight,baseline.growth,25);
+detail='Model score '+breakdown+': macro support '+macroSupport+'/2, 12-month trend '+longSupport+'/2, short-term trend '+trendScore+', correction opportunity '+contrarianBonus+'. A controlled pullback can increase exposure when longer-term momentum and macro conditions remain favourable. Severe declines do not earn a contrarian bonus. Illustrative rules, not backtested or approved.';
+}
+window.pendingGoldSignal={weight:goldWeight,verified:ready};window.updateAutomatedGoldWeight?.(goldWeight,ready);
+goldReview.innerHTML='<b>Automated gold-mining equities allocation:</b> '+(ready?goldWeight+'% of total portfolio':'Pending verified signals')+'<p class="small">'+esc(detail)+'</p><div style="margin-top:7px">'+factors.map(([name,x])=>'<div>'+esc(name)+': '+(trend(x)!==null?esc(trend(x).toFixed(1))+'% (3m), '+esc(x.date):'Unavailable or stale')+(trend(x,'12m')!==null?', 12m '+esc(trend(x,'12m').toFixed(1))+'%':'')+'</div>').join('')+'</div><p class="small">25% is a combined bullion/miner ceiling, not a target. Gold bullion remains 0% pending a separate rule. The dollar index feed may be a broad trade-weighted proxy rather than DXY; confirm its identity before treating the model as production-ready. Illustrative weights do not change holdings.</p>';
 }
 const dataAgeDays=(Date.now()-Date.parse(d.generated_at_utc||''))/86400000;
 const freshSnapshot=Number.isFinite(dataAgeDays)&&dataAgeDays>=0&&dataAgeDays<=4;
