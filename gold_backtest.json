@@ -1,8 +1,8 @@
 {
-  "generated_from": "2026-11-13T03:33:22.862631+00:00",
+  "generated_from": "2026-11-13T03:38:46.709875+00:00",
   "start": "2016-01-31",
   "end": "2026-11-13",
-  "method": "Point-in-time monthly signal at month-end, returns NEXT month. SPY/GLD/GDX adjusted-price USD proxies; growth allocation from seven market signals. Gold overlay 60% bullion GLD / 40% miners GDX funded from equities. Contrarian adds 5 percentage points for controlled three-month correction while 6- and 12-month bullion and 12-month miners trends remain positive. Does NOT include real yields, DXY, Australian currency, bond/cash returns, costs, tax or portfolio-level distributions. Not the live four-factor model; do not treat as validated investable returns.",
+  "method": "Four strategies including independent bullion (0-15%) and miner (0-15%) signals, combined maximum 25%. Bullion uses GLD 3/6/12-month momentum plus controlled correction; miners use GDX 3/6/12-month momentum and GDX/GLD relative strength plus controlled correction. These rules are research hypotheses, not optimised or approved. Point-in-time monthly signal at month-end, returns NEXT month. SPY/GLD/GDX adjusted-price USD proxies; growth allocation from seven market signals. Gold overlay 60% bullion GLD / 40% miners GDX funded from equities. Contrarian adds 5 percentage points for controlled three-month correction while 6- and 12-month bullion and 12-month miners trends remain positive. Does NOT include real yields, DXY, Australian currency, bond/cash returns, costs, tax or portfolio-level distributions. Not the live four-factor model; do not treat as validated investable returns.",
   "results": {
     "no_gold": {
       "months": 130,
@@ -24,6 +24,13 @@
       "annualised_pct": 9.21,
       "volatility_pct": 8.57,
       "max_drawdown_pct": -16.24
+    },
+    "separate_sleeves": {
+      "months": 130,
+      "cumulative_pct": 144.22,
+      "annualised_pct": 8.59,
+      "volatility_pct": 8.59,
+      "max_drawdown_pct": -16.11
     }
   },
   "windows": {
@@ -48,6 +55,13 @@
         "annualised_pct": -12.29,
         "volatility_pct": 4.38,
         "max_drawdown_pct": -3.54
+      },
+      "separate_sleeves": {
+        "months": 3,
+        "cumulative_pct": -3.92,
+        "annualised_pct": -14.78,
+        "volatility_pct": 7.05,
+        "max_drawdown_pct": -4.88
       }
     },
     "6m": {
@@ -71,6 +85,13 @@
         "annualised_pct": -5.9,
         "volatility_pct": 8.16,
         "max_drawdown_pct": -3.54
+      },
+      "separate_sleeves": {
+        "months": 6,
+        "cumulative_pct": -4.9,
+        "annualised_pct": -9.56,
+        "volatility_pct": 7.75,
+        "max_drawdown_pct": -5.85
       }
     },
     "12m": {
@@ -94,6 +115,13 @@
         "annualised_pct": 4.6,
         "volatility_pct": 10.52,
         "max_drawdown_pct": -5.46
+      },
+      "separate_sleeves": {
+        "months": 12,
+        "cumulative_pct": 2.47,
+        "annualised_pct": 2.47,
+        "volatility_pct": 10.9,
+        "max_drawdown_pct": -5.96
       }
     },
     "36m": {
@@ -117,6 +145,13 @@
         "annualised_pct": 15.37,
         "volatility_pct": 7.65,
         "max_drawdown_pct": -5.46
+      },
+      "separate_sleeves": {
+        "months": 36,
+        "cumulative_pct": 51.56,
+        "annualised_pct": 14.87,
+        "volatility_pct": 7.93,
+        "max_drawdown_pct": -5.96
       }
     },
     "60m": {
@@ -140,6 +175,13 @@
         "annualised_pct": 8.7,
         "volatility_pct": 9.73,
         "max_drawdown_pct": -16.24
+      },
+      "separate_sleeves": {
+        "months": 60,
+        "cumulative_pct": 49.28,
+        "annualised_pct": 8.34,
+        "volatility_pct": 9.88,
+        "max_drawdown_pct": -16.11
       }
     },
     "120m": {
@@ -163,6 +205,13 @@
         "annualised_pct": 9.05,
         "volatility_pct": 8.72,
         "max_drawdown_pct": -16.24
+      },
+      "separate_sleeves": {
+        "months": 120,
+        "cumulative_pct": 120.0,
+        "annualised_pct": 8.2,
+        "volatility_pct": 8.67,
+        "max_drawdown_pct": -16.11
       }
     }
   },
@@ -180,7 +229,11 @@
     "gdx_3m_pct": 4.04,
     "gdx_6m_pct": -12.69,
     "gdx_12m_pct": 7.76,
-    "contrarian_bonus_pct": 0
+    "contrarian_bonus_pct": 0,
+    "separate_bullion_pct": 0,
+    "separate_miners_pct": 15,
+    "separate_total_pct": 15,
+    "miners_vs_bullion_3m_pct": 8.64
   },
   "dynamic_history": [
     {
@@ -197,7 +250,11 @@
       "gdx_3m_pct": -4.2,
       "gdx_6m_pct": 4.23,
       "gdx_12m_pct": -35.7,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 5,
+      "separate_total_pct": 10,
+      "miners_vs_bullion_3m_pct": -2.09
     },
     {
       "date": "2016-02-29",
@@ -213,7 +270,11 @@
       "gdx_3m_pct": 42.05,
       "gdx_6m_pct": 38.53,
       "gdx_12m_pct": -8.15,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 22.03
     },
     {
       "date": "2016-03-31",
@@ -229,7 +290,11 @@
       "gdx_3m_pct": 45.55,
       "gdx_6m_pct": 46.59,
       "gdx_12m_pct": 10.42,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 25.53
     },
     {
       "date": "2016-04-30",
@@ -245,7 +310,11 @@
       "gdx_3m_pct": 81.77,
       "gdx_6m_pct": 74.14,
       "gdx_12m_pct": 29.55,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 57.22
     },
     {
       "date": "2016-05-31",
@@ -261,7 +330,11 @@
       "gdx_3m_pct": 16.51,
       "gdx_6m_pct": 65.51,
       "gdx_12m_pct": 16.31,
-      "contrarian_bonus_pct": 5
+      "contrarian_bonus_pct": 5,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 19.1
     },
     {
       "date": "2016-06-30",
@@ -277,7 +350,11 @@
       "gdx_3m_pct": 38.76,
       "gdx_6m_pct": 101.97,
       "gdx_12m_pct": 57.36,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 29.07
     },
     {
       "date": "2016-07-31",
@@ -293,7 +370,11 @@
       "gdx_3m_pct": 18.43,
       "gdx_6m_pct": 115.27,
       "gdx_12m_pct": 124.38,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 13.53
     },
     {
       "date": "2016-08-31",
@@ -309,7 +390,11 @@
       "gdx_3m_pct": 12.89,
       "gdx_6m_pct": 31.53,
       "gdx_12m_pct": 82.2,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 5.0
     },
     {
       "date": "2016-09-30",
@@ -325,7 +410,11 @@
       "gdx_3m_pct": -4.62,
       "gdx_6m_pct": 32.35,
       "gdx_12m_pct": 94.01,
-      "contrarian_bonus_pct": 5
+      "contrarian_bonus_pct": 5,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": -3.99
     },
     {
       "date": "2016-10-31",
@@ -341,7 +430,11 @@
       "gdx_3m_pct": -19.84,
       "gdx_6m_pct": -5.07,
       "gdx_12m_pct": 65.31,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 5,
+      "miners_vs_bullion_3m_pct": -15.22
     },
     {
       "date": "2016-11-30",
@@ -357,7 +450,11 @@
       "gdx_3m_pct": -18.28,
       "gdx_6m_pct": -7.75,
       "gdx_12m_pct": 52.68,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 5,
+      "miners_vs_bullion_3m_pct": -8.75
     },
     {
       "date": "2016-12-31",
@@ -373,7 +470,11 @@
       "gdx_3m_pct": -20.62,
       "gdx_6m_pct": -24.29,
       "gdx_12m_pct": 52.92,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 5,
+      "miners_vs_bullion_3m_pct": -9.01
     },
     {
       "date": "2017-01-31",
@@ -389,7 +490,11 @@
       "gdx_3m_pct": -2.12,
       "gdx_6m_pct": -21.55,
       "gdx_12m_pct": 68.89,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 5,
+      "separate_total_pct": 10,
+      "miners_vs_bullion_3m_pct": 3.29
     },
     {
       "date": "2017-02-28",
@@ -405,7 +510,11 @@
       "gdx_3m_pct": 10.02,
       "gdx_6m_pct": -10.1,
       "gdx_12m_pct": 18.25,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 10,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 20,
+      "miners_vs_bullion_3m_pct": 3.11
     },
     {
       "date": "2017-03-31",
@@ -421,7 +530,11 @@
       "gdx_3m_pct": 9.03,
       "gdx_6m_pct": -13.45,
       "gdx_12m_pct": 14.55,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 10,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 20,
+      "miners_vs_bullion_3m_pct": 0.67
     },
     {
       "date": "2017-04-30",
@@ -437,7 +550,11 @@
       "gdx_3m_pct": -7.1,
       "gdx_6m_pct": -9.08,
       "gdx_12m_pct": -13.69,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 5,
+      "miners_vs_bullion_3m_pct": -11.12
     },
     {
       "date": "2017-05-31",
@@ -453,7 +570,11 @@
       "gdx_3m_pct": -0.7,
       "gdx_6m_pct": 9.24,
       "gdx_12m_pct": 0.78,
-      "contrarian_bonus_pct": 5
+      "contrarian_bonus_pct": 5,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": -1.84
     },
     {
       "date": "2017-06-30",
@@ -469,7 +590,11 @@
       "gdx_3m_pct": -3.2,
       "gdx_6m_pct": 5.55,
       "gdx_12m_pct": -20.09,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 5,
+      "miners_vs_bullion_3m_pct": -2.63
     },
     {
       "date": "2017-07-31",
@@ -485,7 +610,11 @@
       "gdx_3m_pct": 2.83,
       "gdx_6m_pct": -4.47,
       "gdx_12m_pct": -25.05,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 5,
+      "separate_total_pct": 10,
+      "miners_vs_bullion_3m_pct": 2.85
     },
     {
       "date": "2017-08-31",
@@ -501,7 +630,11 @@
       "gdx_3m_pct": 8.95,
       "gdx_6m_pct": 8.18,
       "gdx_12m_pct": -2.74,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 4.44
     },
     {
       "date": "2017-09-30",
@@ -517,7 +650,11 @@
       "gdx_3m_pct": 3.99,
       "gdx_6m_pct": 0.66,
       "gdx_12m_pct": -12.88,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 10,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 20,
+      "miners_vs_bullion_3m_pct": 0.94
     },
     {
       "date": "2017-10-31",
@@ -533,7 +670,11 @@
       "gdx_3m_pct": -1.66,
       "gdx_6m_pct": 1.12,
       "gdx_12m_pct": -8.05,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 0,
+      "separate_miners_pct": 5,
+      "separate_total_pct": 5,
+      "miners_vs_bullion_3m_pct": -1.6
     },
     {
       "date": "2017-11-30",
@@ -549,7 +690,11 @@
       "gdx_3m_pct": -9.1,
       "gdx_6m_pct": -0.97,
       "gdx_12m_pct": 8.19,
-      "contrarian_bonus_pct": 5
+      "contrarian_bonus_pct": 5,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 15,
+      "miners_vs_bullion_3m_pct": -5.56
     },
     {
       "date": "2017-12-31",
@@ -565,7 +710,11 @@
       "gdx_3m_pct": 2.04,
       "gdx_6m_pct": 6.1,
       "gdx_12m_pct": 11.99,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 0.33
     },
     {
       "date": "2018-01-31",
@@ -581,7 +730,11 @@
       "gdx_3m_pct": 6.5,
       "gdx_6m_pct": 4.73,
       "gdx_12m_pct": 0.05,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 0.68
     },
     {
       "date": "2018-02-28",
@@ -597,7 +750,11 @@
       "gdx_3m_pct": -4.22,
       "gdx_6m_pct": -12.94,
       "gdx_12m_pct": -5.81,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 10,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 10,
+      "miners_vs_bullion_3m_pct": -7.21
     },
     {
       "date": "2018-03-31",
@@ -613,7 +770,11 @@
       "gdx_3m_pct": -5.42,
       "gdx_6m_pct": -3.5,
       "gdx_12m_pct": -2.86,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 15,
+      "miners_vs_bullion_3m_pct": -7.03
     },
     {
       "date": "2018-04-30",
@@ -629,7 +790,11 @@
       "gdx_3m_pct": -6.19,
       "gdx_6m_pct": -0.09,
       "gdx_12m_pct": 1.03,
-      "contrarian_bonus_pct": 5
+      "contrarian_bonus_pct": 5,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 15,
+      "miners_vs_bullion_3m_pct": -3.89
     },
     {
       "date": "2018-05-31",
@@ -645,7 +810,11 @@
       "gdx_3m_pct": 4.64,
       "gdx_6m_pct": 0.22,
       "gdx_12m_pct": -0.75,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 6.25
     },
     {
       "date": "2018-06-30",
@@ -661,7 +830,11 @@
       "gdx_3m_pct": 1.5,
       "gdx_6m_pct": -4.0,
       "gdx_12m_pct": 1.86,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 15,
+      "separate_total_pct": 20,
+      "miners_vs_bullion_3m_pct": 7.61
     },
     {
       "date": "2018-07-31",
@@ -677,7 +850,11 @@
       "gdx_3m_pct": -4.49,
       "gdx_6m_pct": -10.4,
       "gdx_12m_pct": -6.16,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 0,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 0,
+      "miners_vs_bullion_3m_pct": 2.59
     },
     {
       "date": "2018-08-31",
@@ -693,7 +870,11 @@
       "gdx_3m_pct": -16.97,
       "gdx_6m_pct": -13.11,
       "gdx_12m_pct": -24.35,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 0,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 0,
+      "miners_vs_bullion_3m_pct": -9.95
     },
     {
       "date": "2018-09-30",
@@ -709,7 +890,11 @@
       "gdx_3m_pct": -16.99,
       "gdx_6m_pct": -15.74,
       "gdx_12m_pct": -18.69,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 0,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 0,
+      "miners_vs_bullion_3m_pct": -12.65
     },
     {
       "date": "2018-10-31",
@@ -725,7 +910,11 @@
       "gdx_3m_pct": -11.04,
       "gdx_6m_pct": -15.04,
       "gdx_12m_pct": -15.11,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 0,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 0,
+      "miners_vs_bullion_3m_pct": -10.39
     },
     {
       "date": "2018-11-30",
@@ -741,7 +930,11 @@
       "gdx_3m_pct": 2.91,
       "gdx_6m_pct": -14.55,
       "gdx_12m_pct": -14.36,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 5,
+      "separate_total_pct": 10,
+      "miners_vs_bullion_3m_pct": 1.1
     },
     {
       "date": "2018-12-31",
@@ -757,7 +950,11 @@
       "gdx_3m_pct": 14.48,
       "gdx_6m_pct": -4.97,
       "gdx_12m_pct": -8.77,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 10,
+      "separate_miners_pct": 5,
+      "separate_total_pct": 15,
+      "miners_vs_bullion_3m_pct": 6.46
     },
     {
       "date": "2019-01-31",
@@ -773,7 +970,11 @@
       "gdx_3m_pct": 20.5,
       "gdx_6m_pct": 7.19,
       "gdx_12m_pct": -3.96,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 10,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 20,
+      "miners_vs_bullion_3m_pct": 11.22
     },
     {
       "date": "2019-02-28",
@@ -789,7 +990,11 @@
       "gdx_3m_pct": 17.12,
       "gdx_6m_pct": 20.53,
       "gdx_12m_pct": 4.72,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 10,
+      "separate_miners_pct": 15,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 9.14
     },
     {
       "date": "2019-03-31",
@@ -805,7 +1010,11 @@
       "gdx_3m_pct": 6.31,
       "gdx_6m_pct": 21.7,
       "gdx_12m_pct": 2.54,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 10,
+      "separate_miners_pct": 15,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 5.64
     },
     {
       "date": "2019-04-30",
@@ -821,7 +1030,11 @@
       "gdx_3m_pct": -7.93,
       "gdx_6m_pct": 10.94,
       "gdx_12m_pct": -5.74,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 5,
+      "separate_total_pct": 10,
+      "miners_vs_bullion_3m_pct": -5.24
     },
     {
       "date": "2019-05-31",
@@ -837,7 +1050,11 @@
       "gdx_3m_pct": -2.92,
       "gdx_6m_pct": 13.69,
       "gdx_12m_pct": -2.85,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 5,
+      "separate_total_pct": 20,
+      "miners_vs_bullion_3m_pct": -2.4
     },
     {
       "date": "2019-06-30",
@@ -853,7 +1070,11 @@
       "gdx_3m_pct": 14.0,
       "gdx_6m_pct": 21.19,
       "gdx_12m_pct": 15.17,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 4.43
     },
     {
       "date": "2019-07-31",
@@ -869,7 +1090,11 @@
       "gdx_3m_pct": 26.86,
       "gdx_6m_pct": 16.79,
       "gdx_12m_pct": 25.19,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 15.42
     },
     {
       "date": "2019-08-31",
@@ -885,7 +1110,11 @@
       "gdx_3m_pct": 38.3,
       "gdx_6m_pct": 34.26,
       "gdx_12m_pct": 61.82,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 18.66
     },
     {
       "date": "2019-09-30",
@@ -901,7 +1130,11 @@
       "gdx_3m_pct": 4.5,
       "gdx_6m_pct": 19.13,
       "gdx_12m_pct": 44.99,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 0.23
     },
     {
       "date": "2019-10-31",
@@ -917,7 +1150,11 @@
       "gdx_3m_pct": 6.23,
       "gdx_6m_pct": 34.75,
       "gdx_12m_pct": 49.49,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": -0.65
     },
     {
       "date": "2019-11-30",
@@ -932,8 +1169,12 @@
       "gold_12m_pct": 19.32,
       "gdx_3m_pct": -9.31,
       "gdx_6m_pct": 25.43,
-      "gdx_12m_pct": 42.61,
-      "contrarian_bonus_pct": 5
+      "gdx_12m_pct": 42.6,
+      "contrarian_bonus_pct": 5,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": -5.44
     },
     {
       "date": "2019-12-31",
@@ -949,7 +1190,11 @@
       "gdx_3m_pct": 10.4,
       "gdx_6m_pct": 15.37,
       "gdx_12m_pct": 39.82,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 7.29
     },
     {
       "date": "2020-01-31",
@@ -965,7 +1210,11 @@
       "gdx_3m_pct": 3.71,
       "gdx_6m_pct": 10.17,
       "gdx_12m_pct": 28.67,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": -1.08
     },
     {
       "date": "2020-02-29",
@@ -981,7 +1230,11 @@
       "gdx_3m_pct": -2.49,
       "gdx_6m_pct": -11.57,
       "gdx_12m_pct": 18.73,
-      "contrarian_bonus_pct": 5
+      "contrarian_bonus_pct": 5,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 15,
+      "miners_vs_bullion_3m_pct": -9.4
     },
     {
       "date": "2020-03-31",
@@ -997,7 +1250,11 @@
       "gdx_3m_pct": -21.31,
       "gdx_6m_pct": -13.13,
       "gdx_12m_pct": 3.49,
-      "contrarian_bonus_pct": 5
+      "contrarian_bonus_pct": 5,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 15,
+      "miners_vs_bullion_3m_pct": -24.05
     },
     {
       "date": "2020-04-30",
@@ -1013,7 +1270,11 @@
       "gdx_3m_pct": 11.28,
       "gdx_6m_pct": 15.41,
       "gdx_12m_pct": 55.52,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 4.64
     },
     {
       "date": "2020-05-31",
@@ -1029,7 +1290,11 @@
       "gdx_3m_pct": 30.89,
       "gdx_6m_pct": 27.63,
       "gdx_12m_pct": 60.09,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 19.22
     },
     {
       "date": "2020-06-30",
@@ -1045,7 +1310,11 @@
       "gdx_3m_pct": 59.2,
       "gdx_6m_pct": 25.27,
       "gdx_12m_pct": 44.52,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 40.82
     },
     {
       "date": "2020-07-31",
@@ -1061,7 +1330,11 @@
       "gdx_3m_pct": 33.11,
       "gdx_6m_pct": 48.12,
       "gdx_12m_pct": 63.19,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 13.99
     },
     {
       "date": "2020-08-31",
@@ -1077,7 +1350,11 @@
       "gdx_3m_pct": 23.16,
       "gdx_6m_pct": 61.21,
       "gdx_12m_pct": 42.56,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 8.56
     },
     {
       "date": "2020-09-30",
@@ -1093,7 +1370,11 @@
       "gdx_3m_pct": 6.76,
       "gdx_6m_pct": 69.97,
       "gdx_12m_pct": 47.65,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 0.88
     },
     {
       "date": "2020-10-31",
@@ -1109,7 +1390,11 @@
       "gdx_3m_pct": -12.69,
       "gdx_6m_pct": 16.21,
       "gdx_12m_pct": 34.12,
-      "contrarian_bonus_pct": 5
+      "contrarian_bonus_pct": 5,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": -8.12
     },
     {
       "date": "2020-11-30",
@@ -1125,7 +1410,11 @@
       "gdx_3m_pct": -17.96,
       "gdx_6m_pct": 1.05,
       "gdx_12m_pct": 28.97,
-      "contrarian_bonus_pct": 5
+      "contrarian_bonus_pct": 5,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 5,
+      "separate_total_pct": 20,
+      "miners_vs_bullion_3m_pct": -9.02
     },
     {
       "date": "2020-12-31",
@@ -1141,7 +1430,11 @@
       "gdx_3m_pct": -7.54,
       "gdx_6m_pct": -1.29,
       "gdx_12m_pct": 23.66,
-      "contrarian_bonus_pct": 5
+      "contrarian_bonus_pct": 5,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 15,
+      "miners_vs_bullion_3m_pct": -8.18
     },
     {
       "date": "2021-01-31",
@@ -1157,7 +1450,11 @@
       "gdx_3m_pct": -7.47,
       "gdx_6m_pct": -19.21,
       "gdx_12m_pct": 19.66,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 5,
+      "miners_vs_bullion_3m_pct": -5.54
     },
     {
       "date": "2021-02-28",
@@ -1173,7 +1470,11 @@
       "gdx_3m_pct": -9.77,
       "gdx_6m_pct": -25.97,
       "gdx_12m_pct": 19.35,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 5,
+      "miners_vs_bullion_3m_pct": -7.06
     },
     {
       "date": "2021-03-31",
@@ -1189,7 +1490,11 @@
       "gdx_3m_pct": -9.77,
       "gdx_6m_pct": -16.57,
       "gdx_12m_pct": 41.8,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 5,
+      "separate_total_pct": 10,
+      "miners_vs_bullion_3m_pct": 0.61
     },
     {
       "date": "2021-04-30",
@@ -1205,7 +1510,11 @@
       "gdx_3m_pct": -0.43,
       "gdx_6m_pct": -7.87,
       "gdx_12m_pct": 7.07,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 5,
+      "separate_total_pct": 10,
+      "miners_vs_bullion_3m_pct": 3.74
     },
     {
       "date": "2021-05-31",
@@ -1221,7 +1530,11 @@
       "gdx_3m_pct": 26.63,
       "gdx_6m_pct": 14.26,
       "gdx_12m_pct": 15.46,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 14.87
     },
     {
       "date": "2021-06-30",
@@ -1237,7 +1550,11 @@
       "gdx_3m_pct": 4.55,
       "gdx_6m_pct": -5.66,
       "gdx_12m_pct": -6.88,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 15,
+      "miners_vs_bullion_3m_pct": 0.97
     },
     {
       "date": "2021-07-31",
@@ -1253,7 +1570,11 @@
       "gdx_3m_pct": 1.63,
       "gdx_6m_pct": 1.19,
       "gdx_12m_pct": -18.25,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 15,
+      "miners_vs_bullion_3m_pct": -0.86
     },
     {
       "date": "2021-08-31",
@@ -1269,7 +1590,11 @@
       "gdx_3m_pct": -17.3,
       "gdx_6m_pct": 4.72,
       "gdx_12m_pct": -22.47,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 5,
+      "miners_vs_bullion_3m_pct": -13.07
     },
     {
       "date": "2021-09-30",
@@ -1285,7 +1610,11 @@
       "gdx_3m_pct": -13.27,
       "gdx_6m_pct": -9.32,
       "gdx_12m_pct": -24.35,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 5,
+      "miners_vs_bullion_3m_pct": -12.53
     },
     {
       "date": "2021-10-31",
@@ -1301,7 +1630,11 @@
       "gdx_3m_pct": -9.19,
       "gdx_6m_pct": -7.71,
       "gdx_12m_pct": -14.98,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 5,
+      "miners_vs_bullion_3m_pct": -7.46
     },
     {
       "date": "2021-11-30",
@@ -1317,7 +1650,11 @@
       "gdx_3m_pct": -2.45,
       "gdx_6m_pct": -19.33,
       "gdx_12m_pct": -7.83,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 0,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 0,
+      "miners_vs_bullion_3m_pct": 0.02
     },
     {
       "date": "2021-12-31",
@@ -1333,7 +1670,11 @@
       "gdx_3m_pct": 10.59,
       "gdx_6m_pct": -4.09,
       "gdx_12m_pct": -9.52,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 10,
+      "separate_miners_pct": 5,
+      "separate_total_pct": 15,
+      "miners_vs_bullion_3m_pct": 6.23
     },
     {
       "date": "2022-01-31",
@@ -1349,7 +1690,11 @@
       "gdx_3m_pct": -3.0,
       "gdx_6m_pct": -11.92,
       "gdx_12m_pct": -10.87,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 5,
+      "miners_vs_bullion_3m_pct": -3.83
     },
     {
       "date": "2022-02-28",
@@ -1365,7 +1710,11 @@
       "gdx_3m_pct": 10.0,
       "gdx_6m_pct": 7.3,
       "gdx_12m_pct": 12.37,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 2.06
     },
     {
       "date": "2022-03-31",
@@ -1381,7 +1730,11 @@
       "gdx_3m_pct": 19.73,
       "gdx_6m_pct": 32.41,
       "gdx_12m_pct": 20.06,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 13.31
     },
     {
       "date": "2022-04-30",
@@ -1397,7 +1750,11 @@
       "gdx_3m_pct": 15.75,
       "gdx_6m_pct": 12.27,
       "gdx_12m_pct": 3.61,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 9.98
     },
     {
       "date": "2022-05-31",
@@ -1413,7 +1770,11 @@
       "gdx_3m_pct": -7.71,
       "gdx_6m_pct": 1.52,
       "gdx_12m_pct": -18.1,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 5,
+      "miners_vs_bullion_3m_pct": -3.8
     },
     {
       "date": "2022-06-30",
@@ -1429,7 +1790,11 @@
       "gdx_3m_pct": -28.6,
       "gdx_6m_pct": -14.52,
       "gdx_12m_pct": -18.01,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 5,
+      "miners_vs_bullion_3m_pct": -23.44
     },
     {
       "date": "2022-07-31",
@@ -1445,7 +1810,11 @@
       "gdx_3m_pct": -24.92,
       "gdx_6m_pct": -13.1,
       "gdx_12m_pct": -23.46,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 0,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 0,
+      "miners_vs_bullion_3m_pct": -19.06
     },
     {
       "date": "2022-08-31",
@@ -1461,7 +1830,11 @@
       "gdx_3m_pct": -24.99,
       "gdx_6m_pct": -30.77,
       "gdx_12m_pct": -25.72,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 0,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 0,
+      "miners_vs_bullion_3m_pct": -19.4
     },
     {
       "date": "2022-09-30",
@@ -1477,7 +1850,11 @@
       "gdx_3m_pct": -11.91,
       "gdx_6m_pct": -37.11,
       "gdx_12m_pct": -16.72,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 0,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 0,
+      "miners_vs_bullion_3m_pct": -4.05
     },
     {
       "date": "2022-10-31",
@@ -1493,7 +1870,11 @@
       "gdx_3m_pct": -8.03,
       "gdx_6m_pct": -30.95,
       "gdx_12m_pct": -22.48,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 0,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 0,
+      "miners_vs_bullion_3m_pct": -0.65
     },
     {
       "date": "2022-11-30",
@@ -1509,7 +1890,11 @@
       "gdx_3m_pct": 22.06,
       "gdx_6m_pct": -8.45,
       "gdx_12m_pct": -7.05,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 5,
+      "separate_total_pct": 10,
+      "miners_vs_bullion_3m_pct": 17.96
     },
     {
       "date": "2022-12-31",
@@ -1525,7 +1910,11 @@
       "gdx_3m_pct": 20.83,
       "gdx_6m_pct": 6.45,
       "gdx_12m_pct": -9.01,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 10,
+      "separate_miners_pct": 15,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 10.17
     },
     {
       "date": "2023-01-31",
@@ -1541,7 +1930,11 @@
       "gdx_3m_pct": 34.78,
       "gdx_6m_pct": 23.95,
       "gdx_12m_pct": 7.71,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 14.12
     },
     {
       "date": "2023-02-28",
@@ -1557,7 +1950,11 @@
       "gdx_3m_pct": -3.7,
       "gdx_6m_pct": 17.54,
       "gdx_12m_pct": -18.63,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 10,
+      "separate_miners_pct": 5,
+      "separate_total_pct": 15,
+      "miners_vs_bullion_3m_pct": -6.52
     },
     {
       "date": "2023-03-31",
@@ -1573,7 +1970,11 @@
       "gdx_3m_pct": 12.87,
       "gdx_6m_pct": 36.39,
       "gdx_12m_pct": -14.22,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 4.51
     },
     {
       "date": "2023-04-30",
@@ -1589,7 +1990,11 @@
       "gdx_3m_pct": 4.87,
       "gdx_6m_pct": 41.34,
       "gdx_12m_pct": -2.41,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 1.81
     },
     {
       "date": "2023-05-31",
@@ -1605,7 +2010,11 @@
       "gdx_3m_pct": 12.36,
       "gdx_6m_pct": 8.2,
       "gdx_12m_pct": -0.94,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 4.63
     },
     {
       "date": "2023-06-30",
@@ -1621,7 +2030,11 @@
       "gdx_3m_pct": -6.92,
       "gdx_6m_pct": 5.06,
       "gdx_12m_pct": 11.83,
-      "contrarian_bonus_pct": 5
+      "contrarian_bonus_pct": 5,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 5,
+      "separate_total_pct": 20,
+      "miners_vs_bullion_3m_pct": -4.34
     },
     {
       "date": "2023-07-31",
@@ -1637,7 +2050,11 @@
       "gdx_3m_pct": -6.46,
       "gdx_6m_pct": -1.91,
       "gdx_12m_pct": 21.59,
-      "contrarian_bonus_pct": 5
+      "contrarian_bonus_pct": 5,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 15,
+      "miners_vs_bullion_3m_pct": -5.21
     },
     {
       "date": "2023-08-31",
@@ -1653,7 +2070,11 @@
       "gdx_3m_pct": -5.34,
       "gdx_6m_pct": 6.36,
       "gdx_12m_pct": 25.02,
-      "contrarian_bonus_pct": 5
+      "contrarian_bonus_pct": 5,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": -4.13
     },
     {
       "date": "2023-09-30",
@@ -1669,7 +2090,11 @@
       "gdx_3m_pct": -10.63,
       "gdx_6m_pct": -16.82,
       "gdx_12m_pct": 13.46,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 5,
+      "miners_vs_bullion_3m_pct": -7.07
     },
     {
       "date": "2023-10-31",
@@ -1685,7 +2110,11 @@
       "gdx_3m_pct": -10.82,
       "gdx_6m_pct": -16.59,
       "gdx_12m_pct": 17.9,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 10,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 10,
+      "miners_vs_bullion_3m_pct": -11.67
     },
     {
       "date": "2023-11-30",
@@ -1701,7 +2130,11 @@
       "gdx_3m_pct": 7.04,
       "gdx_6m_pct": 1.33,
       "gdx_12m_pct": 9.64,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 2.09
     },
     {
       "date": "2023-12-31",
@@ -1717,7 +2150,11 @@
       "gdx_3m_pct": 17.13,
       "gdx_6m_pct": 4.68,
       "gdx_12m_pct": 9.98,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 5.05
     },
     {
       "date": "2024-01-31",
@@ -1733,7 +2170,11 @@
       "gdx_3m_pct": 1.39,
       "gdx_6m_pct": -9.59,
       "gdx_12m_pct": -11.31,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 15,
+      "miners_vs_bullion_3m_pct": -0.96
     },
     {
       "date": "2024-02-29",
@@ -1749,7 +2190,11 @@
       "gdx_3m_pct": -14.45,
       "gdx_6m_pct": -8.43,
       "gdx_12m_pct": -2.61,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 15,
+      "miners_vs_bullion_3m_pct": -14.71
     },
     {
       "date": "2024-03-31",
@@ -1765,7 +2210,11 @@
       "gdx_3m_pct": 1.97,
       "gdx_6m_pct": 19.43,
       "gdx_12m_pct": -0.65,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 5,
+      "separate_total_pct": 20,
+      "miners_vs_bullion_3m_pct": -5.24
     },
     {
       "date": "2024-04-30",
@@ -1781,7 +2230,11 @@
       "gdx_3m_pct": 18.58,
       "gdx_6m_pct": 20.22,
       "gdx_12m_pct": 0.28,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 5.47
     },
     {
       "date": "2024-05-31",
@@ -1797,7 +2250,11 @@
       "gdx_3m_pct": 33.91,
       "gdx_6m_pct": 14.56,
       "gdx_12m_pct": 16.08,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 17.75
     },
     {
       "date": "2024-06-30",
@@ -1813,7 +2270,11 @@
       "gdx_3m_pct": 7.31,
       "gdx_6m_pct": 9.42,
       "gdx_12m_pct": 14.54,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 2.67
     },
     {
       "date": "2024-07-31",
@@ -1829,7 +2290,11 @@
       "gdx_3m_pct": 14.49,
       "gdx_6m_pct": 35.76,
       "gdx_12m_pct": 22.74,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 7.07
     },
     {
       "date": "2024-08-31",
@@ -1845,7 +2310,11 @@
       "gdx_3m_pct": 9.41,
       "gdx_6m_pct": 46.51,
       "gdx_12m_pct": 34.16,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 1.84
     },
     {
       "date": "2024-09-30",
@@ -1861,7 +2330,11 @@
       "gdx_3m_pct": 17.36,
       "gdx_6m_pct": 25.93,
       "gdx_12m_pct": 50.4,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 3.82
     },
     {
       "date": "2024-10-31",
@@ -1877,7 +2350,11 @@
       "gdx_3m_pct": 6.35,
       "gdx_6m_pct": 21.76,
       "gdx_12m_pct": 46.38,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": -4.96
     },
     {
       "date": "2024-11-30",
@@ -1893,7 +2370,11 @@
       "gdx_3m_pct": -2.49,
       "gdx_6m_pct": 6.69,
       "gdx_12m_pct": 22.22,
-      "contrarian_bonus_pct": 5
+      "contrarian_bonus_pct": 5,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 5,
+      "separate_total_pct": 20,
+      "miners_vs_bullion_3m_pct": -8.16
     },
     {
       "date": "2024-12-31",
@@ -1909,7 +2390,11 @@
       "gdx_3m_pct": -13.84,
       "gdx_6m_pct": 1.11,
       "gdx_12m_pct": 10.64,
-      "contrarian_bonus_pct": 5
+      "contrarian_bonus_pct": 5,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 5,
+      "separate_total_pct": 20,
+      "miners_vs_bullion_3m_pct": -13.51
     },
     {
       "date": "2025-01-31",
@@ -1925,7 +2410,11 @@
       "gdx_3m_pct": -2.29,
       "gdx_6m_pct": 3.92,
       "gdx_12m_pct": 41.08,
-      "contrarian_bonus_pct": 5
+      "contrarian_bonus_pct": 5,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 5,
+      "separate_total_pct": 20,
+      "miners_vs_bullion_3m_pct": -4.2
     },
     {
       "date": "2025-02-28",
@@ -1941,7 +2430,11 @@
       "gdx_3m_pct": 6.71,
       "gdx_6m_pct": 4.06,
       "gdx_12m_pct": 52.45,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": -0.46
     },
     {
       "date": "2025-03-31",
@@ -1957,7 +2450,11 @@
       "gdx_3m_pct": 35.56,
       "gdx_6m_pct": 16.8,
       "gdx_12m_pct": 47.09,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 13.92
     },
     {
       "date": "2025-04-30",
@@ -1973,7 +2470,11 @@
       "gdx_3m_pct": 25.8,
       "gdx_6m_pct": 22.92,
       "gdx_12m_pct": 49.67,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 7.07
     },
     {
       "date": "2025-05-31",
@@ -1989,7 +2490,11 @@
       "gdx_3m_pct": 27.52,
       "gdx_6m_pct": 36.07,
       "gdx_12m_pct": 45.17,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 10.58
     },
     {
       "date": "2025-06-30",
@@ -2005,7 +2510,11 @@
       "gdx_3m_pct": 13.25,
       "gdx_6m_pct": 53.52,
       "gdx_12m_pct": 55.23,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 7.05
     },
     {
       "date": "2025-07-31",
@@ -2021,7 +2530,11 @@
       "gdx_3m_pct": 5.37,
       "gdx_6m_pct": 32.55,
       "gdx_12m_pct": 37.74,
-      "contrarian_bonus_pct": 5
+      "contrarian_bonus_pct": 5,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 5.65
     },
     {
       "date": "2025-08-31",
@@ -2037,7 +2550,11 @@
       "gdx_3m_pct": 24.72,
       "gdx_6m_pct": 59.04,
       "gdx_12m_pct": 65.49,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 19.04
     },
     {
       "date": "2025-09-30",
@@ -2053,7 +2570,11 @@
       "gdx_3m_pct": 46.75,
       "gdx_6m_pct": 66.2,
       "gdx_12m_pct": 94.12,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 25.85
     },
     {
       "date": "2025-10-31",
@@ -2069,7 +2590,11 @@
       "gdx_3m_pct": 39.54,
       "gdx_6m_pct": 47.03,
       "gdx_12m_pct": 80.73,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 14.84
     },
     {
       "date": "2025-11-30",
@@ -2085,7 +2610,11 @@
       "gdx_3m_pct": 31.76,
       "gdx_6m_pct": 64.32,
       "gdx_12m_pct": 123.6,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 8.04
     },
     {
       "date": "2025-12-31",
@@ -2101,7 +2630,11 @@
       "gdx_3m_pct": 13.08,
       "gdx_6m_pct": 65.95,
       "gdx_12m_pct": 154.77,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 1.43
     },
     {
       "date": "2026-01-31",
@@ -2117,7 +2650,11 @@
       "gdx_3m_pct": 31.67,
       "gdx_6m_pct": 83.74,
       "gdx_12m_pct": 143.54,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 8.94
     },
     {
       "date": "2026-02-28",
@@ -2133,7 +2670,11 @@
       "gdx_3m_pct": 40.19,
       "gdx_6m_pct": 84.71,
       "gdx_12m_pct": 193.76,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 12.41
     },
     {
       "date": "2026-03-31",
@@ -2149,7 +2690,11 @@
       "gdx_3m_pct": 7.0,
       "gdx_6m_pct": 20.99,
       "gdx_12m_pct": 101.08,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": -1.45
     },
     {
       "date": "2026-04-30",
@@ -2165,7 +2710,11 @@
       "gdx_3m_pct": -6.27,
       "gdx_6m_pct": 23.41,
       "gdx_12m_pct": 81.46,
-      "contrarian_bonus_pct": 5
+      "contrarian_bonus_pct": 5,
+      "separate_bullion_pct": 15,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": -1.56
     },
     {
       "date": "2026-05-31",
@@ -2181,7 +2730,11 @@
       "gdx_3m_pct": -22.75,
       "gdx_6m_pct": 8.3,
       "gdx_12m_pct": 77.97,
-      "contrarian_bonus_pct": 5
+      "contrarian_bonus_pct": 5,
+      "separate_bullion_pct": 10,
+      "separate_miners_pct": 10,
+      "separate_total_pct": 20,
+      "miners_vs_bullion_3m_pct": -10.41
     },
     {
       "date": "2026-06-30",
@@ -2197,7 +2750,11 @@
       "gdx_3m_pct": -17.78,
       "gdx_6m_pct": -12.03,
       "gdx_12m_pct": 45.98,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 5,
+      "miners_vs_bullion_3m_pct": -3.97
     },
     {
       "date": "2026-07-31",
@@ -2213,7 +2770,11 @@
       "gdx_3m_pct": -16.07,
       "gdx_6m_pct": -21.34,
       "gdx_12m_pct": 44.54,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 0,
+      "separate_total_pct": 5,
+      "miners_vs_bullion_3m_pct": -4.3
     },
     {
       "date": "2026-08-31",
@@ -2229,7 +2790,11 @@
       "gdx_3m_pct": 10.08,
       "gdx_6m_pct": -14.96,
       "gdx_12m_pct": 57.08,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 5,
+      "separate_miners_pct": 15,
+      "separate_total_pct": 20,
+      "miners_vs_bullion_3m_pct": 12.42
     },
     {
       "date": "2026-09-30",
@@ -2245,7 +2810,11 @@
       "gdx_3m_pct": 16.37,
       "gdx_6m_pct": -4.33,
       "gdx_12m_pct": 15.76,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 10,
+      "separate_miners_pct": 15,
+      "separate_total_pct": 25,
+      "miners_vs_bullion_3m_pct": 12.56
     },
     {
       "date": "2026-10-31",
@@ -2261,7 +2830,11 @@
       "gdx_3m_pct": 4.04,
       "gdx_6m_pct": -12.69,
       "gdx_12m_pct": 7.76,
-      "contrarian_bonus_pct": 0
+      "contrarian_bonus_pct": 0,
+      "separate_bullion_pct": 0,
+      "separate_miners_pct": 15,
+      "separate_total_pct": 15,
+      "miners_vs_bullion_3m_pct": 8.64
     }
   ]
 }
