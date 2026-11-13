@@ -3,7 +3,7 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from urllib.parse import quote
 NOW=datetime.datetime.now(datetime.timezone.utc)
-SERIES={'US 10Y yield (market proxy)':'DGS10','US 5Y yield (market proxy)':'DGS5','Gold futures USD/oz':'GOLDAMGBD228NLBM','Gold miners ETF (GDX)':'GDX','AUD/USD':'DEXUSAL','US Dollar Index (DXY)':'DTWEXBGS','US real 10Y yield':'DFII10','US unemployment':'UNRATE','Brent crude futures':'DCOILBRENTEU','S&P 500':'SP500','Nasdaq':'NASDAQCOM','VIX':'VIXCLS','High yield corporate bond ETF (HYG)':'HYG','Investment grade corporate bond ETF (LQD)':'LQD','Consumer discretionary ETF (XLY)':'XLY','Consumer staples ETF (XLP)':'XLP','Equal weight S&P ETF (RSP)':'RSP','S&P ETF (SPY)':'SPY','Small cap ETF (IWM)':'IWM','Regional banks ETF (KRE)':'KRE','Australian equities ETF (VAS)':'VAS.AX','Australian resources ETF (MVR)':'MVR.AX','Australian quality ETF (AQLT)':'AQLT.AX','Developed markets ETF (VEU)':'VEU','Emerging markets ETF (VWO)':'VWO','Global technology ETF (IXN)':'IXN','Australian government bonds ETF (IAF)':'IAF.AX'}
+SERIES={'US 10Y yield (market proxy)':'DGS10','US 5Y yield (market proxy)':'DGS5','Gold futures USD/oz':'GOLDAMGBD228NLBM','Gold miners ETF (GDX)':'GDX','AUD/USD':'DEXUSAL','US Dollar Index (DXY)':'DTWEXBGS','US real 10Y yield':'DFII10','US unemployment':'UNRATE','US CPI index':'CPIAUCSL','US M2 money stock':'M2SL','Brent crude futures':'DCOILBRENTEU','S&P 500':'SP500','Nasdaq':'NASDAQCOM','VIX':'VIXCLS','High yield corporate bond ETF (HYG)':'HYG','Investment grade corporate bond ETF (LQD)':'LQD','Consumer discretionary ETF (XLY)':'XLY','Consumer staples ETF (XLP)':'XLP','Equal weight S&P ETF (RSP)':'RSP','S&P ETF (SPY)':'SPY','Small cap ETF (IWM)':'IWM','Regional banks ETF (KRE)':'KRE','Broad US banks ETF (KBE)':'KBE','Australian equities ETF (VAS)':'VAS.AX','Australian resources ETF (MVR)':'MVR.AX','Australian quality ETF (AQLT)':'AQLT.AX','Developed markets ETF (VEU)':'VEU','Emerging markets ETF (VWO)':'VWO','Global technology ETF (IXN)':'IXN','Australian government bonds ETF (IAF)':'IAF.AX'}
 MARKETS={'S&P 500':'^GSPC','Nasdaq':'^IXIC','VIX':'^VIX','US 10Y yield (market proxy)':'^TNX','US 5Y yield (market proxy)':'^FVX','Gold futures USD/oz':'GC=F','Gold miners ETF (GDX)':'GDX','Brent crude futures':'BZ=F','AUD/USD':'AUDUSD=X','US Dollar Index (DXY)':'DX-Y.NYB','High yield corporate bond ETF (HYG)':'HYG','Investment grade corporate bond ETF (LQD)':'LQD','Consumer discretionary ETF (XLY)':'XLY','Consumer staples ETF (XLP)':'XLP','Equal weight S&P ETF (RSP)':'RSP','S&P ETF (SPY)':'SPY','Small cap ETF (IWM)':'IWM','Regional banks ETF (KRE)':'KRE','Australian equities ETF (VAS)':'VAS.AX','Australian resources ETF (MVR)':'MVR.AX','Australian quality ETF (AQLT)':'AQLT.AX','Developed markets ETF (VEU)':'VEU','Emerging markets ETF (VWO)':'VWO','Global technology ETF (IXN)':'IXN','Australian government bonds ETF (IAF)':'IAF.AX'}
 STOOQ={'S&P 500':'^spx','Nasdaq':'^ndq','Gold futures USD/oz':'gc.f','Brent crude futures':'brn.f','AUD/USD':'audusd'}
 def trends(obs,name):
@@ -100,7 +100,7 @@ def fetch(item):
    if secondary['status']=='ok':return secondary
    primary['error']+='; Stooq: '+secondary.get('error','')
   return primary
- url='https://fred.stlouisfed.org/graph/fredgraph.csv?id='+quote(code)+'&cosd=2026-01-01'
+ url='https://fred.stlouisfed.org/graph/fredgraph.csv?id='+quote(code)+'&cosd=2024-01-01'
  try:
   req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'})
   with urllib.request.urlopen(req,timeout=8) as f: rows=list(csv.reader(io.StringIO(f.read().decode('utf-8-sig'))))
@@ -110,7 +110,7 @@ def fetch(item):
    except (ValueError,IndexError):pass
   if not obs:raise ValueError('No observations')
   date,value=obs[-1]
-  return {'name':name,'date':date,'value':value,'previous':obs[-2][1] if len(obs)>1 else value,'status':'ok','source':url}
+  return {'name':name,'date':date,'value':value,'previous':obs[-2][1] if len(obs)>1 else value,'status':'ok','source':url,'trends':trends(obs,name)}
  except Exception as e:return {'name':name,'status':'unavailable','error':str(e)[:150],'source':url}
 def news(item):
  category,term=item;url='https://news.google.com/rss/search?q='+quote(term)+'&hl=en-AU&gl=AU&ceid=AU:en'
