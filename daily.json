@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-13T03:30:31.118579+00:00",
+  "generated_at_utc": "2026-11-13T03:33:19.972054+00:00",
   "regime": "DATA INSUFFICIENT",
   "score": 0.5,
   "coverage": 2,
@@ -72,7 +72,7 @@
     {
       "name": "Gold futures USD/oz",
       "date": "2026-11-13",
-      "value": 3918.8999,
+      "value": 3919.1001,
       "previous": 3885.300048828125,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?range=1y&interval=1d",
@@ -84,7 +84,7 @@
           "base_date": "2026-08-14"
         },
         "6m": {
-          "value": -14.1,
+          "value": -14.09,
           "unit": "%",
           "base_date": "2026-05-15"
         },
@@ -153,24 +153,24 @@
     {
       "name": "US Dollar Index (DXY)",
       "date": "2026-11-13",
-      "value": 103.159,
+      "value": 103.148,
       "previous": 103.16999816894531,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": 3.5,
+          "value": 3.49,
           "unit": "%",
           "base_date": "2026-08-14"
         },
         "6m": {
-          "value": 3.92,
+          "value": 3.91,
           "unit": "%",
           "base_date": "2026-05-15"
         },
         "12m": {
-          "value": 4.01,
+          "value": 4.0,
           "unit": "%",
           "base_date": "2025-11-13"
         }
@@ -222,24 +222,24 @@
     {
       "name": "Brent crude futures",
       "date": "2026-11-13",
-      "value": 95.47,
+      "value": 95.38,
       "previous": 95.81999969482422,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/BZ%3DF?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": 7.85,
+          "value": 7.75,
           "unit": "%",
           "base_date": "2026-08-14"
         },
         "6m": {
-          "value": -12.62,
+          "value": -12.7,
           "unit": "%",
           "base_date": "2026-05-15"
         },
         "12m": {
-          "value": 51.52,
+          "value": 51.37,
           "unit": "%",
           "base_date": "2025-11-13"
         }
@@ -554,24 +554,24 @@
     {
       "name": "Australian equities ETF (VAS)",
       "date": "2026-11-13",
-      "value": 112.63,
+      "value": 112.7,
       "previous": 113.44999694824219,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/VAS.AX?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": -0.26,
+          "value": -0.19,
           "unit": "%",
           "base_date": "2026-08-14"
         },
         "6m": {
-          "value": 4.87,
+          "value": 4.93,
           "unit": "%",
           "base_date": "2026-05-15"
         },
         "12m": {
-          "value": 4.86,
+          "value": 4.93,
           "unit": "%",
           "base_date": "2025-11-13"
         }
@@ -829,20 +829,20 @@
       "style": "Defensive",
       "status": "ok",
       "date": "2026-11-13",
-      "price": 202.08,
+      "price": 202.39,
       "trends": {
         "3m": {
-          "value": 48.04,
+          "value": 48.27,
           "unit": "%",
           "base_date": "2026-08-14"
         },
         "6m": {
-          "value": 106.29,
+          "value": 106.6,
           "unit": "%",
           "base_date": "2026-05-15"
         },
         "12m": {
-          "value": 11.15,
+          "value": 11.32,
           "unit": "%",
           "base_date": "2025-11-13"
         }
@@ -881,20 +881,20 @@
       "style": "Defensive",
       "status": "ok",
       "date": "2026-11-13",
-      "price": 41.855,
+      "price": 41.89,
       "trends": {
         "3m": {
-          "value": 4.64,
+          "value": 4.72,
           "unit": "%",
           "base_date": "2026-08-14"
         },
         "6m": {
-          "value": 26.91,
+          "value": 27.02,
           "unit": "%",
           "base_date": "2026-05-15"
         },
         "12m": {
-          "value": 48.21,
+          "value": 48.34,
           "unit": "%",
           "base_date": "2025-11-13"
         }
@@ -907,20 +907,20 @@
       "style": "Defensive",
       "status": "ok",
       "date": "2026-11-13",
-      "price": 22.335,
+      "price": 22.35,
       "trends": {
         "3m": {
-          "value": -5.12,
+          "value": -5.06,
           "unit": "%",
           "base_date": "2026-08-14"
         },
         "6m": {
-          "value": 7.33,
+          "value": 7.4,
           "unit": "%",
           "base_date": "2026-05-15"
         },
         "12m": {
-          "value": 0.11,
+          "value": 0.18,
           "unit": "%",
           "base_date": "2025-11-13"
         }
@@ -933,20 +933,20 @@
       "style": "Defensive",
       "status": "ok",
       "date": "2026-11-13",
-      "price": 5.11,
+      "price": 5.105,
       "trends": {
         "3m": {
-          "value": 6.9,
+          "value": 6.8,
           "unit": "%",
           "base_date": "2026-08-14"
         },
         "6m": {
-          "value": -5.02,
+          "value": -5.11,
           "unit": "%",
           "base_date": "2026-05-15"
         },
         "12m": {
-          "value": 3.44,
+          "value": 3.34,
           "unit": "%",
           "base_date": "2025-11-13"
         }
@@ -959,20 +959,20 @@
       "style": "Defensive",
       "status": "ok",
       "date": "2026-11-13",
-      "price": 14.925,
+      "price": 14.92,
       "trends": {
         "3m": {
-          "value": 6.91,
+          "value": 6.88,
           "unit": "%",
           "base_date": "2026-08-14"
         },
         "6m": {
-          "value": 2.23,
+          "value": 2.19,
           "unit": "%",
           "base_date": "2026-05-15"
         },
         "12m": {
-          "value": 0.1,
+          "value": 0.07,
           "unit": "%",
           "base_date": "2025-11-13"
         }
@@ -985,20 +985,20 @@
       "style": "Cyclical",
       "status": "ok",
       "date": "2026-11-13",
-      "price": 58.89,
+      "price": 58.885,
       "trends": {
         "3m": {
-          "value": -4.01,
+          "value": -4.02,
           "unit": "%",
           "base_date": "2026-08-14"
         },
         "6m": {
-          "value": -2.6,
+          "value": -2.61,
           "unit": "%",
           "base_date": "2026-05-15"
         },
         "12m": {
-          "value": 37.75,
+          "value": 37.74,
           "unit": "%",
           "base_date": "2025-11-13"
         }
@@ -1011,20 +1011,20 @@
       "style": "Cyclical",
       "status": "ok",
       "date": "2026-11-13",
-      "price": 149.13,
+      "price": 149.09,
       "trends": {
         "3m": {
-          "value": -11.01,
+          "value": -11.04,
           "unit": "%",
           "base_date": "2026-08-14"
         },
         "6m": {
-          "value": -19.71,
+          "value": -19.74,
           "unit": "%",
           "base_date": "2026-05-15"
         },
         "12m": {
-          "value": 13.11,
+          "value": 13.08,
           "unit": "%",
           "base_date": "2025-11-13"
         }
@@ -1037,20 +1037,20 @@
       "style": "Cyclical",
       "status": "ok",
       "date": "2026-11-13",
-      "price": 80.75,
+      "price": 80.845,
       "trends": {
         "3m": {
-          "value": -8.96,
+          "value": -8.86,
           "unit": "%",
           "base_date": "2026-08-14"
         },
         "6m": {
-          "value": 12.67,
+          "value": 12.8,
           "unit": "%",
           "base_date": "2026-05-15"
         },
         "12m": {
-          "value": -0.47,
+          "value": -0.35,
           "unit": "%",
           "base_date": "2025-11-13"
         }
@@ -1063,20 +1063,20 @@
       "style": "Cyclical",
       "status": "ok",
       "date": "2026-11-13",
-      "price": 26.71,
+      "price": 26.725,
       "trends": {
         "3m": {
-          "value": 15.68,
+          "value": 15.74,
           "unit": "%",
           "base_date": "2026-08-14"
         },
         "6m": {
-          "value": 15.93,
+          "value": 15.99,
           "unit": "%",
           "base_date": "2026-05-15"
         },
         "12m": {
-          "value": 32.03,
+          "value": 32.11,
           "unit": "%",
           "base_date": "2025-11-13"
         }
@@ -1089,20 +1089,20 @@
       "style": "Growth",
       "status": "ok",
       "date": "2026-11-13",
-      "price": 28.95,
+      "price": 28.94,
       "trends": {
         "3m": {
-          "value": -2.43,
+          "value": -2.46,
           "unit": "%",
           "base_date": "2026-08-14"
         },
         "6m": {
-          "value": -7.74,
+          "value": -7.78,
           "unit": "%",
           "base_date": "2026-05-15"
         },
         "12m": {
-          "value": -2.1,
+          "value": -2.13,
           "unit": "%",
           "base_date": "2025-11-13"
         }
@@ -1141,20 +1141,20 @@
       "style": "Growth",
       "status": "ok",
       "date": "2026-11-13",
-      "price": 13.63,
+      "price": 13.6,
       "trends": {
         "3m": {
-          "value": -18.53,
+          "value": -18.71,
           "unit": "%",
           "base_date": "2026-08-14"
         },
         "6m": {
-          "value": -7.4,
+          "value": -7.61,
           "unit": "%",
           "base_date": "2026-05-15"
         },
         "12m": {
-          "value": -3.54,
+          "value": -3.75,
           "unit": "%",
           "base_date": "2025-11-13"
         }
@@ -1167,20 +1167,20 @@
       "style": "Growth",
       "status": "ok",
       "date": "2026-11-13",
-      "price": 77.03,
+      "price": 77.06,
       "trends": {
         "3m": {
-          "value": -5.46,
+          "value": -5.42,
           "unit": "%",
           "base_date": "2026-08-14"
         },
         "6m": {
-          "value": -3.31,
+          "value": -3.28,
           "unit": "%",
           "base_date": "2026-05-15"
         },
         "12m": {
-          "value": -37.05,
+          "value": -37.02,
           "unit": "%",
           "base_date": "2025-11-13"
         }
@@ -1193,20 +1193,20 @@
       "style": "Cyclical",
       "status": "ok",
       "date": "2026-11-13",
-      "price": 6.355,
+      "price": 6.36,
       "trends": {
         "3m": {
-          "value": 15.55,
+          "value": 15.64,
           "unit": "%",
           "base_date": "2026-08-14"
         },
         "6m": {
-          "value": 14.92,
+          "value": 15.01,
           "unit": "%",
           "base_date": "2026-05-15"
         },
         "12m": {
-          "value": 21.51,
+          "value": 21.61,
           "unit": "%",
           "base_date": "2025-11-13"
         }
@@ -1219,20 +1219,20 @@
       "style": "Cyclical",
       "status": "ok",
       "date": "2026-11-13",
-      "price": 25.59,
+      "price": 25.58,
       "trends": {
         "3m": {
-          "value": 13.63,
+          "value": 13.59,
           "unit": "%",
           "base_date": "2026-08-14"
         },
         "6m": {
-          "value": 24.83,
+          "value": 24.78,
           "unit": "%",
           "base_date": "2026-05-15"
         },
         "12m": {
-          "value": -3.43,
+          "value": -3.47,
           "unit": "%",
           "base_date": "2025-11-13"
         }
