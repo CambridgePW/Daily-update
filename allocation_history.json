@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-13T03:45:32.035484+00:00",
+  "generated_at_utc": "2026-11-13T23:44:41.183137+00:00",
   "method": "Retrospective rule-based illustration: 7 equally weighted monthly market tests, each positive test adds 10 percentage points to a 30% growth floor (range 30\u2013100%). Uses only market prices observable at each month end, and 91-day lookbacks. No trading costs, tax, dividends, or rebalancing friction. Not the historical CPW recommendation or an independently validated backtest.",
   "source": "Yahoo Finance adjusted close history (dividends/splits adjusted where provided)",
   "points": [
@@ -28,7 +28,7 @@
       "defensive": 20,
       "positive": 5,
       "tests": 7,
-      "spy": 173.5769,
+      "spy": 173.5768,
       "gld": 116.16,
       "gdx": 19.1335,
       "signals": {
@@ -47,7 +47,7 @@
       "defensive": 30,
       "positive": 4,
       "tests": 7,
-      "spy": 170.8508,
+      "spy": 170.8507,
       "gld": 113.66,
       "gdx": 16.4001,
       "signals": {
@@ -66,7 +66,7 @@
       "defensive": 10,
       "positive": 6,
       "tests": 7,
-      "spy": 172.5309,
+      "spy": 172.5308,
       "gld": 113.47,
       "gdx": 18.0815,
       "signals": {
@@ -237,7 +237,7 @@
       "defensive": 60,
       "positive": 1,
       "tests": 7,
-      "spy": 162.9127,
+      "spy": 162.9126,
       "gld": 106.95,
       "gdx": 12.8862,
       "signals": {
@@ -408,7 +408,7 @@
       "defensive": 40,
       "positive": 3,
       "tests": 7,
-      "spy": 181.5167,
+      "spy": 181.5168,
       "gld": 121.94,
       "gdx": 22.2358,
       "signals": {
@@ -541,7 +541,7 @@
       "defensive": 40,
       "positive": 3,
       "tests": 7,
-      "spy": 208.3062,
+      "spy": 208.3063,
       "gld": 120.62,
       "gdx": 20.6357,
       "signals": {
@@ -579,7 +579,7 @@
       "defensive": 40,
       "positive": 3,
       "tests": 7,
-      "spy": 213.9431,
+      "spy": 213.943,
       "gld": 120.75,
       "gdx": 20.7904,
       "signals": {
@@ -598,7 +598,7 @@
       "defensive": 40,
       "positive": 3,
       "tests": 7,
-      "spy": 214.5672,
+      "spy": 214.5673,
       "gld": 125.82,
       "gdx": 22.482,
       "signals": {
@@ -695,7 +695,7 @@
       "tests": 7,
       "spy": 246.8681,
       "gld": 127.65,
-      "gdx": 21.774,
+      "gdx": 21.7741,
       "signals": {
         "Broad US market trend": true,
         "Market breadth": false,
@@ -750,9 +750,9 @@
       "defensive": 10,
       "positive": 6,
       "tests": 7,
-      "spy": 232.5669,
+      "spy": 232.567,
       "gld": 124.59,
-      "gdx": 20.4263,
+      "gdx": 20.4264,
       "signals": {
         "Broad US market trend": false,
         "Market breadth": true,
@@ -769,7 +769,7 @@
       "defensive": 0,
       "positive": 7,
       "tests": 7,
-      "spy": 238.2205,
+      "spy": 238.2204,
       "gld": 123.1,
       "gdx": 20.4814,
       "signals": {
@@ -864,7 +864,7 @@
       "defensive": 50,
       "positive": 2,
       "tests": 7,
-      "spy": 240.0983,
+      "spy": 240.0984,
       "gld": 115.15,
       "gdx": 17.3551,
       "signals": {
@@ -940,7 +940,7 @@
       "defensive": 10,
       "positive": 6,
       "tests": 7,
-      "spy": 248.684,
+      "spy": 248.6839,
       "gld": 123.99,
       "gdx": 20.4976,
       "signals": {
@@ -997,7 +997,7 @@
       "defensive": 60,
       "positive": 1,
       "tests": 7,
-      "spy": 246.723,
+      "spy": 246.7229,
       "gld": 123.33,
       "gdx": 19.8985,
       "signals": {
@@ -1035,7 +1035,7 @@
       "defensive": 50,
       "positive": 2,
       "tests": 7,
-      "spy": 267.8813,
+      "spy": 267.8815,
       "gld": 133.21,
       "gdx": 24.4238,
       "signals": {
@@ -1073,7 +1073,7 @@
       "defensive": 50,
       "positive": 2,
       "tests": 7,
-      "spy": 268.5213,
+      "spy": 268.5212,
       "gld": 138.87,
       "gdx": 24.6173,
       "signals": {
@@ -1092,7 +1092,7 @@
       "defensive": 50,
       "positive": 2,
       "tests": 7,
-      "spy": 274.4568,
+      "spy": 274.4569,
       "gld": 142.43,
       "gdx": 25.9445,
       "signals": {
@@ -1111,7 +1111,7 @@
       "defensive": 0,
       "positive": 7,
       "tests": 7,
-      "spy": 284.3918,
+      "spy": 284.3917,
       "gld": 137.86,
       "gdx": 24.9584,
       "signals": {
@@ -1168,7 +1168,7 @@
       "defensive": 60,
       "positive": 1,
       "tests": 7,
-      "spy": 269.3778,
+      "spy": 269.3779,
       "gld": 148.38,
       "gdx": 24.3371,
       "signals": {
@@ -1301,7 +1301,7 @@
       "defensive": 40,
       "positive": 3,
       "tests": 7,
-      "spy": 308.8724,
+      "spy": 308.8725,
       "gld": 177.12,
       "gdx": 36.3478,
       "signals": {
@@ -1377,7 +1377,7 @@
       "defensive": 10,
       "positive": 6,
       "tests": 7,
-      "spy": 342.7742,
+      "spy": 342.7743,
       "gld": 172.61,
       "gdx": 32.199,
       "signals": {
@@ -1415,7 +1415,7 @@
       "defensive": 0,
       "positive": 7,
       "tests": 7,
-      "spy": 368.2998,
+      "spy": 368.2997,
       "gld": 159.96,
       "gdx": 30.3236,
       "signals": {
@@ -1434,7 +1434,7 @@
       "defensive": 10,
       "positive": 6,
       "tests": 7,
-      "spy": 387.7865,
+      "spy": 387.7866,
       "gld": 165.66,
       "gdx": 32.059,
       "signals": {
@@ -1567,7 +1567,7 @@
       "defensive": 40,
       "positive": 3,
       "tests": 7,
-      "spy": 426.0863,
+      "spy": 426.0864,
       "gld": 165.5,
       "gdx": 29.6705,
       "signals": {
@@ -1605,7 +1605,7 @@
       "defensive": 30,
       "positive": 4,
       "tests": 7,
-      "spy": 422.2803,
+      "spy": 422.2802,
       "gld": 168.09,
       "gdx": 28.6988,
       "signals": {
@@ -1624,7 +1624,7 @@
       "defensive": 40,
       "positive": 3,
       "tests": 7,
-      "spy": 409.8159,
+      "spy": 409.8158,
       "gld": 178.38,
       "gdx": 32.6386,
       "signals": {
@@ -1643,7 +1643,7 @@
       "defensive": 30,
       "positive": 4,
       "tests": 7,
-      "spy": 425.2209,
+      "spy": 425.221,
       "gld": 180.65,
       "gdx": 36.4075,
       "signals": {
@@ -1681,7 +1681,7 @@
       "defensive": 50,
       "positive": 2,
       "tests": 7,
-      "spy": 388.7754,
+      "spy": 388.7753,
       "gld": 171.14,
       "gdx": 30.1229,
       "signals": {
@@ -1795,7 +1795,7 @@
       "defensive": 20,
       "positive": 5,
       "tests": 7,
-      "spy": 387.074,
+      "spy": 387.0739,
       "gld": 164.81,
       "gdx": 27.5786,
       "signals": {
@@ -1814,7 +1814,7 @@
       "defensive": 30,
       "positive": 4,
       "tests": 7,
-      "spy": 364.7676,
+      "spy": 364.7677,
       "gld": 169.64,
       "gdx": 27.6689,
       "signals": {
@@ -1852,7 +1852,7 @@
       "defensive": 10,
       "positive": 6,
       "tests": 7,
-      "spy": 377.9588,
+      "spy": 377.9589,
       "gld": 169.78,
       "gdx": 26.5586,
       "signals": {
@@ -1871,7 +1871,7 @@
       "defensive": 40,
       "positive": 3,
       "tests": 7,
-      "spy": 391.9728,
+      "spy": 391.9727,
       "gld": 183.22,
       "gdx": 31.2312,
       "signals": {
@@ -1928,7 +1928,7 @@
       "defensive": 30,
       "positive": 4,
       "tests": 7,
-      "spy": 425.9976,
+      "spy": 425.9975,
       "gld": 178.27,
       "gdx": 29.0687,
       "signals": {
@@ -1947,7 +1947,7 @@
       "defensive": 10,
       "positive": 6,
       "tests": 7,
-      "spy": 439.9417,
+      "spy": 439.9418,
       "gld": 182.35,
       "gdx": 30.3237,
       "signals": {
@@ -2004,7 +2004,7 @@
       "defensive": 50,
       "positive": 2,
       "tests": 7,
-      "spy": 403.313,
+      "spy": 403.3129,
       "gld": 184.09,
       "gdx": 27.0413,
       "signals": {
@@ -2061,7 +2061,7 @@
       "defensive": 10,
       "positive": 6,
       "tests": 7,
-      "spy": 467.5786,
+      "spy": 467.5785,
       "gld": 188.45,
       "gdx": 27.4167,
       "signals": {
@@ -2099,7 +2099,7 @@
       "defensive": 40,
       "positive": 3,
       "tests": 7,
-      "spy": 508.0687,
+      "spy": 508.0688,
       "gld": 205.72,
       "gdx": 31.0277,
       "signals": {
@@ -2137,7 +2137,7 @@
       "defensive": 30,
       "positive": 4,
       "tests": 7,
-      "spy": 512.2454,
+      "spy": 512.2455,
       "gld": 215.3,
       "gdx": 34.6388,
       "signals": {
@@ -2156,7 +2156,7 @@
       "defensive": 40,
       "positive": 3,
       "tests": 7,
-      "spy": 530.3174,
+      "spy": 530.3175,
       "gld": 215.01,
       "gdx": 33.2945,
       "signals": {
@@ -2175,7 +2175,7 @@
       "defensive": 20,
       "positive": 5,
       "tests": 7,
-      "spy": 536.7391,
+      "spy": 536.7392,
       "gld": 226.55,
       "gdx": 37.2196,
       "signals": {
@@ -2194,7 +2194,7 @@
       "defensive": 30,
       "positive": 4,
       "tests": 7,
-      "spy": 549.2804,
+      "spy": 549.2803,
       "gld": 231.29,
       "gdx": 37.8966,
       "signals": {
@@ -2232,7 +2232,7 @@
       "defensive": 20,
       "positive": 5,
       "tests": 7,
-      "spy": 555.8133,
+      "spy": 555.8135,
       "gld": 253.51,
       "gdx": 39.5844,
       "signals": {
@@ -2251,7 +2251,7 @@
       "defensive": 10,
       "positive": 6,
       "tests": 7,
-      "spy": 588.9583,
+      "spy": 588.9584,
       "gld": 245.59,
       "gdx": 36.9546,
       "signals": {
@@ -2289,7 +2289,7 @@
       "defensive": 20,
       "positive": 5,
       "tests": 7,
-      "spy": 590.2246,
+      "spy": 590.2247,
       "gld": 258.56,
       "gdx": 38.6791,
       "signals": {
@@ -2308,7 +2308,7 @@
       "defensive": 50,
       "positive": 2,
       "tests": 7,
-      "spy": 582.7319,
+      "spy": 582.7318,
       "gld": 263.27,
       "gdx": 39.4336,
       "signals": {
@@ -2365,7 +2365,7 @@
       "defensive": 50,
       "positive": 2,
       "tests": 7,
-      "spy": 579.7731,
+      "spy": 579.773,
       "gld": 303.6,
       "gdx": 50.2848,
       "signals": {
@@ -2479,7 +2479,7 @@
       "defensive": 40,
       "positive": 3,
       "tests": 7,
-      "spy": 676.0958,
+      "spy": 676.0959,
       "gld": 387.88,
       "gdx": 82.6299,
       "signals": {
@@ -2517,7 +2517,7 @@
       "defensive": 10,
       "positive": 6,
       "tests": 7,
-      "spy": 686.6072,
+      "spy": 686.6071,
       "gld": 444.95,
       "gdx": 94.2,
       "signals": {
@@ -2707,9 +2707,9 @@
       "defensive": 50,
       "positive": 2,
       "tests": 7,
-      "spy": 757.12,
-      "gld": 354.89,
-      "gdx": 81.84,
+      "spy": 754.37,
+      "gld": 355.45,
+      "gdx": 81.64,
       "signals": {
         "Broad US market trend": false,
         "Market breadth": true,
