@@ -166,7 +166,7 @@ const reviewMonth=new Date().toISOString().slice(0,7);
 const smoothingKey='cpw-gold-monthly-research-v1';
 let reviewState=null;
 try{reviewState=JSON.parse(localStorage.getItem(smoothingKey)||'null')}catch(e){}
-const validReview=reviewState&&Number.isFinite(reviewState.miners)&&reviewState.miners>=0&&reviewState.miners<=20&&/^\\d{4}-\\d{2}$/.test(reviewState.month||'');
+const validReview=reviewState&&Number.isFinite(reviewState.miners)&&reviewState.miners>=0&&reviewState.miners<=20&&/^\d{4}-\d{2}$/.test(reviewState.month||'');
 if(ready){
  if(!validReview){
    // Research anchor reflects previous dashboard's 5% model signal, not an actual holding.
