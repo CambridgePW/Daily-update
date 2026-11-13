@@ -92,9 +92,22 @@ const referenceBase={growth:50,fixed:30,cash:20};
 const pctWeight=(bucket,base)=>baseline[bucket]*base/referenceBase[bucket];
 const weightsNode=document.getElementById('portfolio-weights');
 if(weightsNode){
-const rows=allocationRows.map(([name,bucket,w])=>({name,bucket,weight:pctWeight(bucket,w)}));
+const original=allocationRows.map(([name,bucket,w])=>({name,bucket,weight:pctWeight(bucket,w)}));
+const maxGold=Math.min(25,baseline.growth);
+weightsNode.innerHTML='<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px"><div style="flex:1"><div class="small">Growth (including gold miners)</div><b style="font-size:23px">'+baseline.growth+'%</b></div><div style="flex:1"><div class="small">Fixed interest</div><b style="font-size:23px">'+baseline.fixed+'%</b></div><div style="flex:1"><div class="small">Cash &amp; TDs</div><b style="font-size:23px">'+baseline.cash+'%</b></div></div><div style="padding:10px 12px;border:1px solid #dce3ed;border-radius:9px;margin-bottom:12px"><b>Gold equities · separate scenario weighting</b><p class="small" style="margin:5px 0">Current model: 0% explicitly allocated to gold miners. Move the slider to see how a potential gold-miner allocation changes the other growth weights. This is a scenario, not an approved allocation.</p><label for="gold-miner-weight">Illustrative gold-mining equities: <b id="gold-miner-label">0%</b></label><input id="gold-miner-weight" type="range" min="0" max="'+maxGold+'" step="1" value="0" style="display:block;width:100%;margin:10px 0" aria-label="Illustrative gold mining equities weighting"><p class="small">Funded proportionately from existing non-gold growth equities; fixed interest and cash remain unchanged. Combined gold bullion and miners must not exceed 25%.</p></div><div id="portfolio-weight-table" class="scroll"></div><p class="small">Gold equities are classified as growth assets, not defensive assets. Gold bullion is separately disclosed at 0% in this illustration. The slider does not save an allocation, execute trades, or change the approved reference portfolio.</p>';
+const table=weightsNode.querySelector('#portfolio-weight-table');
+const slider=weightsNode.querySelector('#gold-miner-weight');
+const label=weightsNode.querySelector('#gold-miner-label');
+const renderGold=()=>{
+const gold=Number(slider.value);label.textContent=gold+'%';
+const factor=baseline.growth>0?(baseline.growth-gold)/baseline.growth:1;
+const rows=original.map(x=>({...x,weight:x.bucket==='growth'?x.weight*factor:x.weight}));
+rows.push({name:'Gold-mining equities (separate growth sleeve)',weight:gold});
+rows.push({name:'Gold bullion (separate diversifier)',weight:0});
 const sum=rows.reduce((a,x)=>a+x.weight,0);
-weightsNode.innerHTML='<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px"><div style="flex:1"><div class="small">Growth</div><b style="font-size:23px">'+baseline.growth+'%</b></div><div style="flex:1"><div class="small">Fixed interest</div><b style="font-size:23px">'+baseline.fixed+'%</b></div><div style="flex:1"><div class="small">Cash &amp; TDs</div><b style="font-size:23px">'+baseline.cash+'%</b></div></div><div class="scroll"><table><tr><th>Current model asset allocation</th><th style="text-align:right">Weight</th></tr>'+rows.map(x=>'<tr><td>'+esc(x.name)+'</td><td style="text-align:right">'+x.weight.toFixed(1)+'%</td></tr>').join('')+'<tr><td><b>Total</b></td><td style="text-align:right"><b>'+sum.toFixed(1)+'%</b></td></tr></table></div><p class="small">Illustrative reference weights, not actual holdings or current buy recommendations. Australian and developed-market defensive/growth equity splits are provisional assumptions, not derived from individual market confidence scores. Sub-allocations scale proportionally with an approved growth/cash change; securities and bond durations are not optimised.</p>';
+table.innerHTML='<table><tr><th>Illustrative asset allocation</th><th style="text-align:right">Weight</th></tr>'+rows.map(x=>'<tr><td>'+esc(x.name)+'</td><td style="text-align:right">'+x.weight.toFixed(1)+'%</td></tr>').join('')+'<tr><td><b>Total</b></td><td style="text-align:right"><b>'+sum.toFixed(1)+'%</b></td></tr></table>';
+};
+slider.addEventListener('input',renderGold);renderGold();
 }
 const dataAgeDays=(Date.now()-Date.parse(d.generated_at_utc||''))/86400000;
 const freshSnapshot=Number.isFinite(dataAgeDays)&&dataAgeDays>=0&&dataAgeDays<=4;
