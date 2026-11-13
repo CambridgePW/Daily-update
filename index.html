@@ -117,7 +117,7 @@ const miners=findReading(/Gold miners ETF \(GDX\)/i);
 const realYield=findReading(/US real 10Y yield/i);
 const usd=findReading(/US Dollar Index/i);
 const factors=[['Gold futures',bullion],['Gold miners (GDX)',miners],['US real 10-year yield',realYield],['US dollar index (verify series)',usd]];
-const recent=x=>x&&x.status==='ok'&&x.date&&Number.isFinite(Date.parse(x.date+'T00:00:00Z'))&&Math.abs((Date.now()-Date.parse(x.date+'T00:00:00Z'))/86400000)<=14;
+const recent=x=>x&&x.status==='ok'&&x.date&&Number.isFinite(Date.parse(x.date+'T00:00:00Z'))&&Math.abs((Date.now()-Date.parse(x.date+'T00:00:00Z'))/86400000)<=(/US CPI index|US M2 money stock/.test(x.name)?75:14);
 const trend=(x,period='3m')=>recent(x)&&Number.isFinite(x.trends?.[period]?.value)?x.trends[period].value:null;
 const g=trend(bullion),m=trend(miners),y=trend(realYield),u=trend(usd);
 const g12=trend(bullion,'12m'),m12=trend(miners,'12m');
