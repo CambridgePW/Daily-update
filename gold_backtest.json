@@ -1,5 +1,5 @@
 {
-  "generated_from": "2026-11-13T23:53:30.375790+00:00",
+  "generated_from": "2026-11-13T23:56:13.046354+00:00",
   "start": "2016-01-31",
   "end": "2026-11-13",
   "method": "Four strategies including independent bullion (0-15%) and miner (0-15%) signals, combined maximum 25%. Bullion uses GLD 3/6/12-month momentum plus controlled correction; miners use GDX 3/6/12-month momentum and GDX/GLD relative strength plus controlled correction. These rules are research hypotheses, not optimised or approved. Point-in-time monthly signal at month-end, returns NEXT month. SPY/GLD/GDX adjusted-price USD proxies; growth allocation from seven market signals. Gold overlay 60% bullion GLD / 40% miners GDX funded from equities. Contrarian adds 5 percentage points for controlled three-month correction while 6- and 12-month bullion and 12-month miners trends remain positive. Does NOT include real yields, DXY, Australian currency, bond/cash returns, costs, tax or portfolio-level distributions. Not the live four-factor model; do not treat as validated investable returns.",
@@ -13,7 +13,7 @@
     },
     "momentum_only": {
       "months": 130,
-      "cumulative_pct": 158.78,
+      "cumulative_pct": 158.79,
       "annualised_pct": 9.17,
       "volatility_pct": 8.52,
       "max_drawdown_pct": -16.24
@@ -794,7 +794,7 @@
       "separate_bullion_pct": 15,
       "separate_miners_pct": 0,
       "separate_total_pct": 15,
-      "miners_vs_bullion_3m_pct": -3.89
+      "miners_vs_bullion_3m_pct": -3.88
     },
     {
       "date": "2018-05-31",
