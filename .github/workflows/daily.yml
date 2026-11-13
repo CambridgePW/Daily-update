@@ -1,5 +1,13 @@
 name: Daily pre-market intelligence
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'update.py'
+      - 'allocation_history.py'
+      - 'gold_backtest.py'
+      - 'index.html'
+      - '.github/workflows/daily.yml'
   schedule:
     - cron: '30 20 * * 0-4'
   workflow_dispatch:
