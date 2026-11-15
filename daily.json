@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-13T23:55:58.503244+00:00",
+  "generated_at_utc": "2026-11-15T05:08:42.260326+00:00",
   "regime": "DATA INSUFFICIENT",
   "score": 0.5,
   "coverage": 2,
@@ -72,26 +72,26 @@
     {
       "name": "Gold futures USD/oz",
       "date": "2026-11-13",
-      "value": 3887.6001,
+      "value": 3886.3,
       "previous": 3885.300048828125,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": -12.39,
+          "value": -12.42,
           "unit": "%",
           "base_date": "2026-08-14"
         },
         "6m": {
-          "value": -14.78,
+          "value": -14.81,
           "unit": "%",
           "base_date": "2026-05-15"
         },
         "12m": {
-          "value": -7.32,
+          "value": -4.62,
           "unit": "%",
-          "base_date": "2025-11-13"
+          "base_date": "2025-11-17"
         }
       },
       "volume_signal": null
@@ -125,27 +125,27 @@
     },
     {
       "name": "AUD/USD",
-      "date": "2026-11-13",
+      "date": "2026-11-14",
       "value": 0.6774,
-      "previous": 0.6842800378799438,
+      "previous": 0.680689811706543,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/AUDUSD%3DX?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": -4.1,
+          "value": -4.39,
           "unit": "%",
-          "base_date": "2026-08-13"
+          "base_date": "2026-08-16"
         },
         "6m": {
-          "value": -6.1,
+          "value": -4.99,
           "unit": "%",
-          "base_date": "2026-05-14"
+          "base_date": "2026-05-17"
         },
         "12m": {
-          "value": 3.64,
+          "value": 3.75,
           "unit": "%",
-          "base_date": "2025-11-13"
+          "base_date": "2025-11-14"
         }
       },
       "volume_signal": null
@@ -153,7 +153,7 @@
     {
       "name": "US Dollar Index (DXY)",
       "date": "2026-11-13",
-      "value": 103.411,
+      "value": 103.41,
       "previous": 103.16999816894531,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?range=1y&interval=1d",
@@ -170,9 +170,9 @@
           "base_date": "2026-05-15"
         },
         "12m": {
-          "value": 4.27,
+          "value": 3.84,
           "unit": "%",
-          "base_date": "2025-11-13"
+          "base_date": "2025-11-17"
         }
       },
       "volume_signal": null
@@ -240,26 +240,26 @@
     {
       "name": "Brent crude futures",
       "date": "2026-11-13",
-      "value": 96.08,
+      "value": 95.84,
       "previous": 95.81999969482422,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/BZ%3DF?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": 8.54,
+          "value": 8.27,
           "unit": "%",
           "base_date": "2026-08-14"
         },
         "6m": {
-          "value": -12.06,
+          "value": -12.28,
           "unit": "%",
           "base_date": "2026-05-15"
         },
         "12m": {
-          "value": 52.48,
+          "value": 49.28,
           "unit": "%",
-          "base_date": "2025-11-13"
+          "base_date": "2025-11-17"
         }
       },
       "volume_signal": null
@@ -290,7 +290,7 @@
         }
       },
       "volume_signal": {
-        "ratio_to_20d": 0.49,
+        "ratio_to_20d": 0.78,
         "direction": "down",
         "note": "Reported index volume; not consolidated exchange volume"
       }
@@ -298,7 +298,7 @@
     {
       "name": "Nasdaq",
       "date": "2026-11-13",
-      "value": 25136.2734,
+      "value": 25136.2695,
       "previous": 25366.08984375,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=1y&interval=1d",
@@ -321,7 +321,7 @@
         }
       },
       "volume_signal": {
-        "ratio_to_20d": 0.87,
+        "ratio_to_20d": 0.98,
         "direction": "down",
         "note": "Reported index volume; not consolidated exchange volume"
       }
@@ -1330,9 +1330,9 @@
     },
     {
       "category": "Credit",
-      "title": "Argentina credit stress deepens as inflation and utility costs hit households - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPNnN6Sk90SWV4aGh5cVJPLVFSN2d2aVBVZnVrS3JTU002OG9paFgyNWZjU2dhQ0pPM2hjZi1vX2NpSHlKRkFCTHNwRldGWlpLbTRMZVFmd2hUNTg3cklFVjZfRUdDQXpYSlhrY19fSnRMeElvVTNDeFV1N1Q4c0lVNG5fYjNrQWNXUlRiMGg2Yjc1Q3lLNVBYSURLV0FTYXladDNyeXFFX1ZhU05FcG1aLW5TS0pzNDRQYTdnbEhR?oc=5",
-      "published": "Mon, 13 Apr 2026 07:00:00 GMT"
+      "title": "Buy Now, Pay Later: Recent Developments and Implications - Federal Reserve Bank of Richmond",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOOUtCSkJTcks5T0FGUlJuR29QVVNRelRBbDVzSk5MRHNRRHF4MGZlUFlvdmducGFjMFc3eTZZUVpLM3hXUFhiTWJhZ01lT05jTW5ZOVJwR2dENFRSTnZCam5aZTdGTHliNmh1ZnlIOXBscmMweU00a2NiLXNOem11QTBKLVQ?oc=5",
+      "published": "Wed, 11 Feb 2026 12:33:43 GMT"
     },
     {
       "category": "Credit",
@@ -1342,15 +1342,21 @@
     },
     {
       "category": "Credit",
-      "title": "Buy Now, Pay Later: Recent Developments and Implications - Federal Reserve Bank of Richmond",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOOUtCSkJTcks5T0FGUlJuR29QVVNRelRBbDVzSk5MRHNRRHF4MGZlUFlvdmducGFjMFc3eTZZUVpLM3hXUFhiTWJhZ01lT05jTW5ZOVJwR2dENFRSTnZCam5aZTdGTHliNmh1ZnlIOXBscmMweU00a2NiLXNOem11QTBKLVQ?oc=5",
-      "published": "Wed, 11 Feb 2026 12:33:43 GMT"
+      "title": "Financial stability indicators - Bank of Canada",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPX29GU1VSMDFzdUtQV1A3bk5ubnZEb3RYRVREb2NuZzR2NmQ2WDlYRW1PTm4wcmpMZUQxTk1iSDlRam9zdWlvdENYVHRlc1NYU1lsenB2Vlo3RWJOVHdPOXNJMmNKeWxXdXJXWmVnRkM3NTl5WlVYVzQwMmJSQmF4TWtR?oc=5",
+      "published": "Fri, 19 Dec 2025 15:01:30 GMT"
     },
     {
       "category": "Geopolitics",
       "title": "WTO chief sees lasting impact on trade from Middle East war and geopolitics - Reuters",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPdmFldXBLU0N2MEtrUHZGUXFMNEVGR0lsYzJwZDJwdVV0T0ZvN0FENHlMOXdmekY4elZOb1BsV04ydDZMazlQRlREcmowSUFKVkRHYXpXUlRnN24zcFpXUlRYWnNMNE5pN1dDVFZZb21WMzl1SnJZam1GOGFLemtxVjVMUjE2eTFrTEpZNGwtam5yanJjeWFyRkpIQTdtU21sRDZ2MVNObEZJNW9T?oc=5",
       "published": "Thu, 15 Oct 2026 07:00:00 GMT"
+    },
+    {
+      "category": "Geopolitics",
+      "title": "How War, Tariffs, and Other Foreign Policy Issues Could Affect the U.S. Midterms - Council on Foreign Relations",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPLVlPVkVnYnAxQlg3WXpENjk5YlhnM1M5eXYwYm9hektFZjNEeHU5ZkI0NVZCVzBZR25jdmJSdVFnVW1jOUZnUVV6Tm1aVFpMdG9MVGpMYjNPeGxDX19RSWxEdFRQc3BXenktMkpMVUhPNHZHNURzek1sdmgxemwtYmtLTmduSzdlZTA0UG12YTFhc3ZOT0pmRjkyTXBNRXJyWTgxeFg3MnN2VmNN?oc=5",
+      "published": "Thu, 29 Oct 2026 07:00:00 GMT"
     },
     {
       "category": "Geopolitics",
@@ -1371,16 +1377,16 @@
       "published": "Sat, 28 Feb 2026 08:00:00 GMT"
     },
     {
-      "category": "Geopolitics",
-      "title": "Geopolitical analysis on the rise for investors as risks multiply - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQMk1qdUh0QlJYM1ZMUVJzRG5ueVNlZnRGWHZuVjdhZV9rQ05JT3BsQ0Zxa1VXMVYybDZkQnp1Yms0R3ZxZFhBT0lLLWhtU0RRX2ZIaGZ0blFXT3RNaUJMMG5XZFhsd0F1UkdKY1lSRS1zbGVSUG50Q0c0VWFvQUloSnd4ek0zdWk5azZLLXlZQ2ltaDIxTEJDMlJXMmpsQndyaEFwaA?oc=5",
-      "published": "Fri, 23 Jan 2026 08:00:00 GMT"
+      "category": "Gold",
+      "title": "Gold Price \u2013 Today\u2019s Chart \u2013 Historical Data \u2013 Outlook - thebull.com.au",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNOGczUWdqT2loTW9IaEhCeWxuSHE2OXQwTm9mUTRFVHBDZmlWQWx3WE1STVotaVJhUzk1LU5nY05SX0pBRXdEZzU2MmtteWJSMFRVWGNLSTFUaUpOWFIxdENMd0pxbFM4VVMtWmN5cXVFQUZzUGRDb1BjR19Tdlc1WVBMWQ?oc=5",
+      "published": "Sun, 15 Nov 2026 01:20:49 GMT"
     },
     {
       "category": "Gold",
       "title": "Central Bank Gold Buying Surges 42% as Prices Dip Below US$4,000 - Streetwise Reports",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxORklGZ0xpd2dxTXk1bW5aRnNpOEVmeU5pZ3lYZ0JJUWdTQkwwMWl2eVJtWEdFcGZHcWx6VG9BcnE0QlJuem1pWXhLenNNZURERDFzdWZtY1FqMEw5THo4S1oxZHBrSGxkWmNQeFNheWtjUGdWUm1PakQ4NjBaQWpNM0E0dVVTZE5jRkxaV2V5RVZfN09lZUYxblFrSzB6c2l2bUJzUUhDY1ZaOWR4NnJhS0dfdW94c21PT2N2UXlR?oc=5",
-      "published": "Fri, 13 Nov 2026 18:17:35 GMT"
+      "published": "Sat, 14 Nov 2026 10:30:36 GMT"
     },
     {
       "category": "Gold",
@@ -1390,21 +1396,15 @@
     },
     {
       "category": "Gold",
-      "title": "Gold price: Two major banks, two scenarios - who will be right? - Shanghai Metals Market",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNb3FtN1FUUGdMRFoyMjFJaHg2RkJKSGJGblVrcUgxQnVtVzlvZDdmR1lmWnp3UDNCaXVlTnlSU2VoSmU5eEFhLUN2N0h4emhZVm9zVXJFazNiQkxmWTJ3YTBnLXRPYVk2ODJIWWU0WXE5MUg2a051OVZFUjJpS25OMzM3YUg3Z1hqaVh6Z0J4TXJDeENIdzY1cTdvOGFMZUdia1FZbUwtQ3dqandNMnlic1p2QU5hS0hnOVRGeGpkWEQ2eFBnVHpwZTBCRERSMWgt?oc=5",
-      "published": "Fri, 13 Nov 2026 03:49:00 GMT"
+      "title": "Goldman Sachs just slashed its 2027 gold forecast. Here are the new numbers - Investing.com",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQRzYyRU50SDUzOW15clJVVGhYWFZ5WDdSRWpMSnJBTUMzZDZ5VU16QUM3V3RSVE05Mjg2aFg2eFRQTkVkcWo3US0wU3hGWFFzWUVfYjdTLXNZNG5FelVydFhKVmx0SDR3S1l4VVVicmU5WlBLeUhxM051VXQwLVhjQk5ITjBBOGN1OUVjS1lUb2t5VGh6QmtSVmhyRVNYUG5hODJhNlFmcjB2NXFuMF9BTVBsclRJaTFEbmJjaURTWDRLZ2xNZnNwMy1B?oc=5",
+      "published": "Sat, 14 Nov 2026 18:32:48 GMT"
     },
     {
       "category": "Gold",
       "title": "Gold hit a one-year low while central banks bought 321 tonnes \u2014 the sellers were never the ones you think - Mitrade",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNeTkzZWtOTFRUVUcxS092dnIyS2FXaWhVdE1NU3lCMXZUN3EyazJBaHRwWGlEYURwbUItN1RUcUxLS1doeldoNEx1VFFUcXQtZjY0Q3VtYWdoZ1JzNmZ5cExhTjQ4dXNFWVhDaVNyRElPMkRwU0FrRFc5OWV0a251R0p1TkI3S0NQWXlaUDRpMXFjVkg3NDVpSzMzREZ1X3RZeVJLXw?oc=5",
       "published": "Fri, 13 Nov 2026 03:18:39 GMT"
-    },
-    {
-      "category": "Gold",
-      "title": "Gold\u2019s Pullback Puts Producer Costs & Cash Flow in Focus - Crux Investor",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOSzE3b0pVZ0VCS0hHZ0w3ZWNZLTVVTHZBdS1hX0liMGV3UEZrZW9GTFB3OFZ5SVR3RVYyN0kzWXE3WlRCV3JfSEJ6enJiSTF1aEJqX3lES1NRTDF0Y2tBQlNQN1NSM1p4MnBNMGM1V2huTGh3elBzZ2M3c1A3RGdtRC1jam9lbjVaX0NteWk4V1p4Zw?oc=5",
-      "published": "Mon, 09 Nov 2026 08:00:00 GMT"
     }
   ]
 }
