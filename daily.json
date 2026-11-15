@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-15T05:11:26.734201+00:00",
+  "generated_at_utc": "2026-11-15T21:11:46.921900+00:00",
   "regime": "DATA INSUFFICIENT",
   "score": 0.5,
   "coverage": 2,
@@ -125,25 +125,25 @@
     },
     {
       "name": "AUD/USD",
-      "date": "2026-11-14",
-      "value": 0.6774,
+      "date": "2026-11-15",
+      "value": 0.6781,
       "previous": 0.680689811706543,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/AUDUSD%3DX?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": -4.39,
+          "value": -4.29,
           "unit": "%",
           "base_date": "2026-08-16"
         },
         "6m": {
-          "value": -4.99,
+          "value": -4.9,
           "unit": "%",
           "base_date": "2026-05-17"
         },
         "12m": {
-          "value": 3.75,
+          "value": 3.86,
           "unit": "%",
           "base_date": "2025-11-14"
         }
@@ -1288,9 +1288,21 @@
   "news": [
     {
       "category": "Central banks",
+      "title": "Statement on Monetary Policy \u2013 August 2026 1. Financial Conditions - www.rba.gov.au",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5UR1RaNmtCRkNYM1BsSWtDTHVJOHNYYVFLSjdtZlAxM21tVWFBZE90azVLVUNMUE5FanR6bG5DNUJQX0tUTDRMMTMwMWhobjVIVWFNSElHSWsxZlFuQTk0NUZnM0l4RUFmZUZBdjNaNWpVMG5ZcGx6WW9xS1IxZVk?oc=5",
+      "published": "Tue, 11 Aug 2026 07:01:14 GMT"
+    },
+    {
+      "category": "Central banks",
       "title": "Australian Dollar dips under 0.6850 as Fed-RBA policy divergence widens - FXStreet",
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQRW1XeTFzQUpkVVB6THNwSHIwRE9zME1RTm0xN3BzSXBuQUJiSzh5dU0zeDhhcWhtTElJd3BiXzE4WXdEelpDR245N3ZsY2VpSFRaUUgzdi12S3hxTk44dk1lQ3BmTEVJYVk1N0U0dVJSNXl3bjBEclJuU1pwbUlsMWdNOXF5dno5dHNhMjlFMTVoMzFfLVA3RnZTbFdKTm9IZUZRWi1QYzhSbGNtMVFDdWpCOA?oc=5",
       "published": "Wed, 11 Nov 2026 23:03:09 GMT"
+    },
+    {
+      "category": "Central banks",
+      "title": "Interest rates in focus as US eyes first increase since 2023 - CommBank",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQdF9MUFFaU2d0NE5wc0RIckhsTUVUME1OSGVkSDVVV2hCRmwwQUhDTFdzOUxwWkx0NEU5OVJtaTFoV29kMkxjSjItcHloRTN1Y3pqZ21HMzVUTzJYcTlrcUhGQlBDV1c1U0puMV9Ia04tYTAySFI0TzJaRkoyRTJVS3pGUnFrZWl6OVBBSFdfUll6WDkwUEZpU2gtUQ?oc=5",
+      "published": "Mon, 14 Sep 2026 07:00:00 GMT"
     },
     {
       "category": "Central banks",
@@ -1300,21 +1312,9 @@
     },
     {
       "category": "Central banks",
-      "title": "Australian Dollar slips toward March lows as Fed and RBA outlooks diverge - FXStreet",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNT0lvX09tSDhNZHZRQl9mUzhsQ09UUzNuQzdibUROSEJtbWhNek12d0VaRTExYl9QY3MwNnRVX1VIZHkyT0Q0em9WeG5yem9GMzNnemg5dnQxNTRvb1Fjd1ppc0FxUXVvT0ZYbmFlb0c0NzRPd2oxS2JSQ3QzUzBSVWt5TVZ4T1hENFFCMW4yWnZyU3dYdkN3V1h3a3FaZGJMVnNfYmF2YUltekFIMzBsc3hXQkVFZzQ?oc=5",
-      "published": "Wed, 11 Nov 2026 15:06:10 GMT"
-    },
-    {
-      "category": "Central banks",
-      "title": "Statement on Monetary Policy \u2013 August 2026 1. Financial Conditions - www.rba.gov.au",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5UR1RaNmtCRkNYM1BsSWtDTHVJOHNYYVFLSjdtZlAxM21tVWFBZE90azVLVUNMUE5FanR6bG5DNUJQX0tUTDRMMTMwMWhobjVIVWFNSElHSWsxZlFuQTk0NUZnM0l4RUFmZUZBdjNaNWpVMG5ZcGx6WW9xS1IxZVk?oc=5",
-      "published": "Tue, 11 Aug 2026 07:01:14 GMT"
-    },
-    {
-      "category": "Central banks",
-      "title": "Interest rates in focus as US eyes first increase since 2023 - CommBank",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQdF9MUFFaU2d0NE5wc0RIckhsTUVUME1OSGVkSDVVV2hCRmwwQUhDTFdzOUxwWkx0NEU5OVJtaTFoV29kMkxjSjItcHloRTN1Y3pqZ21HMzVUTzJYcTlrcUhGQlBDV1c1U0puMV9Ia04tYTAySFI0TzJaRkoyRTJVS3pGUnFrZWl6OVBBSFdfUll6WDkwUEZpU2gtUQ?oc=5",
-      "published": "Mon, 14 Sep 2026 07:00:00 GMT"
+      "title": "Statement on Monetary Policy \u2013 May 2026 1. Financial Conditions - www.rba.gov.au",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5DaFBudFdtLXVqNHJMTm5TcFZad2RqZ2lrRzA2V3hobGp0ZW56QVdMeF8wamZaOU9TWXhCeU1sM3lSdXNBZ0g2ZTR4YVFtYUEzT1JDSWl4LURXRGVLLUExWkpQOUFtUFcxcHRtTzIza2ZqNk84T1dxM05haUM5WjQ?oc=5",
+      "published": "Tue, 05 May 2026 07:48:44 GMT"
     },
     {
       "category": "Credit",
@@ -1330,12 +1330,6 @@
     },
     {
       "category": "Credit",
-      "title": "Buy Now, Pay Later: Recent Developments and Implications - Federal Reserve Bank of Richmond",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOOUtCSkJTcks5T0FGUlJuR29QVVNRelRBbDVzSk5MRHNRRHF4MGZlUFlvdmducGFjMFc3eTZZUVpLM3hXUFhiTWJhZ01lT05jTW5ZOVJwR2dENFRSTnZCam5aZTdGTHliNmh1ZnlIOXBscmMweU00a2NiLXNOem11QTBKLVQ?oc=5",
-      "published": "Wed, 11 Feb 2026 12:33:43 GMT"
-    },
-    {
-      "category": "Credit",
       "title": "Brazil credit delinquency hits record as debt stress deepens - Valor International",
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQMHFiaHlMNTgyR0xpTE5hNFI0RS1vSk9SQnJkSkw0NnNaVXI0VEd0NV9OSVFsR1lhUWw1Y0Q2TTFkMDdaMWpBZkYxUTBLZ2JzSWZ4ZEZfRmZjd2pUbllZR3c2TTdqZUUyZ3NYS1B6UnU0TlNCZFVpQ1Q4QTIzeEZmZHNjS1FsT3hmY0dGaVZvdEVzdWRZVVQ2VWJodldIRF9BN29Bb1M3bjhweWwxc3g0bThabm9BVlVRRWNxZk1qTG1tOEdBWFHSAdQBQVVfeXFMTUlDRzdJbE5hTldiZXhNa0JPRjRhbVYxeWhwcExPREd0dUtURDlQckd0clIwQU9lSVpXaG8xSzg2UVI5YldmVmJfbTVIOU9VYlpmdEVJcHd3RENvbDdtcjlnT2hmaDVmd19wN3QxSklqZHd4cmxNcDhTb1otdzRBbE82X2pMdUp2QWVoRUJVQ005QU1td3lmdno4dnE0cm1KdHRvRkEzMm9ubGgxVUZFay1BU28xemltRXZQSjh3b0IwYXBzSlNObGc3V2xTVUllQ3NSQkk?oc=5",
       "published": "Thu, 02 Jul 2026 07:00:00 GMT"
@@ -1345,6 +1339,12 @@
       "title": "Financial stability indicators - Bank of Canada",
       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPX29GU1VSMDFzdUtQV1A3bk5ubnZEb3RYRVREb2NuZzR2NmQ2WDlYRW1PTm4wcmpMZUQxTk1iSDlRam9zdWlvdENYVHRlc1NYU1lsenB2Vlo3RWJOVHdPOXNJMmNKeWxXdXJXWmVnRkM3NTl5WlVYVzQwMmJSQmF4TWtR?oc=5",
       "published": "Fri, 19 Dec 2025 15:01:30 GMT"
+    },
+    {
+      "category": "Credit",
+      "title": "RBA bracing for private credit default rates to increase - AFR",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNWFZSeFRzdmt2MkpiSVZxa0l3b0huYV90dGFJQ25WblYwdjRONVF2T2dhVF8zZGJlWC1zVTl6amxYRmdfS2pzem5oUS1hMjRIU3F1SUxlb1d1R2w2eUw1Tl9YZUVtcjNOSHJSdk1kdUtHRF9TMS0xYl8yVV9jNVpFVk5scm12eGo4WWx3SWh6ZEdtbTl3VXZCd3VVaVNwd3RqaGZFZ1F3NDNjVWFka1ZtSnNDcw?oc=5",
+      "published": "Sun, 12 Jul 2026 07:00:00 GMT"
     },
     {
       "category": "Geopolitics",
@@ -1372,15 +1372,15 @@
     },
     {
       "category": "Geopolitics",
-      "title": "How US-Iran tensions could shape world markets - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQWFBBamo3NzdGOFFxZ3h5Z3NpcEtHY0lGS1UyUFpCNThFLUxsUi02TzBMVllKRmVKa3JwcTEtVnFOTVRUWDU4dWpzN0pZLTN6MzJMVWl4WmpEbVlTQWxWbWFSNkRkSkNtT3hTM0RLZzZ4T3ZuVG9vSmkzOFZjcGtjWmhwN1VINmI2QkdpRUg0eHI2aHA0SjFUdVpVTkJUSTQ?oc=5",
-      "published": "Sat, 28 Feb 2026 08:00:00 GMT"
+      "title": "Geopolitical analysis on the rise for investors as risks multiply - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQMk1qdUh0QlJYM1ZMUVJzRG5ueVNlZnRGWHZuVjdhZV9rQ05JT3BsQ0Zxa1VXMVYybDZkQnp1Yms0R3ZxZFhBT0lLLWhtU0RRX2ZIaGZ0blFXT3RNaUJMMG5XZFhsd0F1UkdKY1lSRS1zbGVSUG50Q0c0VWFvQUloSnd4ek0zdWk5azZLLXlZQ2ltaDIxTEJDMlJXMmpsQndyaEFwaA?oc=5",
+      "published": "Fri, 23 Jan 2026 08:00:00 GMT"
     },
     {
       "category": "Gold",
-      "title": "Gold Price \u2013 Today\u2019s Chart \u2013 Historical Data \u2013 Outlook - thebull.com.au",
+      "title": "Gold Price \u2013 Today\u2019s Chart \u2013 Historical Data \u2013 Outlook - TheBull.com.au",
       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNOGczUWdqT2loTW9IaEhCeWxuSHE2OXQwTm9mUTRFVHBDZmlWQWx3WE1STVotaVJhUzk1LU5nY05SX0pBRXdEZzU2MmtteWJSMFRVWGNLSTFUaUpOWFIxdENMd0pxbFM4VVMtWmN5cXVFQUZzUGRDb1BjR19Tdlc1WVBMWQ?oc=5",
-      "published": "Sun, 15 Nov 2026 01:20:49 GMT"
+      "published": "Sun, 15 Nov 2026 02:35:36 GMT"
     },
     {
       "category": "Gold",
@@ -1390,21 +1390,21 @@
     },
     {
       "category": "Gold",
-      "title": "China buys gold for two straight years as central bank demand remains a key pillar of support - Kitco",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNcnMwUHdaakNobncwZG8wWE41M290UThlMmQxQV84UkRuNThLMDdwcU9JWWVKTVUtN0hiWS1nNDNqYUVocXdYZVdjSlpUN0FjamdpRGtFSmNIbk9ITGl3Q0Q4LTJ0WC1BTW03cDBIaTY5MldITlJDVVlsdVZQZkpqelJfSnpSeF9MWGRnOTZXWndsdmFIVjc5bEVNZ28zWThaaXI4VVVuVWxGbmtVOUZfZ24tdmlZX1RUbTA0?oc=5",
-      "published": "Tue, 10 Nov 2026 16:50:34 GMT"
-    },
-    {
-      "category": "Gold",
-      "title": "Goldman Sachs just slashed its 2027 gold forecast. Here are the new numbers - Investing.com",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQRzYyRU50SDUzOW15clJVVGhYWFZ5WDdSRWpMSnJBTUMzZDZ5VU16QUM3V3RSVE05Mjg2aFg2eFRQTkVkcWo3US0wU3hGWFFzWUVfYjdTLXNZNG5FelVydFhKVmx0SDR3S1l4VVVicmU5WlBLeUhxM051VXQwLVhjQk5ITjBBOGN1OUVjS1lUb2t5VGh6QmtSVmhyRVNYUG5hODJhNlFmcjB2NXFuMF9BTVBsclRJaTFEbmJjaURTWDRLZ2xNZnNwMy1B?oc=5",
-      "published": "Sat, 14 Nov 2026 18:32:48 GMT"
+      "title": "Gold demand remains near record highs as central bank buying surges 42% \u2013 WGC - Kitco",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNdXMzWmhCTThSSlhBcHFsbjY2VEdWdUN3WjRxQmE3YnpENklGckNZeXhUakpielZ0MUVnOV9CZlM3dHdTdXZ4OWMwdkVXTkY0Vk9PbDhKNnBybTJuMFlxQTk1dGE1MDZTUTFYX2x1NXZlYzkyUFYxV0NHNW5oNFJHWGhyTW1mdTFfTEtqdDNPMzQ5RmNpSWJ1eTJnZGNvWFRmNDk2YU41OG5VYmhSTUpUVHlRNVFKQ1NS?oc=5",
+      "published": "Tue, 03 Nov 2026 08:00:00 GMT"
     },
     {
       "category": "Gold",
       "title": "Gold hit a one-year low while central banks bought 321 tonnes \u2014 the sellers were never the ones you think - Mitrade",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNeTkzZWtOTFRUVUcxS092dnIyS2FXaWhVdE1NU3lCMXZUN3EyazJBaHRwWGlEYURwbUItN1RUcUxLS1doeldoNEx1VFFUcXQtZjY0Q3VtYWdoZ1JzNmZ5cExhTjQ4dXNFWVhDaVNyRElPMkRwU0FrRFc5OWV0a251R0p1TkI3S0NQWXlaUDRpMXFjVkg3NDVpSzMzREZ1X3RZeVJLXw?oc=5",
       "published": "Fri, 13 Nov 2026 03:18:39 GMT"
+    },
+    {
+      "category": "Gold",
+      "title": "Central Bank Gold Statistics: Central banks make positive headlines on gold | Post by Marissa Salim | Insights - World Gold Council",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPcGtfOTVtaHJlbUFvZlRKNGJfdkpiN2VaYWd6Yzk4akxnZVg2c0tMdlRDVlR6bkFoMVlaMjNSbzZ3X3h6ZG9JSXMzTkVqdFJ1UTJiTXlfNWF2SXZLZ09ZX1dVN3pvNUdrLXV4U1lnaTRUekFZTkx2SHlybDc3dXpoQ3hlUmRUM1lveVl0STE1bGE5c2lka1ZpaXItOC1ybFhzWGdQXzR5WEF2THBZVjBtOUxjUnhfM2d5a204?oc=5",
+      "published": "Thu, 03 Sep 2026 07:00:00 GMT"
     }
   ]
 }
