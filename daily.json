@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-17T21:22:53.019936+00:00",
+  "generated_at_utc": "2026-11-18T21:24:25.924707+00:00",
   "regime": "DATA INSUFFICIENT",
   "score": 0.0,
   "coverage": 2,
@@ -17,106 +17,25 @@
   "readings": [
     {
       "name": "US 10Y yield (market proxy)",
-      "date": "2026-11-17",
-      "value": 5.103,
-      "previous": 5.120999813079834,
+      "date": "2026-11-18",
+      "value": 5.066,
+      "previous": 5.103000164031982,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": 8.44,
+          "value": 8.88,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": 9.34,
+          "value": 10.8,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 23.47,
-          "unit": "%",
-          "base_date": "2025-11-17"
-        }
-      },
-      "volume_signal": null
-    },
-    {
-      "name": "US 5Y yield (market proxy)",
-      "date": "2026-11-17",
-      "value": 4.9,
-      "previous": 4.934999942779541,
-      "status": "ok",
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EFVX?range=1y&interval=1d",
-      "unit": "index/market price",
-      "trends": {
-        "3m": {
-          "value": 12.21,
-          "unit": "%",
-          "base_date": "2026-08-18"
-        },
-        "6m": {
-          "value": 13.16,
-          "unit": "%",
-          "base_date": "2026-05-19"
-        },
-        "12m": {
-          "value": 31.69,
-          "unit": "%",
-          "base_date": "2025-11-17"
-        }
-      },
-      "volume_signal": null
-    },
-    {
-      "name": "Gold futures USD/oz",
-      "date": "2026-11-17",
-      "value": 3852.1001,
-      "previous": 3853.0,
-      "status": "ok",
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?range=1y&interval=1d",
-      "unit": "index/market price",
-      "trends": {
-        "3m": {
-          "value": -12.86,
-          "unit": "%",
-          "base_date": "2026-08-18"
-        },
-        "6m": {
-          "value": -14.61,
-          "unit": "%",
-          "base_date": "2026-05-19"
-        },
-        "12m": {
-          "value": -5.46,
-          "unit": "%",
-          "base_date": "2025-11-17"
-        }
-      },
-      "volume_signal": null
-    },
-    {
-      "name": "Gold miners ETF (GDX)",
-      "date": "2026-11-17",
-      "value": 79.57,
-      "previous": 78.94999694824219,
-      "status": "ok",
-      "source": "https://query1.finance.yahoo.com/v8/finance/chart/GDX?range=1y&interval=1d",
-      "unit": "index/market price",
-      "trends": {
-        "3m": {
-          "value": -10.55,
-          "unit": "%",
-          "base_date": "2026-08-18"
-        },
-        "6m": {
-          "value": -5.03,
-          "unit": "%",
-          "base_date": "2026-05-19"
-        },
-        "12m": {
-          "value": 5.21,
+          "value": 22.87,
           "unit": "%",
           "base_date": "2025-11-18"
         }
@@ -124,77 +43,158 @@
       "volume_signal": null
     },
     {
+      "name": "US 5Y yield (market proxy)",
+      "date": "2026-11-18",
+      "value": 4.884,
+      "previous": 4.900000095367432,
+      "status": "ok",
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EFVX?range=1y&interval=1d",
+      "unit": "index/market price",
+      "trends": {
+        "3m": {
+          "value": 12.2,
+          "unit": "%",
+          "base_date": "2026-08-19"
+        },
+        "6m": {
+          "value": 15.6,
+          "unit": "%",
+          "base_date": "2026-05-20"
+        },
+        "12m": {
+          "value": 32.21,
+          "unit": "%",
+          "base_date": "2025-11-18"
+        }
+      },
+      "volume_signal": null
+    },
+    {
+      "name": "Gold futures USD/oz",
+      "date": "2026-11-18",
+      "value": 3727.3,
+      "previous": 3864.199951171875,
+      "status": "ok",
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?range=1y&interval=1d",
+      "unit": "index/market price",
+      "trends": {
+        "3m": {
+          "value": -18.0,
+          "unit": "%",
+          "base_date": "2026-08-19"
+        },
+        "6m": {
+          "value": -17.82,
+          "unit": "%",
+          "base_date": "2026-05-20"
+        },
+        "12m": {
+          "value": -8.34,
+          "unit": "%",
+          "base_date": "2025-11-18"
+        }
+      },
+      "volume_signal": null
+    },
+    {
+      "name": "Gold miners ETF (GDX)",
+      "date": "2026-11-18",
+      "value": 74.82,
+      "previous": 79.56999969482422,
+      "status": "ok",
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/GDX?range=1y&interval=1d",
+      "unit": "index/market price",
+      "trends": {
+        "3m": {
+          "value": -23.13,
+          "unit": "%",
+          "base_date": "2026-08-19"
+        },
+        "6m": {
+          "value": -13.36,
+          "unit": "%",
+          "base_date": "2026-05-20"
+        },
+        "12m": {
+          "value": -2.06,
+          "unit": "%",
+          "base_date": "2025-11-19"
+        }
+      },
+      "volume_signal": null
+    },
+    {
       "name": "AUD/USD",
-      "date": "2026-11-17",
-      "value": 0.6738,
-      "previous": 0.6778998970985413,
+      "date": "2026-11-18",
+      "value": 0.6716,
+      "previous": 0.6737300157546997,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/AUDUSD%3DX?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": -4.86,
+          "value": -5.74,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": -5.19,
+          "value": -6.07,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 3.13,
+          "value": 3.44,
           "unit": "%",
-          "base_date": "2025-11-17"
+          "base_date": "2025-11-18"
         }
       },
       "volume_signal": null
     },
     {
       "name": "US Dollar Index (DXY)",
-      "date": "2026-11-17",
-      "value": 103.515,
-      "previous": 103.55000305175781,
+      "date": "2026-11-18",
+      "value": 103.79,
+      "previous": 103.48999786376953,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": 3.88,
+          "value": 5.02,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": 4.24,
+          "value": 4.72,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 3.94,
+          "value": 4.26,
           "unit": "%",
-          "base_date": "2025-11-17"
+          "base_date": "2025-11-18"
         }
       },
       "volume_signal": null
     },
     {
       "name": "US real 10Y yield",
-      "date": "2026-11-17",
-      "value": 2.89,
-      "previous": 2.92,
+      "date": "2026-11-18",
+      "value": 2.88,
+      "previous": 2.89,
       "status": "ok",
       "unit": "%",
       "source": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_real_yield_curve&field_tdr_date_value=2026&page&_format=csv",
       "trends": {
         "3m": {
-          "value": 48.0,
+          "value": 53.0,
           "unit": "bp",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": 71.0,
+          "value": 75.0,
           "unit": "bp",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         }
       }
     },
@@ -239,573 +239,573 @@
     },
     {
       "name": "Brent crude futures",
-      "date": "2026-11-17",
-      "value": 92.89,
-      "previous": 92.44000244140625,
+      "date": "2026-11-18",
+      "value": 89.03,
+      "previous": 93.13999938964844,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/BZ%3DF?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": 2.05,
+          "value": -2.83,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": -16.53,
+          "value": -15.23,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 44.69,
+          "value": 37.2,
           "unit": "%",
-          "base_date": "2025-11-17"
+          "base_date": "2025-11-18"
         }
       },
       "volume_signal": null
     },
     {
       "name": "S&P 500",
-      "date": "2026-11-17",
-      "value": 7340.5298,
-      "previous": 7416.58984375,
+      "date": "2026-11-18",
+      "value": 7323.6299,
+      "previous": 7340.52978515625,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": -4.57,
+          "value": -4.99,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": -0.18,
+          "value": -1.47,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 10.93,
+          "value": 10.26,
           "unit": "%",
-          "base_date": "2025-11-18"
+          "base_date": "2025-11-19"
         }
       },
       "volume_signal": {
-        "ratio_to_20d": 0.57,
+        "ratio_to_20d": 0.54,
         "direction": "down",
         "note": "Reported index volume; not consolidated exchange volume"
       }
     },
     {
       "name": "Nasdaq",
-      "date": "2026-11-17",
-      "value": 24328.3828,
-      "previous": 24509.759765625,
+      "date": "2026-11-18",
+      "value": 24429.8848,
+      "previous": 24328.380859375,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": -7.46,
+          "value": -7.22,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": -5.96,
+          "value": -7.01,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 8.45,
+          "value": 8.27,
           "unit": "%",
-          "base_date": "2025-11-18"
+          "base_date": "2025-11-19"
         }
       },
       "volume_signal": {
-        "ratio_to_20d": 0.94,
-        "direction": "down",
+        "ratio_to_20d": 0.78,
+        "direction": "up",
         "note": "Reported index volume; not consolidated exchange volume"
       }
     },
     {
       "name": "VIX",
-      "date": "2026-11-17",
-      "value": 25.53,
-      "previous": 22.90999984741211,
+      "date": "2026-11-18",
+      "value": 24.52,
+      "previous": 25.459999084472656,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": 61.17,
+          "value": 64.67,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": 41.36,
+          "value": 40.6,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 14.08,
+          "value": -0.69,
           "unit": "%",
-          "base_date": "2025-11-17"
+          "base_date": "2025-11-18"
         }
       },
       "volume_signal": null
     },
     {
       "name": "High yield corporate bond ETF (HYG)",
-      "date": "2026-11-17",
-      "value": 76.63,
-      "previous": 76.7300033569336,
+      "date": "2026-11-18",
+      "value": 76.65,
+      "previous": 76.62999725341797,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/HYG?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": -3.65,
+          "value": -3.84,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": -3.43,
+          "value": -4.02,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": -4.34,
+          "value": -4.37,
           "unit": "%",
-          "base_date": "2025-11-18"
+          "base_date": "2025-11-19"
         }
       },
       "volume_signal": null
     },
     {
       "name": "Investment grade corporate bond ETF (LQD)",
-      "date": "2026-11-17",
-      "value": 102.74,
-      "previous": 102.80000305175781,
+      "date": "2026-11-18",
+      "value": 103.15,
+      "previous": 102.73999786376953,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/LQD?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": -2.93,
+          "value": -3.21,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": -4.09,
+          "value": -4.45,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": -6.91,
+          "value": -6.55,
           "unit": "%",
-          "base_date": "2025-11-18"
+          "base_date": "2025-11-19"
         }
       },
       "volume_signal": null
     },
     {
       "name": "Consumer discretionary ETF (XLY)",
-      "date": "2026-11-17",
-      "value": 117.1,
-      "previous": 118.1500015258789,
+      "date": "2026-11-18",
+      "value": 119.2,
+      "previous": 117.0999984741211,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/XLY?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": 0.64,
+          "value": 0.51,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": 1.8,
+          "value": 1.07,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 4.32,
+          "value": 6.19,
           "unit": "%",
-          "base_date": "2025-11-18"
+          "base_date": "2025-11-19"
         }
       },
       "volume_signal": null
     },
     {
       "name": "Consumer staples ETF (XLP)",
-      "date": "2026-11-17",
-      "value": 91.46,
-      "previous": 92.5999984741211,
+      "date": "2026-11-18",
+      "value": 91.18,
+      "previous": 91.45999908447266,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/XLP?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": 6.87,
+          "value": 5.36,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": 6.24,
+          "value": 6.62,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 18.63,
+          "value": 19.17,
           "unit": "%",
-          "base_date": "2025-11-18"
+          "base_date": "2025-11-19"
         }
       },
       "volume_signal": null
     },
     {
       "name": "Equal weight S&P ETF (RSP)",
-      "date": "2026-11-17",
-      "value": 215.8,
-      "previous": 218.92999267578125,
+      "date": "2026-11-18",
+      "value": 215.43,
+      "previous": 215.75999450683594,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/RSP?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": -1.82,
+          "value": -2.99,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": 7.03,
+          "value": 5.69,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 16.65,
+          "value": 16.81,
           "unit": "%",
-          "base_date": "2025-11-18"
+          "base_date": "2025-11-19"
         }
       },
       "volume_signal": null
     },
     {
       "name": "S&P ETF (SPY)",
-      "date": "2026-11-17",
-      "value": 732.44,
-      "previous": 739.9500122070312,
+      "date": "2026-11-18",
+      "value": 730.2,
+      "previous": 732.4400024414062,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": -4.56,
+          "value": -5.05,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": -0.18,
+          "value": -1.49,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 10.96,
+          "value": 10.2,
           "unit": "%",
-          "base_date": "2025-11-18"
+          "base_date": "2025-11-19"
         }
       },
       "volume_signal": null
     },
     {
       "name": "Small cap ETF (IWM)",
-      "date": "2026-11-17",
-      "value": 268.98,
-      "previous": 272.94000244140625,
+      "date": "2026-11-18",
+      "value": 270.11,
+      "previous": 269.04998779296875,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/IWM?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": -10.41,
+          "value": -10.48,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": -1.47,
+          "value": -3.49,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 15.21,
+          "value": 15.71,
           "unit": "%",
-          "base_date": "2025-11-18"
+          "base_date": "2025-11-19"
         }
       },
       "volume_signal": null
     },
     {
       "name": "Regional banks ETF (KRE)",
-      "date": "2026-11-17",
-      "value": 70.85,
-      "previous": 72.19000244140625,
+      "date": "2026-11-18",
+      "value": 70.51,
+      "previous": 70.8499984741211,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/KRE?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": -7.81,
+          "value": -5.99,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": 4.87,
+          "value": 1.94,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 19.76,
+          "value": 17.93,
           "unit": "%",
-          "base_date": "2025-11-18"
+          "base_date": "2025-11-19"
         }
       },
       "volume_signal": null
     },
     {
       "name": "Broad US banks ETF (KBE)",
-      "date": "2026-11-17",
-      "value": 64.78,
-      "previous": 65.95999908447266,
+      "date": "2026-11-18",
+      "value": 64.42,
+      "previous": 64.77999877929688,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/KBE?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": -8.24,
+          "value": -6.8,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": 4.52,
+          "value": 1.67,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 16.43,
+          "value": 14.65,
           "unit": "%",
-          "base_date": "2025-11-18"
+          "base_date": "2025-11-19"
         }
       },
       "volume_signal": null
     },
     {
       "name": "Australian equities ETF (VAS)",
-      "date": "2026-11-17",
-      "value": 110.13,
-      "previous": 112.16000366210938,
+      "date": "2026-11-18",
+      "value": 109.36,
+      "previous": 110.12999725341797,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/VAS.AX?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": -2.14,
+          "value": -2.81,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": 2.96,
+          "value": 3.55,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 4.48,
+          "value": 4.07,
           "unit": "%",
-          "base_date": "2025-11-17"
+          "base_date": "2025-11-18"
         }
       },
       "volume_signal": null
     },
     {
       "name": "Australian resources ETF (MVR)",
-      "date": "2026-11-17",
-      "value": 43.78,
-      "previous": 44.9900016784668,
+      "date": "2026-11-18",
+      "value": 43.35,
+      "previous": 43.779998779296875,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/MVR.AX?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": -8.94,
+          "value": -10.49,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": -9.75,
+          "value": -9.23,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 5.24,
+          "value": 2.92,
           "unit": "%",
-          "base_date": "2025-11-17"
+          "base_date": "2025-11-18"
         }
       },
       "volume_signal": null
     },
     {
       "name": "Australian quality ETF (AQLT)",
-      "date": "2026-11-17",
-      "value": 36.76,
-      "previous": 37.34000015258789,
+      "date": "2026-11-18",
+      "value": 36.4,
+      "previous": 36.7599983215332,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/AQLT.AX?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": 2.25,
+          "value": 1.53,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": 10.72,
+          "value": 9.18,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 9.96,
+          "value": 9.31,
           "unit": "%",
-          "base_date": "2025-11-17"
+          "base_date": "2025-11-18"
         }
       },
       "volume_signal": null
     },
     {
       "name": "Developed markets ETF (VEU)",
-      "date": "2026-11-17",
-      "value": 78.39,
-      "previous": 79.3499984741211,
+      "date": "2026-11-18",
+      "value": 77.56,
+      "previous": 78.38999938964844,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/VEU?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": -7.15,
+          "value": -8.71,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": -2.95,
+          "value": -5.58,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 9.71,
+          "value": 8.83,
           "unit": "%",
-          "base_date": "2025-11-18"
+          "base_date": "2025-11-19"
         }
       },
       "volume_signal": null
     },
     {
       "name": "Emerging markets ETF (VWO)",
-      "date": "2026-11-17",
-      "value": 54.3,
-      "previous": 54.86000061035156,
+      "date": "2026-11-18",
+      "value": 53.76,
+      "previous": 54.29999923706055,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/VWO?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": -8.95,
+          "value": -10.46,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": -6.17,
+          "value": -8.37,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 0.48,
+          "value": -0.3,
           "unit": "%",
-          "base_date": "2025-11-18"
+          "base_date": "2025-11-19"
         }
       },
       "volume_signal": null
     },
     {
       "name": "Global technology ETF (IXN)",
-      "date": "2026-11-17",
-      "value": 122.24,
-      "previous": 123.30000305175781,
+      "date": "2026-11-18",
+      "value": 122.46,
+      "previous": 122.23999786376953,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/IXN?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": -12.43,
+          "value": -11.9,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": -5.9,
+          "value": -7.89,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 19.55,
+          "value": 18.92,
           "unit": "%",
-          "base_date": "2025-11-18"
+          "base_date": "2025-11-19"
         }
       },
       "volume_signal": null
     },
     {
       "name": "Australian government bonds ETF (IAF)",
-      "date": "2026-11-17",
-      "value": 100.85,
-      "previous": 100.83000183105469,
+      "date": "2026-11-18",
+      "value": 101.15,
+      "previous": 100.8499984741211,
       "status": "ok",
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/IAF.AX?range=1y&interval=1d",
       "unit": "index/market price",
       "trends": {
         "3m": {
-          "value": -0.18,
+          "value": -0.15,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": 0.33,
+          "value": 0.81,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": -2.05,
+          "value": -1.86,
           "unit": "%",
-          "base_date": "2025-11-17"
+          "base_date": "2025-11-18"
         }
       },
       "volume_signal": null
     },
     {
       "name": "Credit risk appetite proxy (HYG vs LQD)",
-      "date": "2026-11-17",
-      "value": -0.72,
+      "date": "2026-11-18",
+      "value": -0.63,
       "status": "ok",
       "unit": "3m relative return (pp)",
       "trends": {
         "3m": {
-          "value": -0.72,
+          "value": -0.63,
           "unit": "pp",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": 0.66,
+          "value": 0.43,
           "unit": "pp",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 2.57,
+          "value": 2.18,
           "unit": "pp",
-          "base_date": "2025-11-18"
+          "base_date": "2025-11-19"
         }
       },
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/HYG?range=1y&interval=1d",
@@ -814,25 +814,25 @@
     },
     {
       "name": "Consumer demand proxy (XLY vs XLP)",
-      "date": "2026-11-17",
-      "value": -6.23,
+      "date": "2026-11-18",
+      "value": -4.85,
       "status": "ok",
       "unit": "3m relative return (pp)",
       "trends": {
         "3m": {
-          "value": -6.23,
+          "value": -4.85,
           "unit": "pp",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": -4.44,
+          "value": -5.55,
           "unit": "pp",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": -14.31,
+          "value": -12.98,
           "unit": "pp",
-          "base_date": "2025-11-18"
+          "base_date": "2025-11-19"
         }
       },
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/XLY?range=1y&interval=1d",
@@ -841,25 +841,25 @@
     },
     {
       "name": "Market breadth proxy (RSP vs SPY)",
-      "date": "2026-11-17",
-      "value": 2.74,
+      "date": "2026-11-18",
+      "value": 2.06,
       "status": "ok",
       "unit": "3m relative return (pp)",
       "trends": {
         "3m": {
-          "value": 2.74,
+          "value": 2.06,
           "unit": "pp",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": 7.21,
+          "value": 7.18,
           "unit": "pp",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 5.69,
+          "value": 6.61,
           "unit": "pp",
-          "base_date": "2025-11-18"
+          "base_date": "2025-11-19"
         }
       },
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/RSP?range=1y&interval=1d",
@@ -873,23 +873,23 @@
       "sector": "Healthcare",
       "style": "Defensive",
       "status": "ok",
-      "date": "2026-11-17",
-      "price": 199.55,
+      "date": "2026-11-18",
+      "price": 199.38,
       "trends": {
         "3m": {
-          "value": 26.44,
+          "value": 19.76,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": 102.2,
+          "value": 102.48,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 10.81,
+          "value": 11.25,
           "unit": "%",
-          "base_date": "2025-11-17"
+          "base_date": "2025-11-18"
         }
       },
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/CSL.AX?range=1y&interval=1d"
@@ -899,23 +899,23 @@
       "sector": "Healthcare",
       "style": "Defensive",
       "status": "ok",
-      "date": "2026-11-17",
+      "date": "2026-11-18",
       "price": 20.07,
       "trends": {
         "3m": {
-          "value": -12.81,
+          "value": -14.81,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": 8.9,
+          "value": 8.84,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": -3.93,
+          "value": -6.61,
           "unit": "%",
-          "base_date": "2025-11-17"
+          "base_date": "2025-11-18"
         }
       },
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/SHL.AX?range=1y&interval=1d"
@@ -925,23 +925,23 @@
       "sector": "Consumer staples",
       "style": "Defensive",
       "status": "ok",
-      "date": "2026-11-17",
-      "price": 42.04,
+      "date": "2026-11-18",
+      "price": 41.99,
       "trends": {
         "3m": {
-          "value": 6.48,
+          "value": 5.72,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": 22.89,
+          "value": 21.96,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 50.25,
+          "value": 50.66,
           "unit": "%",
-          "base_date": "2025-11-17"
+          "base_date": "2025-11-18"
         }
       },
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/WOW.AX?range=1y&interval=1d"
@@ -951,23 +951,23 @@
       "sector": "Consumer staples",
       "style": "Defensive",
       "status": "ok",
-      "date": "2026-11-17",
-      "price": 22.03,
+      "date": "2026-11-18",
+      "price": 21.92,
       "trends": {
         "3m": {
-          "value": -4.84,
+          "value": -5.84,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": 2.9,
+          "value": 1.91,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": -1.56,
+          "value": -1.88,
           "unit": "%",
-          "base_date": "2025-11-17"
+          "base_date": "2025-11-18"
         }
       },
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/COL.AX?range=1y&interval=1d"
@@ -977,23 +977,23 @@
       "sector": "Telecommunications",
       "style": "Defensive",
       "status": "ok",
-      "date": "2026-11-17",
-      "price": 5.14,
+      "date": "2026-11-18",
+      "price": 5.15,
       "trends": {
         "3m": {
-          "value": 8.44,
+          "value": 8.65,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": -7.39,
+          "value": -6.19,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 4.47,
+          "value": 5.32,
           "unit": "%",
-          "base_date": "2025-11-17"
+          "base_date": "2025-11-18"
         }
       },
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/TLS.AX?range=1y&interval=1d"
@@ -1003,23 +1003,23 @@
       "sector": "Infrastructure",
       "style": "Defensive",
       "status": "ok",
-      "date": "2026-11-17",
-      "price": 15.25,
+      "date": "2026-11-18",
+      "price": 15.26,
       "trends": {
         "3m": {
-          "value": 9.63,
+          "value": 8.92,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": 5.39,
+          "value": 6.79,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 2.56,
+          "value": 1.33,
           "unit": "%",
-          "base_date": "2025-11-17"
+          "base_date": "2025-11-18"
         }
       },
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/TCL.AX?range=1y&interval=1d"
@@ -1029,23 +1029,23 @@
       "sector": "Resources",
       "style": "Cyclical",
       "status": "ok",
-      "date": "2026-11-17",
-      "price": 54.38,
+      "date": "2026-11-18",
+      "price": 54.34,
       "trends": {
         "3m": {
-          "value": -14.83,
+          "value": -14.71,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": -7.36,
+          "value": -5.22,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 32.96,
+          "value": 32.7,
           "unit": "%",
-          "base_date": "2025-11-17"
+          "base_date": "2025-11-18"
         }
       },
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/BHP.AX?range=1y&interval=1d"
@@ -1055,23 +1055,23 @@
       "sector": "Resources",
       "style": "Cyclical",
       "status": "ok",
-      "date": "2026-11-17",
-      "price": 143.21,
+      "date": "2026-11-18",
+      "price": 140.72,
       "trends": {
         "3m": {
-          "value": -14.45,
+          "value": -17.21,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": -19.84,
+          "value": -20.08,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 10.95,
+          "value": 8.86,
           "unit": "%",
-          "base_date": "2025-11-17"
+          "base_date": "2025-11-18"
         }
       },
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/RIO.AX?range=1y&interval=1d"
@@ -1081,23 +1081,23 @@
       "sector": "Consumer",
       "style": "Cyclical",
       "status": "ok",
-      "date": "2026-11-17",
-      "price": 78.79,
+      "date": "2026-11-18",
+      "price": 78.18,
       "trends": {
         "3m": {
-          "value": -6.45,
+          "value": -7.22,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": 7.96,
+          "value": 6.05,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": -1.46,
+          "value": -2.24,
           "unit": "%",
-          "base_date": "2025-11-17"
+          "base_date": "2025-11-18"
         }
       },
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/WES.AX?range=1y&interval=1d"
@@ -1107,23 +1107,23 @@
       "sector": "Insurance",
       "style": "Cyclical",
       "status": "ok",
-      "date": "2026-11-17",
-      "price": 26.64,
+      "date": "2026-11-18",
+      "price": 26.47,
       "trends": {
         "3m": {
-          "value": 17.56,
+          "value": 16.76,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": 11.32,
+          "value": 11.78,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 32.87,
+          "value": 34.09,
           "unit": "%",
-          "base_date": "2025-11-17"
+          "base_date": "2025-11-18"
         }
       },
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/QBE.AX?range=1y&interval=1d"
@@ -1133,23 +1133,23 @@
       "sector": "Property",
       "style": "Growth",
       "status": "ok",
-      "date": "2026-11-17",
-      "price": 28.63,
+      "date": "2026-11-18",
+      "price": 28.67,
       "trends": {
         "3m": {
-          "value": -6.04,
+          "value": -1.88,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": -6.59,
+          "value": -4.43,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": -0.69,
+          "value": -1.61,
           "unit": "%",
-          "base_date": "2025-11-17"
+          "base_date": "2025-11-18"
         }
       },
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/GMG.AX?range=1y&interval=1d"
@@ -1159,23 +1159,23 @@
       "sector": "Financial technology",
       "style": "Growth",
       "status": "ok",
-      "date": "2026-11-17",
-      "price": 18.6,
+      "date": "2026-11-18",
+      "price": 18.44,
       "trends": {
         "3m": {
-          "value": -20.21,
+          "value": -20.17,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": -16.22,
+          "value": -15.84,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": -31.11,
+          "value": -30.99,
           "unit": "%",
-          "base_date": "2025-11-17"
+          "base_date": "2025-11-18"
         }
       },
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/NWL.AX?range=1y&interval=1d"
@@ -1185,23 +1185,23 @@
       "sector": "Healthcare",
       "style": "Growth",
       "status": "ok",
-      "date": "2026-11-17",
-      "price": 13.33,
+      "date": "2026-11-18",
+      "price": 13.21,
       "trends": {
         "3m": {
-          "value": -20.47,
+          "value": -21.56,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": -6.19,
+          "value": -5.64,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": -5.19,
+          "value": -5.24,
           "unit": "%",
-          "base_date": "2025-11-17"
+          "base_date": "2025-11-18"
         }
       },
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/TLX.AX?range=1y&interval=1d"
@@ -1211,23 +1211,23 @@
       "sector": "Technology",
       "style": "Growth",
       "status": "ok",
-      "date": "2026-11-17",
-      "price": 82.48,
+      "date": "2026-11-18",
+      "price": 79.34,
       "trends": {
         "3m": {
-          "value": -0.33,
+          "value": -4.79,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": 4.91,
+          "value": 1.26,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": -30.25,
+          "value": -33.11,
           "unit": "%",
-          "base_date": "2025-11-17"
+          "base_date": "2025-11-18"
         }
       },
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/XRO.AX?range=1y&interval=1d"
@@ -1237,23 +1237,23 @@
       "sector": "Gold miners",
       "style": "Cyclical",
       "status": "ok",
-      "date": "2026-11-17",
-      "price": 6.23,
+      "date": "2026-11-18",
+      "price": 6.15,
       "trends": {
         "3m": {
-          "value": 11.85,
+          "value": 9.24,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": 15.8,
+          "value": 19.42,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": 20.97,
+          "value": 16.7,
           "unit": "%",
-          "base_date": "2025-11-17"
+          "base_date": "2025-11-18"
         }
       },
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/PRU.AX?range=1y&interval=1d"
@@ -1263,23 +1263,23 @@
       "sector": "Gold miners",
       "style": "Cyclical",
       "status": "ok",
-      "date": "2026-11-17",
-      "price": 24.59,
+      "date": "2026-11-18",
+      "price": 24.18,
       "trends": {
         "3m": {
-          "value": 9.43,
+          "value": 7.28,
           "unit": "%",
-          "base_date": "2026-08-18"
+          "base_date": "2026-08-19"
         },
         "6m": {
-          "value": 23.82,
+          "value": 24.96,
           "unit": "%",
-          "base_date": "2026-05-19"
+          "base_date": "2026-05-20"
         },
         "12m": {
-          "value": -1.17,
+          "value": -5.51,
           "unit": "%",
-          "base_date": "2025-11-17"
+          "base_date": "2025-11-18"
         }
       },
       "source": "https://query1.finance.yahoo.com/v8/finance/chart/NST.AX?range=1y&interval=1d"
@@ -1288,15 +1288,15 @@
   "news": [
     {
       "category": "Central banks",
-      "title": "Statement on Monetary Policy \u2013 August 2026 1. Financial Conditions - www.rba.gov.au",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5UR1RaNmtCRkNYM1BsSWtDTHVJOHNYYVFLSjdtZlAxM21tVWFBZE90azVLVUNMUE5FanR6bG5DNUJQX0tUTDRMMTMwMWhobjVIVWFNSElHSWsxZlFuQTk0NUZnM0l4RUFmZUZBdjNaNWpVMG5ZcGx6WW9xS1IxZVk?oc=5",
-      "published": "Tue, 11 Aug 2026 07:01:14 GMT"
+      "title": "Australian Dollar stabilises at a 10-month low following split RBA minutes - www.tmgm.com",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQdHlaVUFnSXM2TEhpWDlLdXpZLTlfN3NNWnRCaGJHZEI3QU9fVk1ZV2l5SGl6cndESEpMcVp4aW9tak15VVZzZVJZVldndGlaRFl2aDFFbjM2UDMzOUxSeTNnRGdydWFORG1aVmo2VkRzOXQ3SzhOazFPbndoWkVyYVkyZXlQbjlzMXRoZWRjdG53YXU4WDVsVzc1SzVnZHVLY2VTaDIxVE1XdmExUjNLdDlvT3UzUnRKek84RWRCQTBOQ3FHeDFIY0RBYTlaakR2Wm9z?oc=5",
+      "published": "Tue, 17 Nov 2026 08:00:00 GMT"
     },
     {
       "category": "Central banks",
-      "title": "11 August 2026 | Minutes of the Monetary Policy Board Meeting - Reserve Bank of Australia",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQSkhITVFZRThfUzBZamEzVnBpbW5HNDNpX1gtWS1zSzZ5VEl2elA3Z1hYSlUyenlLWXYzMngwb1FBTFJZbzk5SHQ0dWtYdUl5d0lTbUFyVmNGc0xsWExjZmNkY3JhOWJiSGhlVjFxZk1lOHlmWXg2aTJFRHpqRmktd2dNUQ?oc=5",
-      "published": "Tue, 11 Aug 2026 07:00:00 GMT"
+      "title": "Statement on Monetary Policy \u2013 August 2026 1. Financial Conditions - www.rba.gov.au",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5UR1RaNmtCRkNYM1BsSWtDTHVJOHNYYVFLSjdtZlAxM21tVWFBZE90azVLVUNMUE5FanR6bG5DNUJQX0tUTDRMMTMwMWhobjVIVWFNSElHSWsxZlFuQTk0NUZnM0l4RUFmZUZBdjNaNWpVMG5ZcGx6WW9xS1IxZVk?oc=5",
+      "published": "Tue, 11 Aug 2026 07:01:14 GMT"
     },
     {
       "category": "Central banks",
@@ -1306,27 +1306,15 @@
     },
     {
       "category": "Central banks",
-      "title": "Statement on Monetary Policy \u2013 May 2026 1. Financial Conditions - www.rba.gov.au",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5DaFBudFdtLXVqNHJMTm5TcFZad2RqZ2lrRzA2V3hobGp0ZW56QVdMeF8wamZaOU9TWXhCeU1sM3lSdXNBZ0g2ZTR4YVFtYUEzT1JDSWl4LURXRGVLLUExWkpQOUFtUFcxcHRtTzIza2ZqNk84T1dxM05haUM5WjQ?oc=5",
-      "published": "Tue, 05 May 2026 07:48:44 GMT"
+      "title": "11 August 2026 | Minutes of the Monetary Policy Board Meeting - Reserve Bank of Australia",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQSkhITVFZRThfUzBZamEzVnBpbW5HNDNpX1gtWS1zSzZ5VEl2elA3Z1hYSlUyenlLWXYzMngwb1FBTFJZbzk5SHQ0dWtYdUl5d0lTbUFyVmNGc0xsWExjZmNkY3JhOWJiSGhlVjFxZk1lOHlmWXg2aTJFRHpqRmktd2dNUQ?oc=5",
+      "published": "Tue, 11 Aug 2026 07:00:00 GMT"
     },
     {
       "category": "Central banks",
-      "title": "Statement on Monetary Policy \u2013 February 2026 1. Financial Conditions - www.rba.gov.au",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1qdEl3d0h1MjY2d1VVdTJkTHpPNkhGamVjM0Y0RUlBc29jNDBhbkRtNk5SLVJ6bnY1UHlZZTVlWkptNHBVOExQTWY2WERLeXVfdWdUa3MxVDNyUnR3TjNhNTF5ZVRYa0d1aUVObGd1Uk4zM3BGZ1UtSmJwelNhOXc?oc=5",
-      "published": "Tue, 03 Feb 2026 12:11:08 GMT"
-    },
-    {
-      "category": "Credit",
-      "title": "Banks Must Act Now as Consumer Credit Stress Begins to Spread - The Financial Brand",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPNXFNakh3Sno5LVRBYlhJMmdhX01CZ1I2Y0ozRTdKSE1CcHMtamVwNWNiczhYaEF2OVJBRDYtWlhxQTV4UjRzWlJnQUUweExQcHl3TUtQTkxRRFRBVkxVSlNncVozLS1valdISEpsYjBZa013MGp3WnhvLTRkM2ZfMklhaEFYaGMxSTlLLTl0WXBsRldWeml5bnhPOGI2dXBsXzhQaENZNFp1aEppMkdlVS11cFhucnctdWFVdGo4T19MY0wxSUEzcw?oc=5",
-      "published": "Tue, 07 Apr 2026 07:00:00 GMT"
-    },
-    {
-      "category": "Credit",
-      "title": "Rising Private Credit Defaults Are Testing Banks And Insurers - Forbes",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQUXk4cGgyRUJhaUtIbzRMS1pDaUhHN3pRWjJtcEp0UjYySzNza19yRmlhRnUzay1XTEJ6UGNrVTYzN1cweXZWbFFkZkE3YTZTcnZZME16RjBON3VpejZWVDZXcVFRR29MRHY5dTFsR3hKUmlxNVJqUDhyUVRVeUphWHp3b29YZXM0bHNwQk5EZkYxYWI3ZnFsdGd5TmREQzI5cW9KeVRsSGNacUFZalB6dlVaVFF2OF85Uk1zS3ZTbkRxSS1zSUE?oc=5",
-      "published": "Sun, 24 May 2026 07:00:00 GMT"
+      "title": "Statement on Monetary Policy \u2013 May 2026 1. Financial Conditions - www.rba.gov.au",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5DaFBudFdtLXVqNHJMTm5TcFZad2RqZ2lrRzA2V3hobGp0ZW56QVdMeF8wamZaOU9TWXhCeU1sM3lSdXNBZ0g2ZTR4YVFtYUEzT1JDSWl4LURXRGVLLUExWkpQOUFtUFcxcHRtTzIza2ZqNk84T1dxM05haUM5WjQ?oc=5",
+      "published": "Tue, 05 May 2026 07:48:44 GMT"
     },
     {
       "category": "Credit",
@@ -1336,15 +1324,27 @@
     },
     {
       "category": "Credit",
-      "title": "Financial stability indicators - Bank of Canada",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPX29GU1VSMDFzdUtQV1A3bk5ubnZEb3RYRVREb2NuZzR2NmQ2WDlYRW1PTm4wcmpMZUQxTk1iSDlRam9zdWlvdENYVHRlc1NYU1lsenB2Vlo3RWJOVHdPOXNJMmNKeWxXdXJXWmVnRkM3NTl5WlVYVzQwMmJSQmF4TWtR?oc=5",
-      "published": "Fri, 19 Dec 2025 15:01:30 GMT"
+      "title": "Rising Private Credit Defaults Are Testing Banks And Insurers - Forbes",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQUXk4cGgyRUJhaUtIbzRMS1pDaUhHN3pRWjJtcEp0UjYySzNza19yRmlhRnUzay1XTEJ6UGNrVTYzN1cweXZWbFFkZkE3YTZTcnZZME16RjBON3VpejZWVDZXcVFRR29MRHY5dTFsR3hKUmlxNVJqUDhyUVRVeUphWHp3b29YZXM0bHNwQk5EZkYxYWI3ZnFsdGd5TmREQzI5cW9KeVRsSGNacUFZalB6dlVaVFF2OF85Uk1zS3ZTbkRxSS1zSUE?oc=5",
+      "published": "Sun, 24 May 2026 07:00:00 GMT"
+    },
+    {
+      "category": "Credit",
+      "title": "Banks Must Act Now as Consumer Credit Stress Begins to Spread - The Financial Brand",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPNXFNakh3Sno5LVRBYlhJMmdhX01CZ1I2Y0ozRTdKSE1CcHMtamVwNWNiczhYaEF2OVJBRDYtWlhxQTV4UjRzWlJnQUUweExQcHl3TUtQTkxRRFRBVkxVSlNncVozLS1valdISEpsYjBZa013MGp3WnhvLTRkM2ZfMklhaEFYaGMxSTlLLTl0WXBsRldWeml5bnhPOGI2dXBsXzhQaENZNFp1aEppMkdlVS11cFhucnctdWFVdGo4T19MY0wxSUEzcw?oc=5",
+      "published": "Tue, 07 Apr 2026 07:00:00 GMT"
     },
     {
       "category": "Credit",
       "title": "RBA bracing for private credit default rates to increase - AFR",
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNWFZSeFRzdmt2MkpiSVZxa0l3b0huYV90dGFJQ25WblYwdjRONVF2T2dhVF8zZGJlWC1zVTl6amxYRmdfS2pzem5oUS1hMjRIU3F1SUxlb1d1R2w2eUw1Tl9YZUVtcjNOSHJSdk1kdUtHRF9TMS0xYl8yVV9jNVpFVk5scm12eGo4WWx3SWh6ZEdtbTl3VXZCd3VVaVNwd3RqaGZFZ1F3NDNjVWFka1ZtSnNDcw?oc=5",
       "published": "Sun, 12 Jul 2026 07:00:00 GMT"
+    },
+    {
+      "category": "Credit",
+      "title": "Buy Now, Pay Later: Recent Developments and Implications - Federal Reserve Bank of Richmond",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOOUtCSkJTcks5T0FGUlJuR29QVVNRelRBbDVzSk5MRHNRRHF4MGZlUFlvdmducGFjMFc3eTZZUVpLM3hXUFhiTWJhZ01lT05jTW5ZOVJwR2dENFRSTnZCam5aZTdGTHliNmh1ZnlIOXBscmMweU00a2NiLXNOem11QTBKLVQ?oc=5",
+      "published": "Wed, 11 Feb 2026 12:33:43 GMT"
     },
     {
       "category": "Geopolitics",
@@ -1366,45 +1366,45 @@
     },
     {
       "category": "Geopolitics",
+      "title": "Dollar dips after Supreme Court rules against Trump's tariffs - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQMnpKa0xkd3RTREJWd09tRnFZS2drc0RjVWRjekdQeWtXaVdiaktRbXpTU0tzOXEwQ2FWVDMtMUFqN1NUNkl4WGdieVctYUJmWDRUOEhSR0VNYW1XdVlrVENmY0tCY3dyajJQVlpRcVV2bWw5S2lzd2kxMFBOWk11MnJPVGM4b2lKVWRfMmt0dlBXc0xXQnpHdTNidmduNzdQeDlyM3FOSFY?oc=5",
+      "published": "Fri, 20 Feb 2026 08:00:00 GMT"
+    },
+    {
+      "category": "Geopolitics",
       "title": "Gold climbs as tariff and geopolitical risks spur safe\u2011haven demand - Reuters",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOZHljRXNOTTBKTGZyWVQxRC1uNkRzbXQxVy1wVEphd0VjZkZQXzd1NVB3OFdmN1ZsZHluVVJQd0U3OG45UjQ5MjNJSHYwcUdubU5vTGRsYl8xNzR0dDZNLXd2UzJEMy1FZWQwYl91NXQ0Rjl2Z0xKVHRlaTdQeW80eGZGc1hrdG9nSlhoSzZUT1RMVzJMbi02UjM4N05GNW1CNmdKSFZ3?oc=5",
       "published": "Wed, 25 Feb 2026 08:00:00 GMT"
     },
     {
-      "category": "Geopolitics",
-      "title": "How US-Iran tensions could shape world markets - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQWFBBamo3NzdGOFFxZ3h5Z3NpcEtHY0lGS1UyUFpCNThFLUxsUi02TzBMVllKRmVKa3JwcTEtVnFOTVRUWDU4dWpzN0pZLTN6MzJMVWl4WmpEbVlTQWxWbWFSNkRkSkNtT3hTM0RLZzZ4T3ZuVG9vSmkzOFZjcGtjWmhwN1VINmI2QkdpRUg0eHI2aHA0SjFUdVpVTkJUSTQ?oc=5",
-      "published": "Sat, 28 Feb 2026 08:00:00 GMT"
+      "category": "Gold",
+      "title": "Gold drops 2.5% \ud83d\udcc9 Are precious metals entering a bear market? - XTB.com",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPT04zNGxlQmJrbm1YMEF1TkViWXV3WEpPcC1tMHFlSGxiODRFX3NTMTl5NzRWbjhYVy1aakRHdHFmWEJSOHVicm5xRjNKSEQtWXNJY1kxNU1jaUVmU2I5d2c0dzF6ZEw4MWhYVHllVHdjUEpkTkhHWFJ1Q0czYTdRMmMyUlplbkNFU3AwU0lidHB5VmNiNjh5QW9Fa19VN1RaWC1naVpldXJROGhJS3o4S0pVeFRoQQ?oc=5",
+      "published": "Wed, 18 Nov 2026 15:58:15 GMT"
     },
     {
       "category": "Gold",
-      "title": "Central bank buying to support higher gold price in 2027: Goldman - Mining.com.au",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNUEs3S0xHeDRPVXFScDQ5YUlydTFXeG9jOHRZYTZGSWpCbGhvNE1ITGc2Nk9Vbk5WVXFMQXRpckxabDRKVW9wNGpQVmJUVHU0OU5WcDVlTDItcEVxWDZ5amlSQzEzT0MxLXliWGpHRGJXSUV3M1hZLWZ6NFVBWWZJTG1wTWhqM3ZPSWtYeFpRS00?oc=5",
-      "published": "Mon, 16 Nov 2026 23:04:58 GMT"
+      "title": "China gold market update: Robust demand in October | Post by Ray Jia | Insights - World Gold Council",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOX01TX2R4cG4wLTNVNTBJcWI5UWdhTDdXRi12cVA5N2NoZHJFbkpmZ3d0Smx2WHdMVHozR2NTQUwwYkRLVjVpdVZrZ1NQQ0VlRzNTSm5GX2hCeGhBRlE5eVJCS2xEcTl2dC1GQXZJZlNUbHJxZ09BVkh1bWlUZ05PNndSN2dWLXZUQjNFLUZTRXFtYmktWnpnWl9n?oc=5",
+      "published": "Tue, 17 Nov 2026 13:34:10 GMT"
+    },
+    {
+      "category": "Gold",
+      "title": "Gold Falls Below $3,900 as Caitong Securities Says Central Bank and ETF Buying Retreat, Real Rates Regain Pricing Power - BigGo Finance",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5vdjVhMl9QWWhLdVFuZXgyMjFWaUJmdlhNdUxMTVBaTm44cTNqLTRTWnpGd0ZQenhwOWtZbFZXTTlUZ2RpblZ5YndnSmFieHViVmRoQTd5bGVOdUwwYzMzY3d5VG5pcTNtV0tLQkJDNktuUFNvX2c?oc=5",
+      "published": "Wed, 18 Nov 2026 10:55:00 GMT"
+    },
+    {
+      "category": "Gold",
+      "title": "Central bank buying to support gold\u2019s climb to $4,650/oz by end-2027, Goldman Says - Mining.com",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQWVhvalpmR19JVlVvbTZnV3g0alU0djNoT3FIejZCYXhMSUhYTjJ6TTJ1ZkRzckIxX0Z3eGFyQTlva2RiNXFNMmZZSXpvTHY2ajUxVXpkSmlvUkY2dzhPODI3dmZyYm5pb1pIUC1xS3NiQ1RJM21QdWZHSUtyMzRzTkllSlNRSzczV1ZQRGM0eU42ZlZzeDRiS2lnWVZMTDdqNmY3WXhuaS1oUQ?oc=5",
+      "published": "Mon, 16 Nov 2026 21:35:20 GMT"
     },
     {
       "category": "Gold",
       "title": "Gold prices are falling: China is buying anyway - FXStreet",
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQQlVRTTNYdTdhR1ZXcHZxT1RxNEp0TnBKNHRIcjN4dWdMV0JiQ05aOFdUUjRGQjFkLVNYYzJMbG80TmRtVEs2blI1MEJpdHJYNThBa19SSnB2WmtIM1AybGNxUjZkeFo1U1hzUTBDbTJwNWVyZTYwZlN5eDJ0dzFCZzRTMGhIRWZRd3ZIaGRfWUtEdnowaFZDOQ?oc=5",
       "published": "Tue, 17 Nov 2026 02:05:05 GMT"
-    },
-    {
-      "category": "Gold",
-      "title": "Central Bank Gold Buying Surges 42% as Prices Dip Below US$4,000 - Streetwise Reports",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxORklGZ0xpd2dxTXk1bW5aRnNpOEVmeU5pZ3lYZ0JJUWdTQkwwMWl2eVJtWEdFcGZHcWx6VG9BcnE0QlJuem1pWXhLenNNZURERDFzdWZtY1FqMEw5THo4S1oxZHBrSGxkWmNQeFNheWtjUGdWUm1PakQ4NjBaQWpNM0E0dVVTZE5jRkxaV2V5RVZfN09lZUYxblFrSzB6c2l2bUJzUUhDY1ZaOWR4NnJhS0dfdW94c21PT2N2UXlR?oc=5",
-      "published": "Sat, 14 Nov 2026 10:30:36 GMT"
-    },
-    {
-      "category": "Gold",
-      "title": "Gold Price \u2013 Today\u2019s Chart \u2013 Historical Data \u2013 Outlook - TheBull.com.au",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNOGczUWdqT2loTW9IaEhCeWxuSHE2OXQwTm9mUTRFVHBDZmlWQWx3WE1STVotaVJhUzk1LU5nY05SX0pBRXdEZzU2MmtteWJSMFRVWGNLSTFUaUpOWFIxdENMd0pxbFM4VVMtWmN5cXVFQUZzUGRDb1BjR19Tdlc1WVBMWQ?oc=5",
-      "published": "Sun, 15 Nov 2026 02:35:36 GMT"
-    },
-    {
-      "category": "Gold",
-      "title": "Gold demand remains near record highs as central bank buying surges 42% \u2013 WGC - Kitco",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNdXMzWmhCTThSSlhBcHFsbjY2VEdWdUN3WjRxQmE3YnpENklGckNZeXhUakpielZ0MUVnOV9CZlM3dHdTdXZ4OWMwdkVXTkY0Vk9PbDhKNnBybTJuMFlxQTk1dGE1MDZTUTFYX2x1NXZlYzkyUFYxV0NHNW5oNFJHWGhyTW1mdTFfTEtqdDNPMzQ5RmNpSWJ1eTJnZGNvWFRmNDk2YU41OG5VYmhSTUpUVHlRNVFKQ1NS?oc=5",
-      "published": "Tue, 03 Nov 2026 08:00:00 GMT"
     }
   ]
 }
