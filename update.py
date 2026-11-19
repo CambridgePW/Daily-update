@@ -88,6 +88,23 @@ def treasury_real_yield():
   date,value=observations[-1]
   return {'name':'US real 10Y yield','date':date,'value':value,'previous':observations[-2][1] if len(observations)>1 else value,'status':'ok','unit':'%','source':url,'trends':trends(observations,'US real 10Y yield')}
  except Exception as e:return {'name':'US real 10Y yield','status':'unavailable','error':'Treasury: '+str(e)[:130],'source':url}
+def dbnomics(name,code):
+ url='https://api.db.nomics.world/v22/series/FRED/'+quote(code)+'?observations=1'
+ try:
+  req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Accept':'application/json'})
+  with urllib.request.urlopen(req,timeout=18) as f:doc=json.load(f)
+  series=doc['series']['docs'][0]
+  obs=[]
+  for d,v in zip(series.get('period',[]),series.get('value',[])):
+   try:
+    if v is None or v=='NA':continue
+    obs.append((d,float(v)))
+   except (TypeError,ValueError):continue
+  if not obs:raise ValueError('No usable DBnomics observations')
+  obs.sort()
+  date,value=obs[-1]
+  return {'name':name,'date':date,'value':value,'previous':obs[-2][1] if len(obs)>1 else value,'status':'ok','source':url,'unit':'official series via DBnomics mirror','trends':trends(obs,name)}
+ except Exception as e:return {'name':name,'status':'unavailable','error':'DBnomics: '+str(e)[:120],'source':url}
 def fetch(item):
  name,code=item
  if name=='US unemployment':return bls_unemployment()
@@ -112,7 +129,9 @@ def fetch(item):
   date,value=obs[-1]
   return {'name':name,'date':date,'value':value,'previous':obs[-2][1] if len(obs)>1 else value,'status':'ok','source':url,'trends':trends(obs,name)}
  except Exception as e:
-  return {'name':name,'status':'unavailable','error':str(e)[:150],'source':url}
+  alternate=dbnomics(name,code)
+  if alternate['status']=='ok':return alternate
+  return {'name':name,'status':'unavailable','error':'FRED: '+str(e)[:65]+'; '+alternate.get('error','')[:65],'source':url}
 def news(item):
  category,term=item;url='https://news.google.com/rss/search?q='+quote(term)+'&hl=en-AU&gl=AU&ceid=AU:en'
  try:
