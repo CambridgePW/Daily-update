@@ -69,6 +69,22 @@ def bls_unemployment():
   date,value=points[-1]
   return {'name':'US unemployment','date':date,'value':value,'previous':points[-2][1] if len(points)>1 else value,'status':'ok','source':url,'unit':'%','trends':trends(points,'US unemployment')}
  except Exception as e:return {'name':'US unemployment','status':'unavailable','error':'BLS: '+str(e)[:130],'source':url}
+def bls_cpi():
+ url='https://api.bls.gov/publicAPI/v1/timeseries/data/CUUR0000SA0'
+ try:
+  req=urllib.request.Request(url,headers={'User-Agent':'CambridgeMarketIntelligence/1.0','Accept':'application/json'})
+  with urllib.request.urlopen(req,timeout=18) as f:doc=json.load(f)
+  if doc.get('status')!='REQUEST_SUCCEEDED':raise ValueError(str(doc.get('message')))
+  points=[]
+  for row in doc['Results']['series'][0]['data']:
+   if row.get('period','').startswith('M') and row['period']!='M13':
+    try:points.append((row['year']+'-'+row['period'][1:]+'-01',float(row['value'])))
+    except (ValueError,TypeError):continue
+  points.sort()
+  if not points:raise ValueError('No monthly CPI observations')
+  date,value=points[-1]
+  return {'name':'US CPI index','date':date,'value':value,'previous':points[-2][1] if len(points)>1 else value,'status':'ok','source':url,'unit':'CPI-U all items, not seasonally adjusted (1982-84=100); BLS CUUR0000SA0','trends':trends(points,'US CPI index'),'note':'BLS non-seasonally adjusted CPI-U; distinct from FRED seasonally adjusted CPIAUCSL'}
+ except Exception as e:return {'name':'US CPI index','status':'unavailable','error':'BLS CPI: '+str(e)[:130],'source':url}
 def treasury_real_yield():
  year=NOW.year
  url='https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/'+str(year)+'/all?type=daily_treasury_real_yield_curve&field_tdr_date_value='+str(year)+'&page&_format=csv'
@@ -108,6 +124,7 @@ def dbnomics(name,code):
 def fetch(item):
  name,code=item
  if name=='US unemployment':return bls_unemployment()
+ if name=='US CPI index':return bls_cpi()
  if name=='US real 10Y yield':return treasury_real_yield()
  if name in MARKETS:
   primary=yahoo((name,MARKETS[name]))
@@ -188,17 +205,33 @@ def add(label,n):
  score+=n;count+=1;notes.append({'name':label,'score':n})
 hy=v('High yield spread')
 if hy is not None:add('Credit risk',-2 if hy>=6 else -1 if hy>=4.5 else 1 if hy<3.5 else 0)
+else:
+ credit_proxy=r.get('Credit risk appetite proxy (HYG vs LQD)',{})
+ if credit_proxy.get('status')=='ok' and credit_proxy.get('value') is not None:
+  cp=credit_proxy['value']
+  add('Credit risk (ETF relative-return proxy)',-2 if cp<=-5 else -1 if cp<=-2 else 1 if cp>=2 else 0)
 vix=v('VIX')
 if vix is not None:add('Volatility',-2 if vix>=30 else -1 if vix>=22 else 1 if vix<17 else 0)
 un=v('US unemployment')
 if un is not None:add('Employment',-1 if un>=5.5 else 1 if un<4.2 else 0)
 sent=v('Consumer sentiment')
 if sent is not None:add('Consumer confidence',-1 if sent<60 else 1 if sent>80 else 0)
+else:
+ demand_proxy=r.get('Consumer demand proxy (XLY vs XLP)',{})
+ if demand_proxy.get('status')=='ok' and demand_proxy.get('value') is not None:
+  dp=demand_proxy['value']
+  add('Consumer demand (sector-return proxy)',-1 if dp<=-3 else 1 if dp>=3 else 0)
 delinq=v('All loan delinquencies')
 if delinq is not None:add('Loan stress',-1 if delinq>3 else 1 if delinq<2 else 0)
+else:
+ banks=v('Regional banks ETF (KRE)')
+ if banks is not None:
+  bank_data=r.get('Regional banks ETF (KRE)',{})
+  trend=bank_data.get('trends',{}).get('3m',{}).get('value')
+  if trend is not None:add('Banking stress (KRE price-trend proxy)',-1 if trend<=-12 else 1 if trend>=8 else 0)
 avg=score/count if count else None
 regime='DATA INSUFFICIENT' if count<3 else 'DEFENSIVE' if avg<=-.6 else 'CONSTRUCTIVE' if avg>=.6 else 'MIXED / CAUTIOUS'
 positioning={} if count<3 else {'Equities':'REDUCE / DEFENSIVE' if avg<=-.6 else 'SELECTIVE BUY' if avg>=.6 else 'HOLD / SELECTIVE','Government bonds':'HOLD / REVIEW YIELDS','Gold':'HOLD / REVIEW REAL YIELDS','Cash':'MAINTAIN BUFFER' if avg<.6 else 'NORMAL BUFFER'}
-output={'generated_at_utc':NOW.isoformat(),'regime':regime,'score':round(avg,2) if avg is not None else None,'coverage':count,'coverage_target':5,'missing_scoring_indicators':[k for k in ('High yield spread','VIX','US unemployment','Consumer sentiment','All loan delinquencies') if v(k) is None],'positioning':positioning,'indicators':notes,'readings':readings,'asx_watch':asx_watch,'news':[n for group in headlines for n in group]}
+output={'generated_at_utc':NOW.isoformat(),'regime':regime,'score':round(avg,2) if avg is not None else None,'coverage':count,'coverage_target':5,'coverage_definition':'Scoring inputs including explicitly labelled market proxies; official macro coverage shown separately','official_macro_coverage':sum(1 for k in ('High yield spread','VIX','US unemployment','Consumer sentiment','All loan delinquencies') if v(k) is not None),'proxy_scoring_inputs':[n['name'] for n in notes if 'proxy' in n['name']],'missing_scoring_indicators':[k for k in ('High yield spread','VIX','US unemployment','Consumer sentiment','All loan delinquencies') if v(k) is None],'positioning':positioning,'indicators':notes,'readings':readings,'asx_watch':asx_watch,'news':[n for group in headlines for n in group]}
 Path(__file__).with_name('daily.json').write_text(json.dumps(output,indent=2))
 print('Saved daily.json:',regime,'coverage',count)
