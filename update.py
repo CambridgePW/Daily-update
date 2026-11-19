@@ -3,7 +3,7 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from urllib.parse import quote
 NOW=datetime.datetime.now(datetime.timezone.utc)
-SERIES={'US 10Y yield (market proxy)':'DGS10','US 5Y yield (market proxy)':'DGS5','Gold futures USD/oz':'GOLDAMGBD228NLBM','Gold miners ETF (GDX)':'GDX','AUD/USD':'DEXUSAL','US Dollar Index (DXY)':'DTWEXBGS','US real 10Y yield':'DFII10','US unemployment':'UNRATE','US CPI index':'CPIAUCSL','US M2 money stock':'M2SL','US household debt service ratio':'TDSP','Brent crude futures':'DCOILBRENTEU','S&P 500':'SP500','Nasdaq':'NASDAQCOM','VIX':'VIXCLS','High yield corporate bond ETF (HYG)':'HYG','Investment grade corporate bond ETF (LQD)':'LQD','Consumer discretionary ETF (XLY)':'XLY','Consumer staples ETF (XLP)':'XLP','Equal weight S&P ETF (RSP)':'RSP','S&P ETF (SPY)':'SPY','Small cap ETF (IWM)':'IWM','Regional banks ETF (KRE)':'KRE','Broad US banks ETF (KBE)':'KBE','Australian equities ETF (VAS)':'VAS.AX','Australian resources ETF (MVR)':'MVR.AX','Australian quality ETF (AQLT)':'AQLT.AX','Developed markets ETF (VEU)':'VEU','Emerging markets ETF (VWO)':'VWO','Global technology ETF (IXN)':'IXN','Australian government bonds ETF (IAF)':'IAF.AX'}
+SERIES={'US 10Y yield (market proxy)':'DGS10','US 5Y yield (market proxy)':'DGS5','Gold futures USD/oz':'GOLDAMGBD228NLBM','Gold miners ETF (GDX)':'GDX','AUD/USD':'DEXUSAL','US Dollar Index (DXY)':'DTWEXBGS','US real 10Y yield':'DFII10','US unemployment':'UNRATE','US CPI index':'CPIAUCSL','US M2 money stock':'M2SL','US household debt service ratio':'TDSP','High yield spread':'BAMLH0A0HYM2','Consumer sentiment':'UMCSENT','All loan delinquencies':'DRALACBS','Brent crude futures':'DCOILBRENTEU','S&P 500':'SP500','Nasdaq':'NASDAQCOM','VIX':'VIXCLS','High yield corporate bond ETF (HYG)':'HYG','Investment grade corporate bond ETF (LQD)':'LQD','Consumer discretionary ETF (XLY)':'XLY','Consumer staples ETF (XLP)':'XLP','Equal weight S&P ETF (RSP)':'RSP','S&P ETF (SPY)':'SPY','Small cap ETF (IWM)':'IWM','Regional banks ETF (KRE)':'KRE','Broad US banks ETF (KBE)':'KBE','Australian equities ETF (VAS)':'VAS.AX','Australian resources ETF (MVR)':'MVR.AX','Australian quality ETF (AQLT)':'AQLT.AX','Developed markets ETF (VEU)':'VEU','Emerging markets ETF (VWO)':'VWO','Global technology ETF (IXN)':'IXN','Australian government bonds ETF (IAF)':'IAF.AX'}
 MARKETS={'S&P 500':'^GSPC','Nasdaq':'^IXIC','VIX':'^VIX','US 10Y yield (market proxy)':'^TNX','US 5Y yield (market proxy)':'^FVX','Gold futures USD/oz':'GC=F','Gold miners ETF (GDX)':'GDX','Brent crude futures':'BZ=F','AUD/USD':'AUDUSD=X','US Dollar Index (DXY)':'DX-Y.NYB','High yield corporate bond ETF (HYG)':'HYG','Investment grade corporate bond ETF (LQD)':'LQD','Consumer discretionary ETF (XLY)':'XLY','Consumer staples ETF (XLP)':'XLP','Equal weight S&P ETF (RSP)':'RSP','S&P ETF (SPY)':'SPY','Small cap ETF (IWM)':'IWM','Regional banks ETF (KRE)':'KRE','Broad US banks ETF (KBE)':'KBE','Australian equities ETF (VAS)':'VAS.AX','Australian resources ETF (MVR)':'MVR.AX','Australian quality ETF (AQLT)':'AQLT.AX','Developed markets ETF (VEU)':'VEU','Emerging markets ETF (VWO)':'VWO','Global technology ETF (IXN)':'IXN','Australian government bonds ETF (IAF)':'IAF.AX'}
 STOOQ={'S&P 500':'^spx','Nasdaq':'^ndq','Gold futures USD/oz':'gc.f','Brent crude futures':'brn.f','AUD/USD':'audusd','Broad US banks ETF (KBE)':'kbe.us'}
 def trends(obs,name):
@@ -103,7 +103,7 @@ def fetch(item):
  url='https://fred.stlouisfed.org/graph/fredgraph.csv?id='+quote(code)+'&cosd=2024-01-01'
  try:
   req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'})
-  with urllib.request.urlopen(req,timeout=12) as f: rows=list(csv.reader(io.StringIO(f.read().decode('utf-8-sig'))))
+  with urllib.request.urlopen(req,timeout=24) as f: rows=list(csv.reader(io.StringIO(f.read().decode('utf-8-sig'))))
   obs=[]
   for row in rows[1:]:
    try:obs.append((row[0],float(row[1])))
@@ -111,7 +111,8 @@ def fetch(item):
   if not obs:raise ValueError('No observations')
   date,value=obs[-1]
   return {'name':name,'date':date,'value':value,'previous':obs[-2][1] if len(obs)>1 else value,'status':'ok','source':url,'trends':trends(obs,name)}
- except Exception as e:return {'name':name,'status':'unavailable','error':str(e)[:150],'source':url}
+ except Exception as e:
+  return {'name':name,'status':'unavailable','error':str(e)[:150],'source':url}
 def news(item):
  category,term=item;url='https://news.google.com/rss/search?q='+quote(term)+'&hl=en-AU&gl=AU&ceid=AU:en'
  try:
@@ -160,7 +161,7 @@ r={x['name']:x for x in readings}
 def v(k):
  x=r.get(k,{})
  if x.get('status')!='ok':return None
- if (NOW.date()-datetime.date.fromisoformat(x['date'])).days>(5 if k in MARKETS else 100):return None
+ if (NOW.date()-datetime.date.fromisoformat(x['date'])).days>(5 if k in MARKETS else 120 if k=='All loan delinquencies' else 100):return None
  return x['value']
 score=0;count=0;notes=[]
 def add(label,n):
@@ -179,6 +180,6 @@ if delinq is not None:add('Loan stress',-1 if delinq>3 else 1 if delinq<2 else 0
 avg=score/count if count else None
 regime='DATA INSUFFICIENT' if count<3 else 'DEFENSIVE' if avg<=-.6 else 'CONSTRUCTIVE' if avg>=.6 else 'MIXED / CAUTIOUS'
 positioning={} if count<3 else {'Equities':'REDUCE / DEFENSIVE' if avg<=-.6 else 'SELECTIVE BUY' if avg>=.6 else 'HOLD / SELECTIVE','Government bonds':'HOLD / REVIEW YIELDS','Gold':'HOLD / REVIEW REAL YIELDS','Cash':'MAINTAIN BUFFER' if avg<.6 else 'NORMAL BUFFER'}
-output={'generated_at_utc':NOW.isoformat(),'regime':regime,'score':round(avg,2) if avg is not None else None,'coverage':count,'positioning':positioning,'indicators':notes,'readings':readings,'asx_watch':asx_watch,'news':[n for group in headlines for n in group]}
+output={'generated_at_utc':NOW.isoformat(),'regime':regime,'score':round(avg,2) if avg is not None else None,'coverage':count,'coverage_target':5,'missing_scoring_indicators':[k for k in ('High yield spread','VIX','US unemployment','Consumer sentiment','All loan delinquencies') if v(k) is None],'positioning':positioning,'indicators':notes,'readings':readings,'asx_watch':asx_watch,'news':[n for group in headlines for n in group]}
 Path(__file__).with_name('daily.json').write_text(json.dumps(output,indent=2))
 print('Saved daily.json:',regime,'coverage',count)
