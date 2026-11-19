@@ -1,4 +1,4 @@
-import csv,io,json,datetime,urllib.request,xml.etree.ElementTree as ET
+import csv,io,json,datetime,os,re,urllib.request,xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from urllib.parse import quote
@@ -104,6 +104,50 @@ def treasury_real_yield():
   date,value=observations[-1]
   return {'name':'US real 10Y yield','date':date,'value':value,'previous':observations[-2][1] if len(observations)>1 else value,'status':'ok','unit':'%','source':url,'trends':trends(observations,'US real 10Y yield')}
  except Exception as e:return {'name':'US real 10Y yield','status':'unavailable','error':'Treasury: '+str(e)[:130],'source':url}
+def michigan_sentiment():
+ url='https://www.sca.isr.umich.edu/files/tbmics.csv'
+ try:
+  req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Accept':'text/csv,*/*'})
+  with urllib.request.urlopen(req,timeout=18) as f:raw=f.read().decode('utf-8-sig',errors='replace')
+  obs=[]
+  for row in csv.reader(io.StringIO(raw)):
+   cells=[c.strip().strip('"') for c in row]
+   if not cells:continue
+   d=None
+   for cell in cells:
+    m=re.fullmatch(r'(20[0-9]{2})[-/M]([01]?[0-9])',cell)
+    if m:d=f'{int(m.group(1)):04d}-{int(m.group(2)):02d}-01';break
+   if not d and len(cells)>=3 and re.fullmatch(r'20[0-9]{2}',cells[0]) and re.fullmatch(r'[0-9]{1,2}',cells[1]):
+    d=f'{int(cells[0]):04d}-{int(cells[1]):02d}-01'
+   if not d:continue
+   for cell in reversed(cells):
+    try:
+     value=float(cell)
+     if 1<=value<=150:obs.append((d,value));break
+    except ValueError:continue
+  obs=sorted(set(obs))
+  if not obs:raise ValueError('Could not parse monthly index from CSV')
+  date,value=obs[-1]
+  if (NOW.date()-datetime.date.fromisoformat(date)).days>100:raise ValueError('University of Michigan CSV observations are stale')
+  return {'name':'Consumer sentiment','date':date,'value':value,'previous':obs[-2][1] if len(obs)>1 else value,'status':'ok','source':url,'unit':'University of Michigan Index of Consumer Sentiment','trends':trends(obs,'Consumer sentiment')}
+ except Exception as e:return {'name':'Consumer sentiment','status':'unavailable','error':'Michigan: '+str(e)[:120],'source':url}
+def fred_api(name,code):
+ key=os.environ.get('FRED_API_KEY','').strip()
+ if not key:return {'name':name,'status':'unavailable','error':'FRED_API_KEY secret not configured'}
+ url='https://api.stlouisfed.org/fred/series/observations?series_id='+quote(code)+'&api_key='+quote(key)+'&file_type=json&observation_start=2024-01-01'
+ safe_url='https://api.stlouisfed.org/fred/series/observations?series_id='+quote(code)
+ try:
+  req=urllib.request.Request(url,headers={'User-Agent':'CambridgeMarketIntelligence/1.0','Accept':'application/json'})
+  with urllib.request.urlopen(req,timeout=18) as f:doc=json.load(f)
+  obs=[]
+  for x in doc.get('observations',[]):
+   try:obs.append((x['date'],float(x['value'])))
+   except (KeyError,TypeError,ValueError):continue
+  if not obs:raise ValueError('No valid observations')
+  obs.sort()
+  date,value=obs[-1]
+  return {'name':name,'date':date,'value':value,'previous':obs[-2][1] if len(obs)>1 else value,'status':'ok','source':safe_url,'unit':'official FRED series','trends':trends(obs,name)}
+ except Exception as e:return {'name':name,'status':'unavailable','error':'FRED API: '+str(e)[:100],'source':safe_url}
 def dbnomics(name,code):
  url='https://api.db.nomics.world/v22/series/FRED/'+quote(code)+'?observations=1'
  try:
@@ -125,6 +169,9 @@ def fetch(item):
  name,code=item
  if name=='US unemployment':return bls_unemployment()
  if name=='US CPI index':return bls_cpi()
+ if name=='Consumer sentiment':
+  mich=michigan_sentiment()
+  if mich['status']=='ok':return mich
  if name=='US real 10Y yield':return treasury_real_yield()
  if name in MARKETS:
   primary=yahoo((name,MARKETS[name]))
@@ -146,9 +193,11 @@ def fetch(item):
   date,value=obs[-1]
   return {'name':name,'date':date,'value':value,'previous':obs[-2][1] if len(obs)>1 else value,'status':'ok','source':url,'trends':trends(obs,name)}
  except Exception as e:
+  official=fred_api(name,code)
+  if official['status']=='ok':return official
   alternate=dbnomics(name,code)
   if alternate['status']=='ok':return alternate
-  return {'name':name,'status':'unavailable','error':'FRED: '+str(e)[:65]+'; '+alternate.get('error','')[:65],'source':url}
+  return {'name':name,'status':'unavailable','error':'FRED: '+str(e)[:45]+'; '+official.get('error','')[:55]+'; '+alternate.get('error','')[:45],'source':url}
 def news(item):
  category,term=item;url='https://news.google.com/rss/search?q='+quote(term)+'&hl=en-AU&gl=AU&ceid=AU:en'
  try:
