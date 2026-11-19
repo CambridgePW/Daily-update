@@ -150,7 +150,7 @@ def asx_trend(item):
  symbol,(sector,style)=item
  result=yahoo(('ASX '+symbol,symbol+'.AX'))
  return {'symbol':symbol,'sector':sector,'style':style,'status':result.get('status'),'date':result.get('date'),'price':result.get('value'),'trends':result.get('trends',{}),'source':result.get('source')}
-with ThreadPoolExecutor(max_workers=10) as pool:
+with ThreadPoolExecutor(max_workers=4) as pool:
  readings=list(pool.map(fetch,SERIES.items()))
  asx_watch=list(pool.map(asx_trend,ASX_WATCH.items()))
  headlines=list(pool.map(news,[('Central banks','RBA Federal Reserve rates policy'),('Credit','bank defaults delinquencies credit stress'),('Geopolitics','geopolitics war tariffs Reuters'),('Gold','gold price central bank purchases')]))
@@ -180,7 +180,7 @@ r={x['name']:x for x in readings}
 def v(k):
  x=r.get(k,{})
  if x.get('status')!='ok':return None
- if (NOW.date()-datetime.date.fromisoformat(x['date'])).days>(5 if k in MARKETS else 120 if k=='All loan delinquencies' else 100):return None
+ if (NOW.date()-datetime.date.fromisoformat(x['date'])).days>(5 if k in MARKETS else 180 if k=='All loan delinquencies' else 100):return None
  return x['value']
 score=0;count=0;notes=[]
 def add(label,n):
