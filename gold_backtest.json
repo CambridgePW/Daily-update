@@ -1,35 +1,35 @@
 {
-  "generated_from": "2026-11-24T21:27:42.533290+00:00",
+  "generated_from": "2026-11-25T21:29:51.044589+00:00",
   "start": "2016-01-31",
-  "end": "2026-11-24",
+  "end": "2026-11-25",
   "method": "Four strategies including independent bullion (0-15%) and miner (0-15%) signals, combined maximum 25%. Bullion uses GLD 3/6/12-month momentum plus controlled correction; miners use GDX 3/6/12-month momentum and GDX/GLD relative strength plus controlled correction. These rules are research hypotheses, not optimised or approved. Point-in-time monthly signal at month-end, returns NEXT month. SPY/GLD/GDX adjusted-price USD proxies; growth allocation from seven market signals. Gold overlay 60% bullion GLD / 40% miners GDX funded from equities. Contrarian adds 5 percentage points for controlled three-month correction while 6- and 12-month bullion and 12-month miners trends remain positive. Does NOT include real yields, DXY, Australian currency, bond/cash returns, costs, tax or portfolio-level distributions. Not the live four-factor model; do not treat as validated investable returns.",
   "results": {
     "no_gold": {
       "months": 130,
-      "cumulative_pct": 157.33,
-      "annualised_pct": 9.12,
-      "volatility_pct": 8.93,
+      "cumulative_pct": 156.94,
+      "annualised_pct": 9.1,
+      "volatility_pct": 8.94,
       "max_drawdown_pct": -16.59
     },
     "momentum_only": {
       "months": 130,
-      "cumulative_pct": 149.98,
+      "cumulative_pct": 150.09,
       "annualised_pct": 8.83,
       "volatility_pct": 8.6,
       "max_drawdown_pct": -16.24
     },
     "momentum_contrarian": {
       "months": 130,
-      "cumulative_pct": 150.43,
-      "annualised_pct": 8.84,
+      "cumulative_pct": 150.54,
+      "annualised_pct": 8.85,
       "volatility_pct": 8.65,
       "max_drawdown_pct": -16.24
     },
     "separate_sleeves": {
       "months": 130,
-      "cumulative_pct": 133.75,
-      "annualised_pct": 8.15,
-      "volatility_pct": 8.67,
+      "cumulative_pct": 134.67,
+      "annualised_pct": 8.19,
+      "volatility_pct": 8.66,
       "max_drawdown_pct": -16.11
     }
   },
@@ -37,187 +37,187 @@
     "3m": {
       "no_gold": {
         "months": 3,
-        "cumulative_pct": -3.7,
-        "annualised_pct": -13.99,
-        "volatility_pct": 5.15,
-        "max_drawdown_pct": -3.7
+        "cumulative_pct": -3.85,
+        "annualised_pct": -14.52,
+        "volatility_pct": 5.45,
+        "max_drawdown_pct": -3.85
       },
       "momentum_only": {
         "months": 3,
-        "cumulative_pct": -6.69,
-        "annualised_pct": -24.19,
-        "volatility_pct": 3.19,
-        "max_drawdown_pct": -6.69
+        "cumulative_pct": -6.65,
+        "annualised_pct": -24.06,
+        "volatility_pct": 3.11,
+        "max_drawdown_pct": -6.65
       },
       "momentum_contrarian": {
         "months": 3,
-        "cumulative_pct": -6.69,
-        "annualised_pct": -24.19,
-        "volatility_pct": 3.19,
-        "max_drawdown_pct": -6.69
+        "cumulative_pct": -6.65,
+        "annualised_pct": -24.06,
+        "volatility_pct": 3.11,
+        "max_drawdown_pct": -6.65
       },
       "separate_sleeves": {
         "months": 3,
-        "cumulative_pct": -8.04,
-        "annualised_pct": -28.49,
-        "volatility_pct": 2.07,
-        "max_drawdown_pct": -8.04
+        "cumulative_pct": -7.68,
+        "annualised_pct": -27.35,
+        "volatility_pct": 1.5,
+        "max_drawdown_pct": -7.68
       }
     },
     "6m": {
       "no_gold": {
         "months": 6,
-        "cumulative_pct": -2.58,
-        "annualised_pct": -5.08,
-        "volatility_pct": 5.37,
-        "max_drawdown_pct": -3.7
+        "cumulative_pct": -2.73,
+        "annualised_pct": -5.38,
+        "volatility_pct": 5.54,
+        "max_drawdown_pct": -3.85
       },
       "momentum_only": {
         "months": 6,
-        "cumulative_pct": -5.87,
-        "annualised_pct": -11.4,
-        "volatility_pct": 8.55,
-        "max_drawdown_pct": -6.69
+        "cumulative_pct": -5.83,
+        "annualised_pct": -11.33,
+        "volatility_pct": 8.52,
+        "max_drawdown_pct": -6.65
       },
       "momentum_contrarian": {
         "months": 6,
-        "cumulative_pct": -6.47,
-        "annualised_pct": -12.51,
-        "volatility_pct": 8.86,
-        "max_drawdown_pct": -6.69
+        "cumulative_pct": -6.43,
+        "annualised_pct": -12.44,
+        "volatility_pct": 8.84,
+        "max_drawdown_pct": -6.65
       },
       "separate_sleeves": {
         "months": 6,
-        "cumulative_pct": -8.98,
-        "annualised_pct": -17.15,
-        "volatility_pct": 7.73,
-        "max_drawdown_pct": -8.98
+        "cumulative_pct": -8.62,
+        "annualised_pct": -16.5,
+        "volatility_pct": 7.54,
+        "max_drawdown_pct": -8.62
       }
     },
     "12m": {
       "no_gold": {
         "months": 12,
-        "cumulative_pct": 5.18,
-        "annualised_pct": 5.18,
-        "volatility_pct": 10.0,
+        "cumulative_pct": 5.02,
+        "annualised_pct": 5.02,
+        "volatility_pct": 10.05,
         "max_drawdown_pct": -4.04
       },
       "momentum_only": {
         "months": 12,
-        "cumulative_pct": 1.77,
-        "annualised_pct": 1.77,
-        "volatility_pct": 11.04,
-        "max_drawdown_pct": -6.69
+        "cumulative_pct": 1.82,
+        "annualised_pct": 1.82,
+        "volatility_pct": 11.02,
+        "max_drawdown_pct": -6.65
       },
       "momentum_contrarian": {
         "months": 12,
-        "cumulative_pct": 0.85,
-        "annualised_pct": 0.85,
-        "volatility_pct": 11.15,
-        "max_drawdown_pct": -6.69
+        "cumulative_pct": 0.9,
+        "annualised_pct": 0.9,
+        "volatility_pct": 11.13,
+        "max_drawdown_pct": -6.65
       },
       "separate_sleeves": {
         "months": 12,
-        "cumulative_pct": -1.93,
-        "annualised_pct": -1.93,
-        "volatility_pct": 11.42,
-        "max_drawdown_pct": -8.98
+        "cumulative_pct": -1.54,
+        "annualised_pct": -1.54,
+        "volatility_pct": 11.31,
+        "max_drawdown_pct": -8.62
       }
     },
     "36m": {
       "no_gold": {
         "months": 36,
-        "cumulative_pct": 40.96,
-        "annualised_pct": 12.12,
-        "volatility_pct": 7.83,
+        "cumulative_pct": 40.74,
+        "annualised_pct": 12.07,
+        "volatility_pct": 7.86,
         "max_drawdown_pct": -4.07
       },
       "momentum_only": {
         "months": 36,
-        "cumulative_pct": 48.11,
-        "annualised_pct": 13.99,
-        "volatility_pct": 7.89,
-        "max_drawdown_pct": -6.69
+        "cumulative_pct": 48.18,
+        "annualised_pct": 14.01,
+        "volatility_pct": 7.88,
+        "max_drawdown_pct": -6.65
       },
       "momentum_contrarian": {
         "months": 36,
-        "cumulative_pct": 48.08,
-        "annualised_pct": 13.98,
+        "cumulative_pct": 48.15,
+        "annualised_pct": 14.0,
         "volatility_pct": 8.06,
-        "max_drawdown_pct": -6.69
+        "max_drawdown_pct": -6.65
       },
       "separate_sleeves": {
         "months": 36,
-        "cumulative_pct": 45.06,
-        "annualised_pct": 13.2,
-        "volatility_pct": 8.35,
-        "max_drawdown_pct": -8.98
+        "cumulative_pct": 45.63,
+        "annualised_pct": 13.35,
+        "volatility_pct": 8.28,
+        "max_drawdown_pct": -8.62
       }
     },
     "60m": {
       "no_gold": {
         "months": 60,
-        "cumulative_pct": 41.88,
-        "annualised_pct": 7.25,
-        "volatility_pct": 9.94,
+        "cumulative_pct": 41.66,
+        "annualised_pct": 7.21,
+        "volatility_pct": 9.95,
         "max_drawdown_pct": -16.59
       },
       "momentum_only": {
         "months": 60,
-        "cumulative_pct": 46.63,
-        "annualised_pct": 7.95,
+        "cumulative_pct": 46.69,
+        "annualised_pct": 7.96,
         "volatility_pct": 9.79,
         "max_drawdown_pct": -16.24
       },
       "momentum_contrarian": {
         "months": 60,
-        "cumulative_pct": 46.35,
-        "annualised_pct": 7.91,
+        "cumulative_pct": 46.41,
+        "annualised_pct": 7.92,
         "volatility_pct": 9.89,
         "max_drawdown_pct": -16.24
       },
       "separate_sleeves": {
         "months": 60,
-        "cumulative_pct": 42.88,
-        "annualised_pct": 7.4,
-        "volatility_pct": 10.05,
+        "cumulative_pct": 43.44,
+        "annualised_pct": 7.48,
+        "volatility_pct": 10.02,
         "max_drawdown_pct": -16.11
       }
     },
     "120m": {
       "no_gold": {
         "months": 120,
-        "cumulative_pct": 137.91,
-        "annualised_pct": 9.05,
-        "volatility_pct": 9.21,
+        "cumulative_pct": 137.55,
+        "annualised_pct": 9.04,
+        "volatility_pct": 9.22,
         "max_drawdown_pct": -16.59
       },
       "momentum_only": {
         "months": 120,
-        "cumulative_pct": 130.06,
+        "cumulative_pct": 130.16,
         "annualised_pct": 8.69,
         "volatility_pct": 8.78,
         "max_drawdown_pct": -16.24
       },
       "momentum_contrarian": {
         "months": 120,
-        "cumulative_pct": 129.24,
+        "cumulative_pct": 129.34,
         "annualised_pct": 8.65,
         "volatility_pct": 8.81,
         "max_drawdown_pct": -16.24
       },
       "separate_sleeves": {
         "months": 120,
-        "cumulative_pct": 110.57,
-        "annualised_pct": 7.73,
-        "volatility_pct": 8.76,
+        "cumulative_pct": 111.4,
+        "annualised_pct": 7.77,
+        "volatility_pct": 8.74,
         "max_drawdown_pct": -16.11
       }
     }
   },
   "latest_dynamic_allocation": {
     "date": "2026-10-31",
-    "next_date": "2026-11-24",
+    "next_date": "2026-11-25",
     "growth_pct": 60,
     "momentum_gold_pct": 10,
     "contrarian_gold_pct": 10,
@@ -794,7 +794,7 @@
       "separate_bullion_pct": 15,
       "separate_miners_pct": 0,
       "separate_total_pct": 15,
-      "miners_vs_bullion_3m_pct": -3.88
+      "miners_vs_bullion_3m_pct": -3.89
     },
     {
       "date": "2018-05-31",
@@ -2818,7 +2818,7 @@
     },
     {
       "date": "2026-10-31",
-      "next_date": "2026-11-24",
+      "next_date": "2026-11-25",
       "growth_pct": 60,
       "momentum_gold_pct": 10,
       "contrarian_gold_pct": 10,
